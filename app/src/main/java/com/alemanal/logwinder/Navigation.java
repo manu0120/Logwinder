@@ -2,6 +2,7 @@ package com.alemanal.logwinder;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Adapter;
 import android.widget.Toast;
 
 import androidx.annotation.IdRes;
@@ -13,9 +14,11 @@ import com.alemanal.logwinder.databinding.ActivityNavigationBinding;
 import com.alemanal.logwinder.main.SectionsPagerAdapter;
 import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator;
 
 public class Navigation extends AppCompatActivity {
-
+//    WormDotsIndicator worm_dots_indicator;
+//    Adapter adapter;
     private ActivityNavigationBinding binding;
     private MenuItem prevMenuItem;
     @Override
@@ -49,6 +52,12 @@ public class Navigation extends AppCompatActivity {
 //        BottomNavigationItemView itemView = (BottomNavigationItemView) v;
 //
 //        LayoutInflater.from(this).inflate(R.layout.layot_badge, itemView, true);
+
+//        worm_dots_indicator = (WormDotsIndicator) findViewById(R.id.worm_dots_indicator);
+//        viewPager = (ViewPager) findViewById(R.id.view_pager);
+//        adapter = new ViewPagerAdapter();
+//        viewPager.setAdapter(adapter);
+//        worm_dots_indicator.setViewPager(viewPager);
 
         myBottomNavView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -103,11 +112,5 @@ public class Navigation extends AppCompatActivity {
 
             }
         });
-    }
-    public static void removeBadge(BottomNavigationView bottomNavigationView, @IdRes int itemId){
-        BottomNavigationItemView itemView = bottomNavigationView.findViewById(itemId);
-        if (itemView.getChildCount() == 3) {
-            itemView.removeViewAt(2);
-        }
     }
 }
