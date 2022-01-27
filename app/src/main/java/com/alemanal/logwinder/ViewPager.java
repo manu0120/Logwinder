@@ -10,8 +10,16 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.os.Bundle;
+import android.view.View;
 
 import com.alemanal.logwinder.fragments.Prueba1;
+import com.google.android.material.bottomnavigation.BottomNavigationItemView;
+import com.google.android.material.bottomnavigation.BottomNavigationMenuView;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarItemView;
+import com.google.android.material.navigation.NavigationBarView;
+import com.tbuonomo.viewpagerdotsindicator.DotsIndicator;
+import com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator;
 
 public class ViewPager extends FragmentActivity {
     //Dicta el número de paginas
@@ -20,6 +28,7 @@ public class ViewPager extends FragmentActivity {
     private ViewPager2 view_pager;
     //El adapter que provee las páginas al ViewPager
     private FragmentStateAdapter pagerAdapter;
+    WormDotsIndicator dotsIndicator;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +38,13 @@ public class ViewPager extends FragmentActivity {
         view_pager = findViewById(R.id.pager);
         pagerAdapter = new ScreenSlidePagerAdapter(this);
         view_pager.setAdapter(pagerAdapter);
+        dotsIndicator = (WormDotsIndicator) findViewById(R.id.worm_dots_indicator);
+        dotsIndicator.setViewPager2(view_pager);
+//        BottomNavigationView myBottomNavView = findViewById(R.id.bottom_navigation2);
+//        BottomNavigationMenuView bottomNavigationMenuView = (BottomNavigationMenuView) myBottomNavView.getChildAt(0);
+//        View v = bottomNavigationMenuView.getChildAt(2);
+//        BottomNavigationItemView itemView = (BottomNavigationItemView) v;
+//        NavigationBarView.OnItemSelectedListener()
     }
     @Override
     public void onBackPressed() {
