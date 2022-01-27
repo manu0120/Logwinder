@@ -1,4 +1,4 @@
-package com.alemanal.logwinder.main;
+package com.alemanal.logwinder.ui.main;
 
 import androidx.arch.core.util.Function;
 import androidx.lifecycle.LiveData;
