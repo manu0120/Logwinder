@@ -3,8 +3,30 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/layout/activity_main.xml" value="0.3625" />
+        <entry key="..\:/Logwinder/app/src/main/res/layout/activity_navigation.xml" value="0.33" />
+        <entry key="..\:/Logwinder/app/src/main/res/layout/fragment_navigation.xml" value="0.18704710144927536" />
+        <entry key="..\:/Logwinder/app/src/main/res/layout/fragment_page1.xml" value="0.3307291666666667" />
+        <entry key="..\:/Logwinder/app/src/main/res/layout/fragment_page2.xml" value="0.20520833333333333" />
+        <entry key="..\:/Logwinder/app/src/main/res/layout/fragment_page3.xml" value="0.20520833333333333" />
+        <entry key="..\:/Logwinder/app/src/main/res/layout/fragment_page4.xml" value="0.24048913043478262" />
+        <entry key="..\:/Logwinder/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.3302083333333333" />
+        <entry key="..\:/Logwinder/app/src/main/res/menu/menu_chulo.xml" value="0.3302083333333333" />
+        <entry key="..\:/PROYECTOS_ANDROID/AndroidStudioProjects/Logwinder/app/src/main/res/drawable/ic_logoapp.xml" value="0.3578125" />
+        <entry key="..\:/PROYECTOS_ANDROID/AndroidStudioProjects/Logwinder/app/src/main/res/layout/activity_main.xml" value="0.20878623188405798" />
+        <entry key="..\:/PROYECTOS_ANDROID/AndroidStudioProjects/Logwinder/app/src/main/res/layout/activity_navigation.xml" value="0.296195652173913" />
+        <entry key="..\:/PROYECTOS_ANDROID/AndroidStudioProjects/Logwinder/app/src/main/res/layout/activity_splash.xml" value="0.296195652173913" />
+        <entry key="..\:/PROYECTOS_ANDROID/AndroidStudioProjects/Logwinder/app/src/main/res/layout/fragment_navigation.xml" value="0.296195652173913" />
+        <entry key="..\:/PROYECTOS_ANDROID/AndroidStudioProjects/Logwinder/app/src/main/res/layout/fragment_page1.xml" value="0.296195652173913" />
+        <entry key="..\:/PROYECTOS_ANDROID/AndroidStudioProjects/Logwinder/app/src/main/res/layout/fragment_page2.xml" value="0.296195652173913" />
+        <entry key="..\:/PROYECTOS_ANDROID/AndroidStudioProjects/Logwinder/app/src/main/res/layout/fragment_page3.xml" value="0.296195652173913" />
+        <entry key="..\:/PROYECTOS_ANDROID/AndroidStudioProjects/Logwinder/app/src/main/res/layout/fragment_page4.xml" value="0.296195652173913" />
       </map>
     </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
   </component>
 </project>
