@@ -28,7 +28,7 @@ public class SplashActivity extends AppCompatActivity {
         new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(SplashActivity.this, Navigation.class);
+                Intent intent = new Intent(SplashActivity.this, ViewPager.class);
                 //SIRVE PARA CUANDO SE LE DE AL BOTON DE ATRAS SE SALGA DE LA APLICACION EN VEZ DE IR A LA PANTALLA ANTERIOR
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
