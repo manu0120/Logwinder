@@ -13,7 +13,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.alemanal.logwinder.ui.main.SectionsPagerAdapter;
 import com.alemanal.logwinder.databinding.ActivityNavigation2Binding;
 
 public class Navigation extends AppCompatActivity {
@@ -28,9 +27,9 @@ public class Navigation extends AppCompatActivity {
         binding = ActivityNavigation2Binding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
-        ViewPager viewPager = binding.viewPager;
-        viewPager.setAdapter(sectionsPagerAdapter);
+//        SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
+//        ViewPager viewPager = binding.viewPager;
+//        viewPager.setAdapter(sectionsPagerAdapter);
 //        TabLayout tabs = binding.tabs;
 //        tabs.setupWithViewPager(viewPager);
 //        FloatingActionButton fab = binding.fab;
@@ -94,38 +93,38 @@ public class Navigation extends AppCompatActivity {
 
 //        here we listen to viewpager moves and set navigations items checked or not
 
-        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+//        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+//            @Override
+//            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+//
+//            }
+//
+//            @Override
+//            public void onPageSelected(int position) {
+//                if (prevMenuItem != null)
+//                    prevMenuItem.setChecked(false);
+//
+//                else
+//                    mybottomNavView.getMenu().getItem(0).setChecked(false);
+//
+//                mybottomNavView.getMenu().getItem(position).setChecked(true);
+//                removeBadge(mybottomNavView,mybottomNavView.getMenu().getItem(position).getItemId());
+//                prevMenuItem = mybottomNavView.getMenu().getItem(position);
+//            }
+//
+//            @Override
+//            public void onPageScrollStateChanged(int state) {
+//
+//            }
+//        });
+//
+//    }
 
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-                if (prevMenuItem != null)
-                    prevMenuItem.setChecked(false);
-
-                else
-                    mybottomNavView.getMenu().getItem(0).setChecked(false);
-
-                mybottomNavView.getMenu().getItem(position).setChecked(true);
-                removeBadge(mybottomNavView,mybottomNavView.getMenu().getItem(position).getItemId());
-                prevMenuItem = mybottomNavView.getMenu().getItem(position);
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-
-            }
-        });
-
-    }
-
-    //removing badges
-    public static void removeBadge(BottomNavigationView bottomNavigationView, @IdRes int itemId) {
-        BottomNavigationItemView itemView = bottomNavigationView.findViewById(itemId);
-        if (itemView.getChildCount() == 3) {
-            itemView.removeViewAt(2);
-        }
+//    //removing badges
+//    public static void removeBadge(BottomNavigationView bottomNavigationView, @IdRes int itemId) {
+//        BottomNavigationItemView itemView = bottomNavigationView.findViewById(itemId);
+//        if (itemView.getChildCount() == 3) {
+//            itemView.removeViewAt(2);
+//        }
     }
 }
