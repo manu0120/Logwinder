@@ -5,10 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 <!--    UN EJEMPLO DEL LAYOUT DE UN FRAGMENTO    -->
-    <TextView style="?android:textAppearanceMedium"
-        android:padding="16dp"
-        android:lineSpacingMultiplier="1.2"
+    <TextView
+        style="?android:textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="555555555555" />
+        android:lineSpacingMultiplier="1.2"
+        android:padding="16dp"
+        android:text="klklnkj" />
 </ScrollView>

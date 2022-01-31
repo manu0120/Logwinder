@@ -8,11 +8,12 @@ import android.view.ViewGroup;
 import androidx.fragment.app.Fragment;
 
 import com.alemanal.logwinder.R;
+
 //Esto es un ejemplo de como seria un fragment
-public class Prueba2 extends Fragment {
+public class Prueba3 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         //Infla el layout fragment_prueba1
-        return (ViewGroup) inflater.inflate(R.layout.fragment_prueba2, container, false);
+        return (ViewGroup) inflater.inflate(R.layout.fragment_prueba3, container, false);
     }
 }

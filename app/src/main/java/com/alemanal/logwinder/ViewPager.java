@@ -12,7 +12,7 @@ import androidx.viewpager2.widget.ViewPager2;
 import android.os.Bundle;
 import android.view.View;
 
-import com.alemanal.logwinder.fragments.Prueba1;
+import com.alemanal.logwinder.fragments.*;
 import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 import com.google.android.material.bottomnavigation.BottomNavigationMenuView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -23,7 +23,7 @@ import com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator;
 
 public class ViewPager extends FragmentActivity {
     //Dicta el número de paginas
-    private static final int NUM_PAGES = 2;
+    private static final int NUM_PAGES = 4;
     //Pager widget, que otorga animacion y posibilidad de swipear lateralmente
     private ViewPager2 view_pager;
     //El adapter que provee las páginas al ViewPager
@@ -40,6 +40,7 @@ public class ViewPager extends FragmentActivity {
         view_pager.setAdapter(pagerAdapter);
         dotsIndicator = (WormDotsIndicator) findViewById(R.id.worm_dots_indicator);
         dotsIndicator.setViewPager2(view_pager);
+        view_pager.
 //        BottomNavigationView myBottomNavView = findViewById(R.id.bottom_navigation2);
 //        BottomNavigationMenuView bottomNavigationMenuView = (BottomNavigationMenuView) myBottomNavView.getChildAt(0);
 //        View v = bottomNavigationMenuView.getChildAt(2);
@@ -65,7 +66,18 @@ public class ViewPager extends FragmentActivity {
 
         @Override
         public Fragment createFragment(int position) {
-            return new Prueba1();
+            switch(position){
+                case 0:
+                    return new Prueba1();
+                case 1:
+                    return new Prueba2();
+                case 2:
+                    return new Prueba3();
+                case 3:
+                    return new Prueba4();
+                default:
+                    return new Prueba1();
+            }
         }
 
         @Override
