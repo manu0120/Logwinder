@@ -1,15 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- fragment_screen_slide_page.xml -->
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/content"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent">
 <!--    UN EJEMPLO DEL LAYOUT DE UN FRAGMENTO    -->
     <TextView
+        android:id="@+id/tv1"
         style="?android:textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:lineSpacingMultiplier="1.2"
         android:padding="16dp"
-        android:text="8888888888882" />
-</ScrollView>
+        android:text="8888888888882"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+
+
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cd1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+
+        android:focusable="true"
+        android:clickable="true"
+        app:cardCornerRadius="10dp"
+        android:foreground="?android:attr/selectableItemBackground"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv1"
+        >
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="85dp"
+            android:layout_gravity="start"
+            android:layout_marginStart="20dp"
+
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_air_conditioner">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Aire acondicionado" />
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

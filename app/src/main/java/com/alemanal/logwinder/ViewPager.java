@@ -40,7 +40,7 @@ public class ViewPager extends FragmentActivity {
         view_pager.setAdapter(pagerAdapter);
         dotsIndicator = (WormDotsIndicator) findViewById(R.id.worm_dots_indicator);
         dotsIndicator.setViewPager2(view_pager);
-        view_pager.
+
 //        BottomNavigationView myBottomNavView = findViewById(R.id.bottom_navigation2);
 //        BottomNavigationMenuView bottomNavigationMenuView = (BottomNavigationMenuView) myBottomNavView.getChildAt(0);
 //        View v = bottomNavigationMenuView.getChildAt(2);
