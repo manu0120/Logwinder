@@ -15,9 +15,10 @@
         android:layout_height="wrap_content"
         android:lineSpacingMultiplier="1.2"
         android:padding="16dp"
-        android:text="8888888888882"
+        android:text="¿Cuáles de estos electrodomesticos usas en casa? "
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         />
 
     <ScrollView
@@ -31,7 +32,7 @@
             android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cd1"
+                android:id="@+id/cv1"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
 
@@ -57,7 +58,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="Aire acondicionado" />
+                    android:text="Frigorífico" />
 
                 <CheckBox
                     android:id="@+id/cb1"
@@ -67,7 +68,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cd2"
+                android:id="@+id/cv2"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
 
@@ -103,7 +104,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cd3"
+                android:id="@+id/cv3"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
 
@@ -139,7 +140,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cd4"
+                android:id="@+id/cv4"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
 
@@ -175,7 +176,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cd5"
+                android:id="@+id/cv5"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
 
