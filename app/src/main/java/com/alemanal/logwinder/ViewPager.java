@@ -2,6 +2,7 @@ package com.alemanal.logwinder;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
@@ -11,6 +12,8 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 
 import com.alemanal.logwinder.fragments.*;
 import com.google.android.material.bottomnavigation.BottomNavigationItemView;
@@ -20,6 +23,8 @@ import com.google.android.material.navigation.NavigationBarItemView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.tbuonomo.viewpagerdotsindicator.DotsIndicator;
 import com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator;
+
+import java.util.ArrayList;
 
 public class ViewPager extends FragmentActivity {
     //Dicta el número de paginas
@@ -40,7 +45,6 @@ public class ViewPager extends FragmentActivity {
         view_pager.setAdapter(pagerAdapter);
         dotsIndicator = (WormDotsIndicator) findViewById(R.id.worm_dots_indicator);
         dotsIndicator.setViewPager2(view_pager);
-
 //        BottomNavigationView myBottomNavView = findViewById(R.id.bottom_navigation2);
 //        BottomNavigationMenuView bottomNavigationMenuView = (BottomNavigationMenuView) myBottomNavView.getChildAt(0);
 //        View v = bottomNavigationMenuView.getChildAt(2);
@@ -72,9 +76,9 @@ public class ViewPager extends FragmentActivity {
                 case 1:
                     return new Prueba2();
                 case 2:
-                    return new Prueba3();
-                case 3:
                     return new Prueba4();
+                case 3:
+                    return new Prueba21();
                 default:
                     return new Prueba1();
             }

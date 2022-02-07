@@ -8,6 +8,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 
 import androidx.cardview.widget.CardView;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import com.alemanal.logwinder.R;
@@ -16,46 +17,49 @@ import java.util.ArrayList;
 
 //Esto es un ejemplo de como seria un fragment
 public class Prueba4 extends Fragment {
-    ArrayList<CheckBox> preferencias;
-    private CheckBox cb1, cb2, cb3, cb4, cb5;
-
-    private CardView cv1, cv2, cv3, cv4, cv5;
-
+    private CheckBox cb1;
+    private View v;
+    private CardView cv1;
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        //Infla el layout fragment_prueba1
-        return (ViewGroup) inflater.inflate(R.layout.fragment_prueba4, container, false);
+        v = inflater.inflate(R.layout.fragment_prueba4, container, false);
 
-        //rellenamos el arrayList
-//        preferencias.add(getView().findViewById(R.id.cb1));
-    }
-
-    public void onViewCreated(View view, Bundle savedInstanceState){
-        cb1 =getView().findViewById(R.id.cb1);
-        cb2 =getView().findViewById(R.id.cb2);
-        cb3 =getView().findViewById(R.id.cb3);
-        cb4 =getView().findViewById(R.id.cb4);
-        cb5 =getView().findViewById(R.id.cb5);
-
-        cv1 =getView().findViewById(R.id.cv1);
-        cv2 =getView().findViewById(R.id.cv2);
-        cv3 =getView().findViewById(R.id.cv3);
-        cv4 =getView().findViewById(R.id.cv4);
-        cv5 =getView().findViewById(R.id.cv5);
-
-        preferencias.add(cb1);
-        preferencias.add(cb2);
-        preferencias.add(cb3);
-        preferencias.add(cb4);
-        preferencias.add(cb5);
-
+        cb1 = v.findViewById(R.id.cb1);
+        cv1 = v.findViewById(R.id.cv1);
+        cv1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                compColorCV();
+            }
+        });
         cb1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                cv1.setCardBackgroundColor(@color/secondaryColor);
-                cv2.setCardBackgroundColor(R.color.secondaryColor);
-
+                compColorCB();
             }
         });
 
+
+        //Infla el layout fragment_prueba1
+        return v;
     }
+    private void compColorCV() {
+        String currentColor =  Integer.toHexString(cv1.getCardBackgroundColor().getDefaultColor());
+        String secondaryColor = Integer.toHexString(ContextCompat.getColor(getContext(), R.color.secondaryColor));
+        if(currentColor.equalsIgnoreCase(secondaryColor)) {
+            cv1.setCardBackgroundColor(getResources().getColor(R.color.white));
+            cb1.setChecked(false);
+
+        }
+        else {
+            cv1.setCardBackgroundColor(getResources().getColor(R.color.secondaryColor));
+            cb1.setChecked(true);
+        }
+    }
+    private void compColorCB() {
+        if(cb1.isChecked())
+            cv1.setCardBackgroundColor(getResources().getColor(R.color.secondaryColor));
+        else
+            cv1.setCardBackgroundColor(getResources().getColor(R.color.white));
+    }
+
 }
