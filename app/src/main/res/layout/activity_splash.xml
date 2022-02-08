@@ -17,14 +17,27 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <ImageView
-        android:id="@+id/ic_splash"
-        android:layout_width="293dp"
-        android:layout_height="389dp"
-        android:src="@drawable/ic_splash"
+        android:id="@+id/giro"
+        android:layout_width="206dp"
+        android:layout_height="206dp"
+        android:src="@drawable/ic_logoappfondo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/gifImageView"
-        app:layout_constraintVertical_bias="1" />
+        app:layout_constraintVertical_bias="0.64" />
+    <ImageView
+        android:id="@+id/rayo"
+        android:layout_width="206dp"
+        android:layout_height="206dp"
+        android:src="@drawable/ic_logorayo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gifImageView"
+        app:layout_constraintVertical_bias="0.64"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

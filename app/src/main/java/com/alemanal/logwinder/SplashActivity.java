@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SplashActivity extends AppCompatActivity {
-    ImageView logo_splash;
+    ImageView logo_splash,logo_thunder;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,9 +19,12 @@ public class SplashActivity extends AppCompatActivity {
         //SIRVE PARA HACER LA TRANSICION ENTRE EL SPLASH Y EL ACTIVITY DE NAVIGATION
         openNavigation(true);
         //ANIMACION LOGO
-        logo_splash = (ImageView) findViewById(R.id.ic_splash);
+        logo_splash = (ImageView) findViewById(R.id.giro);
         Animation splash = AnimationUtils.loadAnimation(this,R.anim.splash_anim);
+        logo_thunder = (ImageView) findViewById(R.id.rayo);
+        Animation thunder = AnimationUtils.loadAnimation(this,R.anim.thunder_anim);
         logo_splash.startAnimation(splash);
+        logo_thunder.startAnimation(thunder);
     }
     //SIRVE PARA HACER LA TRANSICION ENTRE EL SPLASH Y EL ACTIVITY DE NAVIGATION
     public void openNavigation(boolean locationPermission){
@@ -34,6 +37,6 @@ public class SplashActivity extends AppCompatActivity {
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
             }
-        }, 3500);
+        }, 4000);
     }
 }
