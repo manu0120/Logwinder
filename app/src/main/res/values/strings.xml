@@ -1,8 +1,24 @@
 <resources>
     <string name="app_name">Logwinder</string>
-    <string name="title_activity_navigation2">Navigation2</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
+    <string name="title_activity_navigation2" translatable="false">Navigation2</string>
+    <string name="tab_text_1" translatable="false">Tab 1</string>
+    <string name="tab_text_2" translatable="false">Tab 2</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+
+    <!-- Electrodomésticos -->
+    <string name="frigorifico">Frigorifico</string>
+    <string name="Congelador">Congelador</string>
+    <string name="Horno">Horno</string>
+    <string name="microondas">Microondas</string>
+    <string name="Lavadora">Lavadora</string>
+    <string name="Lavavajillas">Lavavajillas</string>
+    <string name="secadora">Secadora</string>
+    <string name="vitroceramica">Vitroceramica</string>
+    <string name="caldera">Caldera</string>
+    <string name="aire">Aire Acondicionado</string>
+    <string name="radiador">Radiador</string>
+    <string name="plancha">Plancha</string>
+    <string name="aspiradora">Aspiradora</string>
+
 </resources>
