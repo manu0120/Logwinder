@@ -58,7 +58,7 @@
                     android:text="Frigorífico" />
 
                 <CheckBox
-                    android:id="@+id/cb1"
+                    android:id="@+id/checkFrigo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center|end"

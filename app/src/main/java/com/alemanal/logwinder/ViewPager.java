@@ -3,6 +3,7 @@ package com.alemanal.logwinder;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
@@ -10,10 +11,14 @@ import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.content.Context;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.Toast;
 
 import com.alemanal.logwinder.fragments.*;
 import com.google.android.material.bottomnavigation.BottomNavigationItemView;
@@ -25,6 +30,7 @@ import com.tbuonomo.viewpagerdotsindicator.DotsIndicator;
 import com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class ViewPager extends FragmentActivity {
     //Dicta el número de paginas
@@ -34,6 +40,7 @@ public class ViewPager extends FragmentActivity {
     //El adapter que provee las páginas al ViewPager
     private FragmentStateAdapter pagerAdapter;
     WormDotsIndicator dotsIndicator;
+    public static HashMap<String,Boolean> data;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -89,4 +96,68 @@ public class ViewPager extends FragmentActivity {
             return NUM_PAGES;
         }
     }
+
+    public static void compColorCV(CardView cv1, CheckBox cb1, Context con) {
+        String currentColor =  Integer.toHexString(cv1.getCardBackgroundColor().getDefaultColor());
+        String secondaryColor = Integer.toHexString(ContextCompat.getColor(con,R.color.secondaryColor));
+        if(currentColor.equalsIgnoreCase(secondaryColor)) {
+            cv1.setCardBackgroundColor(con.getResources().getColor(R.color.white));
+            cb1.setChecked(false);
+
+        }
+        else {
+            cv1.setCardBackgroundColor(con.getResources().getColor(R.color.secondaryColor));
+            cb1.setChecked(true);
+        }
+    }
+    public static void compColorCB(CardView cv1,CheckBox cb1,Context con) {
+        if(cb1.isChecked()) {
+            cv1.setCardBackgroundColor(con.getResources().getColor(R.color.secondaryColor));
+        }
+        else
+            cv1.setCardBackgroundColor(con.getResources().getColor(R.color.white));
+    }
+    public static void chekealos(ArrayList<CheckBox> ach, Context con){
+        for(CheckBox ch : ach){
+//            if (ch.isChecked())
+//                data.put(((View)ch).getId(),true);
+//            else data.put(((View)ch).getId(),false);
+            String id = con.getResources().getResourceEntryName(((View)ch).getId());
+            data.put(id,false);
+        }
+    }
+    public static void onCheckboxClicked(View view) {
+        // Is the view now checked?
+        boolean checked = ((CheckBox) view).isChecked();
+
+        // Check which checkbox was clicked
+        switch(view.getId()) {
+            case R.id.checkFrigo:
+                if (checked) {
+                    data.put("checkFrigo", true);
+                    System.out.println(data.get("checkFrigo"));
+                }
+              else
+                    System.out.println("frigo no cheked");
+                break;
+            case R.id.cb2:
+                if (checked)
+                    System.out.println("opcion 2 cheked");
+                else
+                    System.out.println("option 2 no cheked");
+                break;
+        }
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
