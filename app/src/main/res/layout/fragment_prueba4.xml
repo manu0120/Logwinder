@@ -20,15 +20,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ScrollView
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@+id/tv1">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cv1"
@@ -57,164 +55,129 @@
                     android:layout_gravity="center"
                     android:text="Frigorífico" />
 
-                <CheckBox
-                    android:id="@+id/checkFrigo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center|end"
-                    android:layout_marginEnd="16dp"/>
             </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv2"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cv2"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="10dp"
 
-                android:clickable="true"
-                android:focusable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                app:cardCornerRadius="10dp"
+            >
 
-                >
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="85dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="20dp"
 
-                <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="85dp"
-                    android:layout_gravity="start"
-                    android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_air_conditioner">
 
-                    android:layout_marginTop="10dp"
-                    android:src="@drawable/ic_air_conditioner">
+            </ImageView>
 
-                </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Aire acondicionado" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="Aire acondicionado" />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv3"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
 
-                <CheckBox
-                    android:id="@+id/cb2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end|center"
-                    android:layout_marginEnd="16dp"/>
-            </androidx.cardview.widget.CardView>
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="10dp"
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cv3"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
+            >
 
-                android:clickable="true"
-                android:focusable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                app:cardCornerRadius="10dp"
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="85dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="20dp"
 
-                >
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_air_conditioner">
 
-                <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="85dp"
-                    android:layout_gravity="start"
-                    android:layout_marginStart="20dp"
+            </ImageView>
 
-                    android:layout_marginTop="10dp"
-                    android:src="@drawable/ic_air_conditioner">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Aire acondicionado" />
 
-                </ImageView>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv4"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="Aire acondicionado" />
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="10dp"
 
-                <CheckBox
-                    android:id="@+id/cb3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end|center"
-                    android:layout_marginEnd="16dp"/>
-            </androidx.cardview.widget.CardView>
+            >
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cv4"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="85dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="20dp"
 
-                android:clickable="true"
-                android:focusable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                app:cardCornerRadius="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_air_conditioner">
 
-                >
+            </ImageView>
 
-                <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="85dp"
-                    android:layout_gravity="start"
-                    android:layout_marginStart="20dp"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Aire acondicionado" />
 
-                    android:layout_marginTop="10dp"
-                    android:src="@drawable/ic_air_conditioner">
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv5"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
 
-                </ImageView>
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="10dp"
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="Aire acondicionado" />
+            >
 
-                <CheckBox
-                    android:id="@+id/cb4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end|center"
-                    android:layout_marginEnd="16dp"/>
-            </androidx.cardview.widget.CardView>
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="85dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="20dp"
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cv5"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_air_conditioner">
 
-                android:clickable="true"
-                android:focusable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                app:cardCornerRadius="10dp"
+            </ImageView>
 
-                >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Aire acondicionado" />
 
-                <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="85dp"
-                    android:layout_gravity="start"
-                    android:layout_marginStart="20dp"
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
 
-                    android:layout_marginTop="10dp"
-                    android:src="@drawable/ic_air_conditioner">
-
-                </ImageView>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="Aire acondicionado" />
-
-                <CheckBox
-                    android:id="@+id/cb5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end|center"
-                    android:layout_marginEnd="16dp"/>
-            </androidx.cardview.widget.CardView>
-
-        </LinearLayout>
-    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
