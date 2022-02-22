@@ -44,17 +44,6 @@ public class Navigation extends AppCompatActivity {
 
         // cast al xml
         BottomNavigationView mybottomNavView = findViewById(R.id.bottom_navigation);
-
-        // crear badges
-        /*BottomNavigationMenuView bottomNavigationMenuView =
-                (BottomNavigationMenuView) mybottomNavView.getChildAt(0);
-        View v = bottomNavigationMenuView.getChildAt(2);
-        BottomNavigationItemView itemView = (BottomNavigationItemView) v;
-
-        LayoutInflater.from(this)
-                .inflate(R.layout.layout_badge, itemView, true);*/
-
-
         mybottomNavView.setOnItemSelectedListener(new BottomNavigationView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
