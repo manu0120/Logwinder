@@ -7,6 +7,17 @@
     android:orientation="vertical"
     tools:context=".Profile">
 
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/bottom_navigation_menu"
+        android:layout_alignParentBottom="true"
+        style="@style/navigBar"
+        />
     <TextView
         android:id="@+id/titleProfile"
         android:layout_width="match_parent"

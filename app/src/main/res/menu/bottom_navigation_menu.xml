@@ -2,14 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/heart"
-        android:title="Favorite"
+        android:id="@+id/home"
+        android:title="Home"
         android:icon="@drawable/ic_action_data"
         app:showAsAction="always"
         />
     <item
-        android:id="@+id/search"
-        android:title="Lenguage"
+        android:id="@+id/tips"
+        android:title="Tips"
         android:icon="@drawable/ic_action_name"
         app:showAsAction="always"
         />
@@ -20,8 +20,8 @@
         app:showAsAction="always"
         />
     <item
-        android:id="@+id/browse"
-        android:title="Lock"
+        android:id="@+id/settings"
+        android:title="Settings"
         android:icon="@drawable/ic_action_settings"
         app:showAsAction="always"
         />
