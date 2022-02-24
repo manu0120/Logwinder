@@ -14,4 +14,15 @@
         app:layout_constraintTop_toTopOf="parent"
         app:menu="@menu/bottom_navigation_menu"
         style="@style/navigBar"/>
+
+    <ListView
+        android:id="@+id/listaMain"
+        android:layout_width="409dp"
+        android:layout_height="385dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bottom_navigation2" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

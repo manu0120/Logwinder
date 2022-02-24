@@ -2,12 +2,14 @@ package com.alemanal.logwinder;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
+import com.alemanal.logwinder.api.Posts;
 import android.os.Bundle;
 import android.widget.Toast;
 
 import com.alemanal.logwinder.api.Pvpc;
 import com.alemanal.logwinder.interfaces.JsonPlaceHolderApi;
+
+import java.util.ArrayList;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -18,6 +20,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class precioDiario extends AppCompatActivity {
     private SwipeRefreshLayout swrl;
     Pvpc pvpc;
+    ArrayList<Object> listaInformacion;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,9 +35,13 @@ public class precioDiario extends AppCompatActivity {
                     }
                 }
         );
-        pvpc.get0001().getHour();
+
+        //pvpc.get0001().getHour();
 
     }
+
+
+
     private void getPosts(){
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://api.preciodelaluz.org")
@@ -48,6 +55,7 @@ public class precioDiario extends AppCompatActivity {
                 if (!response.isSuccessful()) {
                     Toast.makeText(precioDiario.this,"Código: " + response.code(),Toast.LENGTH_SHORT);
                     pvpc = response.body();
+
                     return;
                 }
             }

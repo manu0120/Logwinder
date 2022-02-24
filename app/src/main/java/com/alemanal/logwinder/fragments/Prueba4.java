@@ -28,7 +28,7 @@ public class Prueba4 extends Fragment {
         cv2 = v.findViewById(R.id.cv2);
         cv3 = v.findViewById(R.id.cv3);
         cv4 = v.findViewById(R.id.cv4);
-        cv5 = v.findViewById(R.id.cv5);
+        //cv5 = v.findViewById(R.id.cv5);
         arch = new ArrayList<CardView>();
 
         cv1.setOnClickListener(new View.OnClickListener() {
