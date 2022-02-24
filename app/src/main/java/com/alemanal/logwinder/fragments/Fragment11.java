@@ -1,13 +1,9 @@
 package com.alemanal.logwinder.fragments;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
-import android.widget.LinearLayout;
 
 import com.alemanal.logwinder.ViewPager;
 import androidx.cardview.widget.CardView;
@@ -18,12 +14,12 @@ import com.alemanal.logwinder.R;
 import java.util.ArrayList;
 
 //Esto es un ejemplo de como seria un fragment
-public class Prueba4 extends Fragment {
+public class Fragment11 extends Fragment {
     private View v;
     private CardView cv1,cv2,cv3,cv4,cv5;
     private ArrayList<CardView> arch;
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        v = inflater.inflate(R.layout.fragment_prueba4, container, false);
+        v = inflater.inflate(R.layout.fragment_11, container, false);
         cv1 = v.findViewById(R.id.cv1);
         cv2 = v.findViewById(R.id.cv2);
         cv3 = v.findViewById(R.id.cv3);

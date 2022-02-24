@@ -1,32 +1,17 @@
 package com.alemanal.logwinder;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.content.Context;
-import android.content.res.Configuration;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
-import android.widget.Toast;
 
 import com.alemanal.logwinder.fragments.*;
-import com.google.android.material.bottomnavigation.BottomNavigationItemView;
-import com.google.android.material.bottomnavigation.BottomNavigationMenuView;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.navigation.NavigationBarItemView;
-import com.google.android.material.navigation.NavigationBarView;
-import com.tbuonomo.viewpagerdotsindicator.DotsIndicator;
 import com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator;
 
 import java.util.ArrayList;
@@ -79,15 +64,15 @@ public class ViewPager extends FragmentActivity {
         public Fragment createFragment(int position) {
             switch(position){
                 case 0:
-                    return new Prueba1();
+                    return new Fragment0();
                 case 1:
-                    return new Prueba2();
+                    return new Fragment11();
                 case 2:
-                    return new Prueba4();
+                    return new Fragment12();
                 case 3:
-                    return new Prueba21();
+                    return new Fragment111();
                 default:
-                    return new Prueba1();
+                    return new Prueba21();
             }
         }
         @Override

@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- fragment_screen_slide_page.xml -->
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/content"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-<!--    UN EJEMPLO DEL LAYOUT DE UN FRAGMENTO    -->
+    <!--    UN EJEMPLO DEL LAYOUT DE UN FRAGMENTO    -->
 
     <TextView
         android:id="@+id/tv1"
@@ -15,7 +14,7 @@
         android:layout_height="wrap_content"
         android:lineSpacingMultiplier="1.2"
         android:padding="16dp"
-        android:text="¿Cuáles de estos electrodomesticos usas en casa? "
+        android:text="Aparte de los anteriores, ¿usas algún otro electrodoméstico  en la cocina? "
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -28,36 +27,36 @@
         app:layout_constraintTop_toBottomOf="@+id/tv1">
 
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cv1"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-
-                android:clickable="true"
-                android:focusable="true"
-
-                app:cardCornerRadius="10dp">
-
-                <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="85dp"
-                    android:layout_gravity="start"
-                    android:layout_marginStart="20dp"
-
-                    android:layout_marginTop="10dp"
-                    android:src="@drawable/ic_air_conditioner">
-
-                </ImageView>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="Frigorífico" />
-
-            </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
-            android:id="@+id/cv2"
+            android:id="@+id/cv6"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+
+            android:clickable="true"
+            android:focusable="true"
+
+            app:cardCornerRadius="10dp">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="85dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="20dp"
+
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_washing_machine">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Lavadora" />
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv7"
             android:layout_width="match_parent"
             android:layout_height="100dp"
 
@@ -75,7 +74,7 @@
                 android:layout_marginStart="20dp"
 
                 android:layout_marginTop="10dp"
-                android:src="@drawable/ic_air_conditioner">
+                android:src="@drawable/ic_dishwasher">
 
             </ImageView>
 
@@ -83,11 +82,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Aire acondicionado" />
+                android:text="Lavavajillas" />
 
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
-            android:id="@+id/cv3"
+            android:id="@+id/cv8"
             android:layout_width="match_parent"
             android:layout_height="100dp"
 
@@ -105,7 +104,7 @@
                 android:layout_marginStart="20dp"
 
                 android:layout_marginTop="10dp"
-                android:src="@drawable/ic_air_conditioner">
+                android:src="@drawable/ic_dryer2">
 
             </ImageView>
 
@@ -113,11 +112,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Aire acondicionado" />
+                android:text="Secadora" />
 
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
-            android:id="@+id/cv4"
+            android:id="@+id/cv9"
             android:layout_width="match_parent"
             android:layout_height="100dp"
 
@@ -135,7 +134,7 @@
                 android:layout_marginStart="20dp"
 
                 android:layout_marginTop="10dp"
-                android:src="@drawable/ic_air_conditioner">
+                android:src="@drawable/ic_caldera">
 
             </ImageView>
 
@@ -143,41 +142,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Aire acondicionado" />
+                android:text="Caldera" />
 
         </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cv5"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
 
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            app:cardCornerRadius="10dp"
 
-            >
 
-            <ImageView
-                android:layout_width="64dp"
-                android:layout_height="85dp"
-                android:layout_gravity="start"
-                android:layout_marginStart="20dp"
-
-                android:layout_marginTop="10dp"
-                android:src="@drawable/ic_air_conditioner">
-
-            </ImageView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Aire acondicionado" />
-
-        </androidx.cardview.widget.CardView>
     </LinearLayout>
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

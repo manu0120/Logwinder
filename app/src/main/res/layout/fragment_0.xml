@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.Fragment0">
+
+    <!--<ImageView
+        android:id="@+id/backgroundFrag0"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/fondo_azul"
+        android:scaleType="centerCrop"
+        />-->
+
+
+    <ImageView
+        android:id="@+id/iconFragment0"
+        android:layout_width="127dp"
+        android:layout_height="165dp"
+        android:layout_marginTop="64dp"
+        android:src="@drawable/ic_splash"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Bienvenido, vamos a mapear los
+electrodomesticos de tu casa u oficina. A continuación,
+procederemos a hacerte una serie de preguntas para poder
+hacer un análisis de tu consumo energético"
+
+        android:textStyle="bold"
+
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iconFragment0" />
+</androidx.constraintlayout.widget.ConstraintLayout>
