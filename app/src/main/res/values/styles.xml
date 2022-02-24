@@ -7,4 +7,10 @@
         <item name="itemIconTint">@color/secondaryColor</item>
         <item name="itemTextColor">@color/secondaryColor</item>
     </style>
+    <style name="AppBar" parent="Theme.Logwinder">
+        <item name="colorPrimary">@color/primaryDarkColor</item>
+
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
 </resources>
