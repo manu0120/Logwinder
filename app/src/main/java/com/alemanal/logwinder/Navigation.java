@@ -1,31 +1,32 @@
 package com.alemanal.logwinder;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import com.google.android.material.bottomappbar.BottomAppBar;
 import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.annotation.IdRes;
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
-import com.alemanal.logwinder.databinding.ActivityNavigation2Binding;
+import com.google.android.material.navigation.NavigationBarView;
 
 public class Navigation extends AppCompatActivity {
 
-    private ActivityNavigation2Binding binding;
     private MenuItem prevMenuItem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        binding = ActivityNavigation2Binding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+        setContentView(R.layout.activity_main);
 
 //        SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
 //        ViewPager viewPager = binding.viewPager;
@@ -36,6 +37,7 @@ public class Navigation extends AppCompatActivity {
 //
 //        fab.setOnClickListener(new View.OnClickListener() {
 //            @Override
+
 //            public void onClick(View view) {
 //                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
 //                        .setAction("Action", null).show();
@@ -43,45 +45,40 @@ public class Navigation extends AppCompatActivity {
 //        });
 
         // cast al xml
-        BottomNavigationView mybottomNavView = findViewById(R.id.bottom_navigation);
-
-        // crear badges
-        /*BottomNavigationMenuView bottomNavigationMenuView =
-                (BottomNavigationMenuView) mybottomNavView.getChildAt(0);
-        View v = bottomNavigationMenuView.getChildAt(2);
-        BottomNavigationItemView itemView = (BottomNavigationItemView) v;
-
-        LayoutInflater.from(this)
-                .inflate(R.layout.layout_badge, itemView, true);*/
 
 
-        mybottomNavView.setOnItemSelectedListener(new BottomNavigationView.OnItemSelectedListener() {
+        BottomAppBar mybottomNavView2 = findViewById(R.id.bottom_navigation2);
+        mybottomNavView2.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-
+            public boolean onMenuItemClick(MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.heart:
-                        item.setChecked(true);
+                        //item.setChecked(true);
                         Toast.makeText(Navigation.this, "Likes clicked.", Toast.LENGTH_SHORT).show();
 //                        removeBadge(mybottomNavView,item.getItemId());
 //                        viewPager.setCurrentItem(0);
                         break;
                     case R.id.search:
-                        item.setChecked(true);
+                        //item.setChecked(true);
                         Toast.makeText(Navigation.this, "Add clicked.", Toast.LENGTH_SHORT).show();
 //                        removeBadge(mybottomNavView,item.getItemId());
 //                        viewPager.setCurrentItem(1);
                         break;
                     case R.id.browse:
-                        item.setChecked(true);
+                        //item.setChecked(true);
                         Toast.makeText(Navigation.this, "Add clicked.", Toast.LENGTH_SHORT).show();
 //                        removeBadge(mybottomNavView,item.getItemId());
 //                        viewPager.setCurrentItem(2);
 
                         break;
                     case R.id.profile:
-                        item.setChecked(true);
+                        //item.setChecked(true);
                         Toast.makeText(Navigation.this, "Add clicked.", Toast.LENGTH_SHORT).show();
+//                        Intent intent = new Intent(Navigation.this, Profile.class);
+//                        startActivity(intent);
+
+
+
 //                        removeBadge(mybottomNavView,item.getItemId());
 //                        viewPager.setCurrentItem(3);
                         break;
@@ -89,6 +86,46 @@ public class Navigation extends AppCompatActivity {
                 return false;
             }
         });
+
+//        BottomNavigationView mybottomNavView = findViewById(R.id.bottom_navigation2);
+//        mybottomNavView.setOnItemSelectedListener(new BottomNavigationView.OnItemSelectedListener() {
+//            @Override
+//            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+//
+//                switch (item.getItemId()) {
+//                    case R.id.heart:
+//                        item.setChecked(true);
+//                        Toast.makeText(Navigation.this, "Likes clicked.", Toast.LENGTH_SHORT).show();
+////                        removeBadge(mybottomNavView,item.getItemId());
+////                        viewPager.setCurrentItem(0);
+//                        break;
+//                    case R.id.search:
+//                        item.setChecked(true);
+//                        Toast.makeText(Navigation.this, "Add clicked.", Toast.LENGTH_SHORT).show();
+////                        removeBadge(mybottomNavView,item.getItemId());
+////                        viewPager.setCurrentItem(1);
+//                        break;
+//                    case R.id.browse:
+//                        item.setChecked(true);
+//                        Toast.makeText(Navigation.this, "Add clicked.", Toast.LENGTH_SHORT).show();
+////                        removeBadge(mybottomNavView,item.getItemId());
+////                        viewPager.setCurrentItem(2);
+//
+//                        break;
+//                    case R.id.profile:
+//                        item.setChecked(true);
+//                        Toast.makeText(Navigation.this, "Add clicked.", Toast.LENGTH_SHORT).show();
+//                        Intent intent = new Intent(getApplicationContext(), Profile.class);
+//                        startActivity(intent);
+//
+//
+////                        removeBadge(mybottomNavView,item.getItemId());
+////                        viewPager.setCurrentItem(3);
+//                        break;
+//                }
+//                return false;
+//            }
+//        });
 
 
 //        here we listen to viewpager moves and set navigations items checked or not
@@ -127,4 +164,5 @@ public class Navigation extends AppCompatActivity {
 //            itemView.removeViewAt(2);
 //        }
     }
+
 }

@@ -17,15 +17,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="top"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:menu="@menu/bottom_navigation_menu"
-        style="@style/navigBar"/>
     <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
         android:id="@+id/worm_dots_indicator"
         android:layout_width="wrap_content"

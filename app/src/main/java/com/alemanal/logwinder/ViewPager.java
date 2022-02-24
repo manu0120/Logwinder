@@ -12,6 +12,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -85,7 +86,8 @@ public class ViewPager extends FragmentActivity {
                 case 2:
                     return new Prueba4();
                 case 3:
-                    return new Prueba21();
+                    Intent in = new Intent(ViewPager.this, MainActivity.class);
+                    startActivity(in);
                 default:
                     return new Prueba1();
             }
@@ -122,6 +124,9 @@ public class ViewPager extends FragmentActivity {
                 System.out.println(id+" "+data.get(id));
             }
         }
+    }
+    public HashMap<String,Boolean> getData(){
+        return data;
     }
 }
 
