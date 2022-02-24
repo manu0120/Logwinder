@@ -17,6 +17,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class precioDiario extends AppCompatActivity {
     private SwipeRefreshLayout swrl;
+    Pvpc pvpc;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +32,7 @@ public class precioDiario extends AppCompatActivity {
                     }
                 }
         );
+        pvpc.get0001().getHour();
 
     }
     private void getPosts(){
@@ -45,6 +47,7 @@ public class precioDiario extends AppCompatActivity {
             public void onResponse(Call<Pvpc> call, Response<Pvpc> response) {
                 if (!response.isSuccessful()) {
                     Toast.makeText(precioDiario.this,"Código: " + response.code(),Toast.LENGTH_SHORT);
+                    pvpc = response.body();
                     return;
                 }
             }
