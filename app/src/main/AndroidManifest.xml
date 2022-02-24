@@ -31,7 +31,7 @@
             android:exported="true"
             android:theme="@style/Theme.NoActionBar"></activity>
         <activity
-            android:name=".Navigation"
+            android:name=".cont"
             android:exported="true"
             android:theme="@style/Theme.NoActionBar"></activity>
     </application>

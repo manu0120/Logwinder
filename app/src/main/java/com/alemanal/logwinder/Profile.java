@@ -1,7 +1,7 @@
 package com.alemanal.logwinder;
 
 import androidx.appcompat.app.AppCompatActivity;
-import com.alemanal.logwinder.ViewPager;
+
 import android.os.Bundle;
 
 public class Profile extends AppCompatActivity {
