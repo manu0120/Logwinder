@@ -12,7 +12,6 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -32,6 +31,7 @@ import com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 public class ViewPager extends FragmentActivity {
     //Dicta el número de paginas
@@ -78,25 +78,65 @@ public class ViewPager extends FragmentActivity {
 
         @Override
         public Fragment createFragment(int position) {
+            Boolean b=true;
+            position = getPosition(position,b);
             switch(position){
                 case 0:
+                    b=false;
                     return new Prueba1();
                 case 1:
+                    b=false;
                     return new Prueba2();
                 case 2:
+                    b=false;
                     return new Prueba4();
-                case 3:
-                    Intent in = new Intent(ViewPager.this, MainActivity.class);
-                    startActivity(in);
-                default:
-                    return new Prueba1();
+                case 11:
+                    b=false;
+                    return new Prueba21();
             }
+            return new Prueba1();
         }
         @Override
         public int getItemCount() {
             return NUM_PAGES;
         }
     }
+
+    private int getPosition(int position,Boolean b) {
+        try {
+            for (Map.Entry<String, Boolean> entry : data.entrySet()) {
+                Boolean aBoolean = entry.getValue();
+                if (aBoolean)
+                    b = true;
+                else b = false;
+            }
+            if(b && data.get("cv1")) {
+                position += 10;
+                return position;
+            }
+            if(b && data.get("cv2")) {
+                position += 10;
+                return position;
+            }
+            if(b && data.get("cv3")) {
+                position += 10;
+                return position;
+            }
+            if(b && data.get("cv4")) {
+                position += 10;
+                return position;
+            }
+            if(b && data.get("cv5")) {
+                position += 10;
+                return position;
+            }
+            return position;
+        } catch(NullPointerException e){
+            return position;
+        }
+
+    }
+
     public static void compColor(CardView cv, Context con) {
         String currentColor =  Integer.toHexString(cv.getCardBackgroundColor().getDefaultColor());
         String secondaryColor = Integer.toHexString(ContextCompat.getColor(con,R.color.secondaryColor));
@@ -124,9 +164,6 @@ public class ViewPager extends FragmentActivity {
                 System.out.println(id+" "+data.get(id));
             }
         }
-    }
-    public HashMap<String,Boolean> getData(){
-        return data;
     }
 }
 

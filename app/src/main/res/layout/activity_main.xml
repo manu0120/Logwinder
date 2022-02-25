@@ -5,28 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
+        android:id="@+id/bottom_navigation2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="top"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:menu="@menu/bottom_navigation_menu"
-        android:layout_alignParentBottom="true"
-        style="@style/navigBar"
-        />
+        style="@style/navigBar"/>
 
     <ListView
-        android:layout_width="match_parent"
-        android:layout_height="673dp"
+        android:id="@+id/listaMain"
+        android:layout_width="409dp"
+        android:layout_height="675dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bottom_navigation" />
-
+        app:layout_constraintTop_toBottomOf="@+id/bottom_navigation2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
