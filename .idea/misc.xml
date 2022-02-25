@@ -3,33 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/PROYECTOS_ANDROID/AndroidStudioProjects/Logwinder/app/src/main/res/layout/activity_main.xml" value="0.3416666666666667" />
+        <entry key="..\:/PROYECTOS_ANDROID/AndroidStudioProjects/Logwinder/app/src/main/res/layout/lista_datos.xml" value="0.16470588235294117" />
         <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.37864583333333335" />
-        <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/drawable/ic_air_conditioner.xml" value="0.3675" />
-        <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/drawable/ic_dishwasher.xml" value="0.3675" />
-        <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/drawable/ic_drying_machine.xml" value="0.3675" />
-        <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/drawable/ic_fridge.xml" value="0.3675" />
         <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/drawable/ic_launcher_background.xml" value="0.37864583333333335" />
         <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/drawable/ic_launcher_logo_foreground.xml" value="0.37864583333333335" />
         <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/drawable/ic_splash.xml" value="0.37864583333333335" />
-        <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/drawable/ic_tv.xml" value="0.3675" />
-        <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/drawable/ic_washing_machine.xml" value="0.3675" />
-        <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/layout/activity_main.xml" value="0.3625" />
         <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/layout/activity_navigation.xml" value="0.3625" />
-        <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/layout/activity_navigation2.xml" value="0.1762917933130699" />
-        <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/layout/activity_profile.xml" value="0.3484375" />
         <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/layout/activity_splash.xml" value="0.3625" />
-        <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/layout/activity_view_pager.xml" value="0.25" />
         <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/layout/fragment_navigation.xml" value="0.3625" />
-        <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/layout/fragment_navigation2.xml" value="0.1762917933130699" />
         <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/layout/fragment_page1.xml" value="0.3625" />
         <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/layout/fragment_page2.xml" value="0.3625" />
         <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/layout/fragment_page3.xml" value="0.3625" />
         <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/layout/fragment_page4.xml" value="0.3625" />
-        <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/layout/fragment_prueba1.xml" value="0.2857789855072464" />
-        <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/layout/fragment_prueba2.xml" value="0.2857789855072464" />
-        <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/layout/fragment_prueba3.xml" value="0.28940217391304346" />
-        <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/layout/fragment_prueba4.xml" value="0.33" />
-        <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.2638888888888889" />
       </map>
     </option>
   </component>
