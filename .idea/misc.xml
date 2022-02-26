@@ -3,6 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Logwinder/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Logwinder/app/src/main/res/layout/activity_profile.xml" value="0.1" />
+        <entry key="..\:/Logwinder/app/src/main/res/layout/activity_view_pager.xml" value="0.36666666666666664" />
+        <entry key="..\:/Logwinder/app/src/main/res/layout/activity_view_pager_main.xml" value="0.20606884057971014" />
+        <entry key="..\:/Logwinder/app/src/main/res/layout/fragment_home.xml" value="0.35104166666666664" />
+        <entry key="..\:/Logwinder/app/src/main/res/layout/fragment_profile.xml" value="0.35260416666666666" />
+        <entry key="..\:/Logwinder/app/src/main/res/layout/fragment_prueba1.xml" value="0.36666666666666664" />
+        <entry key="..\:/Logwinder/app/src/main/res/layout/fragment_prueba2.xml" value="0.36666666666666664" />
+        <entry key="..\:/Logwinder/app/src/main/res/layout/fragment_prueba3.xml" value="0.36666666666666664" />
+        <entry key="..\:/Logwinder/app/src/main/res/layout/home.xml" value="0.36666666666666664" />
         <entry key="..\:/PROYECTOS_ANDROID/AndroidStudioProjects/Logwinder/app/src/main/res/layout/activity_main.xml" value="0.3416666666666667" />
         <entry key="..\:/PROYECTOS_ANDROID/AndroidStudioProjects/Logwinder/app/src/main/res/layout/lista_datos.xml" value="0.16470588235294117" />
         <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.37864583333333335" />

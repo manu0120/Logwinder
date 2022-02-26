@@ -1,21 +1,17 @@
-package com.alemanal.logwinder;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+package com.alemanal.logwinder.fragmentsMain;
 
 import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
 
-import com.alemanal.logwinder.api.Pvpc;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.alemanal.logwinder.R;
+import com.alemanal.logwinder.ViewPager;
 
-import java.util.ArrayList;
-
-public class Home extends Fragment {
+public class Profile extends Fragment {
     View v;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

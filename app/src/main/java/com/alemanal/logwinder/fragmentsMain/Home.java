@@ -1,16 +1,17 @@
-package com.alemanal.logwinder;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+package com.alemanal.logwinder.fragmentsMain;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import androidx.fragment.app.Fragment;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
+import com.alemanal.logwinder.R;
 import com.alemanal.logwinder.api.Pvpc;
 import com.alemanal.logwinder.interfaces.JsonPlaceHolderApi;
 
@@ -22,8 +23,9 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class MainActivity extends AppCompatActivity {
-
+//Esto es un ejemplo de como seria un fragment
+public class Home extends Fragment {
+    private View v;
     private SwipeRefreshLayout swrl;
     Pvpc pvpc;
     ArrayList<String> listaInformacionn;
@@ -34,20 +36,17 @@ public class MainActivity extends AppCompatActivity {
     String dato;
     double media;
     double kilowatio;
-
-    Object[] items;
-
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view_pager_main);
-        listaMain = (ListView) findViewById(R.id.listaMain);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        v = inflater.inflate(R.layout.fragment_home, container, false);
+        getPosts();
+        listaMain = (ListView) v.findViewById(R.id.listaMain);
         pvpc = new Pvpc();
         /*datos = new ArrayList<String>();
         datos.add("hola");*/
 
         //Listener para obtener los datos si se refresca la pantalla.
-        swrl = new SwipeRefreshLayout(getApplicationContext());
+        swrl = new SwipeRefreshLayout(getContext());
         swrl.setOnRefreshListener(
                 new SwipeRefreshLayout.OnRefreshListener() {
                     @Override
@@ -66,16 +65,13 @@ public class MainActivity extends AppCompatActivity {
 
         return listaInformacion;
     }*/
-       // listaInformacionn = new ArrayList<String>();
+        // listaInformacionn = new ArrayList<String>();
         //listaInformacionn.add(dato);
 
         /*ArrayAdapter adaptador = new ArrayAdapter(this, android.R.layout.simple_list_item_1,listaInformacionn);
         listaMain.setAdapter(adaptador);*/
-
+        return v;
     }
-
-
-
     private void getPosts(){
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://api.preciodelaluz.org")
@@ -87,13 +83,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<Pvpc> call, Response<Pvpc> response) {
                 if (!response.isSuccessful()) {
-                    Toast.makeText(MainActivity.this,"Código: " + response.code(),Toast.LENGTH_SHORT);
+                    System.out.println("Código: " + response.code());
                     return;
                 }
-                
+
                 pvpc = response.body();
-                
-                
+
                 dato = pvpc.get0001().getHour();
                 System.out.println(dato);
                 hora();
@@ -105,15 +100,14 @@ public class MainActivity extends AppCompatActivity {
                 //listaInformacionn = new ArrayList<String>();
                 //listaInformacionn.add(dato);
 
-
 //                ArrayAdapter adaptador = new ArrayAdapter(getApplicationContext(), android.R.layout.simple_list_item_1,listaInformacion);
 //                listaMain.setAdapter(adaptador);
-                customAdapter customAdapter = new customAdapter();
+                Home.customAdapter customAdapter = new Home.customAdapter();
                 listaMain.setAdapter(customAdapter);
             }
             @Override
             public void onFailure(Call<Pvpc> call, Throwable t) {
-                Toast.makeText(MainActivity.this,t.getMessage(),Toast.LENGTH_SHORT);
+                System.out.println(t.getMessage());
             }
         });
     }
@@ -215,13 +209,6 @@ public class MainActivity extends AppCompatActivity {
         media = sum/listaPorc.size();
 
     }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        getPosts();
-    }
-
     class customAdapter extends BaseAdapter {
 
         @Override
@@ -261,7 +248,4 @@ public class MainActivity extends AppCompatActivity {
             return myView;
         }
     }
-
-
-
 }

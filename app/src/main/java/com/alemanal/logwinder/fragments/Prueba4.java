@@ -55,12 +55,12 @@ public class Prueba4 extends Fragment {
                 ViewPager.compColor(cv4,getContext());
             }
         });
-        cv5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ViewPager.compColor(cv5,getContext());
-            }
-        });
+//        cv5.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                ViewPager.compColor(cv5,getContext());
+//            }
+//        });
         //Infla el layout fragment_prueba1
         return v;
     }
