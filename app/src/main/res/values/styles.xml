@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <style name="navigBar">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">60dp</item>
@@ -7,10 +8,16 @@
         <item name="itemIconTint">@color/secondaryColor</item>
         <item name="itemTextColor">@color/secondaryColor</item>
     </style>
+
     <style name="AppBar" parent="Theme.Logwinder">
         <item name="colorPrimary">@color/primaryDarkColor</item>
 
         <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
+    </style>
+
+    <style name="Widget.Theme.Logwinder.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@color/black_overlay</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
     </style>
 </resources>
