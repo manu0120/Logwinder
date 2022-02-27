@@ -87,15 +87,15 @@ public class Fragment12 extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        arch = new ArrayList<CardView>();
-        arch.add(cv6);
-        arch.add(cv7);
-        arch.add(cv8);
-        arch.add(cv9);
-
-        //ViewPager.chekealos(arch, getContext());
-
-        vp.chekealos(arch, getContext());
+//        arch = new ArrayList<CardView>();
+//        arch.add(cv6);
+//        arch.add(cv7);
+//        arch.add(cv8);
+//        arch.add(cv9);
+//
+//        //ViewPager.chekealos(arch, getContext());
+//
+//        vp.chekealos(arch, getContext());
     }
 
     /*public void onStop() {

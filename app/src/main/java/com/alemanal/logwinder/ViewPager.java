@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
@@ -59,6 +60,7 @@ public class ViewPager extends FragmentActivity {
 //        View v = bottomNavigationMenuView.getChildAt(2);
 //        BottomNavigationItemView itemView = (BottomNavigationItemView) v;
 //        NavigationBarView.OnItemSelectedListener()
+
     }
     @Override
     public void onBackPressed() {
@@ -86,7 +88,7 @@ public class ViewPager extends FragmentActivity {
                     return new Fragment11();
                 case 2:
                     return new Fragment12();
-                case 3:
+                case 11:
                     return new Fragment111();
                 case 4:
                     return new Fragment112();
@@ -100,40 +102,40 @@ public class ViewPager extends FragmentActivity {
         }
     }
 
-    private int getPosition(int position,Boolean b) {
-        try {
-            for (Map.Entry<String, Boolean> entry : data.entrySet()) {
-                Boolean aBoolean = entry.getValue();
-                if (aBoolean)
-                    b = true;
-                else b = false;
-            }
-            if(b && data.get("cv1")) {
-                position += 10;
-                return position;
-            }
-            if(b && data.get("cv2")) {
-                position += 10;
-                return position;
-            }
-            if(b && data.get("cv3")) {
-                position += 10;
-                return position;
-            }
-            if(b && data.get("cv4")) {
-                position += 10;
-                return position;
-            }
-            if(b && data.get("cv5")) {
-                position += 10;
-                return position;
-            }
-            return position;
-        } catch(NullPointerException e){
-            return position;
-        }
-
-    }
+//    private int getPosition(int position,Boolean b) {
+//        try {
+//            for (Map.Entry<String, Boolean> entry : data.entrySet()) {
+//                Boolean aBoolean = entry.getValue();
+//                if (aBoolean)
+//                    b = true;
+//                else b = false;
+//            }
+//            if(b && data.get("cv1")) {
+//                position += 10;
+//                return position;
+//            }
+//            if(b && data.get("cv2")) {
+//                position += 10;
+//                return position;
+//            }
+//            if(b && data.get("cv3")) {
+//                position += 10;
+//                return position;
+//            }
+//            if(b && data.get("cv4")) {
+//                position += 10;
+//                return position;
+//            }
+//            if(b && data.get("cv5")) {
+//                position += 10;
+//                return position;
+//            }
+//            return position;
+//        } catch(NullPointerException e){
+//            return position;
+//        }
+//
+//    }
 
     public static void compColor(CardView cv, Context con) {
         String currentColor =  Integer.toHexString(cv.getCardBackgroundColor().getDefaultColor());
@@ -192,7 +194,61 @@ public class ViewPager extends FragmentActivity {
         }
     }
 }
-
+/*
+* 0 -> fragmento base
+* 1:
+*   frigo -> 11:
+*               frigoA3
+*               frigoA2
+*               frigoA1
+*               frigoA
+*               frigoB
+*               frigoC
+*   horno -> 12:
+*              []
+*   micro
+*   cange -> 14:
+ *               congeA3
+ *               congeA2
+ *               congeA1
+ *               congeA
+ *               congeB
+ *               congeC
+ *  vitro -> 15
+ *              vitroGas
+ *              vitroBut
+ *              VitroEle
+ *              vitroBio
+* 2: (lavanderia)
+*   lavadora -> 21
+*                lavadoraA3
+ *               lavadoraA2
+ *               lavadoraA1
+ *               lavadoraA
+ *               lavadoraB
+ *               lavadoraC
+*
+*   lavavajillas ->22
+*                lavavajillasA3
+ *               lavavajillasA2
+ *               lavavajillasA1
+ *               lavavajillasA
+ *               lavavajillasB
+ *               lavavajillasC
+*
+*   secadora -> 23:
+*                secadoraA3
+ *               secadoraA2
+ *               secadoraA1
+ *               secadoraA
+ *               secadoraB
+ *               secadoraC
+*
+*
+*
+*
+*
+* */
 
 
 

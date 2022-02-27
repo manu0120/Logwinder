@@ -1,32 +1,20 @@
 package com.alemanal.logwinder;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
-import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
-import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
-import com.alemanal.logwinder.fragments.Prueba1;
 import com.alemanal.logwinder.fragments.Prueba2;
-import com.alemanal.logwinder.fragments.Prueba4;
 import com.alemanal.logwinder.fragmentsMain.Home;
 import com.alemanal.logwinder.fragmentsMain.Profile;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
-import com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator;
-
-import java.util.ArrayList;
-import java.util.HashMap;
 
 public class ViewPagerMain extends FragmentActivity {
     //Dicta el número de paginas
@@ -112,7 +100,7 @@ public class ViewPagerMain extends FragmentActivity {
                     return new Profile();
                 case 3:
                 default:
-                    return new Prueba1();
+                    return new Home();
             }
         }
         @Override

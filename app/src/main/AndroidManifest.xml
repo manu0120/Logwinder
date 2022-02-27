@@ -10,26 +10,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Logwinder">
         <activity
-            android:name=".precioDiario"
-            android:exported="true" />
-        <activity
             android:name=".ViewPagerMain"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".SplashActivity"
             android:exported="true"
             android:theme="@style/Theme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
         <activity
             android:name=".ViewPager"
             android:exported="true"
-            android:theme="@style/Theme.NoActionBar"></activity>
+            android:theme="@style/Theme.NoActionBar">
+
+        </activity>
     </application>
 
 </manifest>
