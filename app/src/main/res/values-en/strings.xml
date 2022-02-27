@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Logwinder</string>
+    <string name="frigorifico">Fridge</string>
+    <string name="Congelador">Freezer</string>
+    <string name="Horno">Oven</string>
+    <string name="microondas">Microwave</string>
+    <string name="Lavavajillas">Dishwasher</string>
+    <string name="aire">"Air "</string>
+    <string name="Lavadora">Washing machine</string>
+    <string name="secadora">Dryer</string>
+    <string name="vitroceramica">Ceramic stove</string>
+    <string name="caldera">Boiler</string>
+    <string name="radiador">Radiator</string>
+    <string name="plancha">Iron</string>
+    <string name="aspiradora">Vacuum</string>
+</resources>
