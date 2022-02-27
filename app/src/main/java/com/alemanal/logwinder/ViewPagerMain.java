@@ -5,12 +5,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
+import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
@@ -18,6 +20,7 @@ import com.alemanal.logwinder.fragments.Prueba1;
 import com.alemanal.logwinder.fragments.Prueba2;
 import com.alemanal.logwinder.fragments.Prueba4;
 import com.alemanal.logwinder.fragmentsMain.Home;
+import com.alemanal.logwinder.fragmentsMain.Profile;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator;
@@ -50,15 +53,34 @@ public class ViewPagerMain extends FragmentActivity {
                 Intent in;
                 switch (id){
                     case R.id.home:
-                        view_pager.setCurrentItem(1);
+                        item.setChecked(true);
+                        view_pager.setCurrentItem(0);
+                        break;
                     case R.id.tips:
+                        item.setChecked(true);
                         view_pager.setCurrentItem(1);
+                        break;
                     case R.id.profile:
-                        view_pager.setCurrentItem(1);
+                        item.setChecked(true);
+                        view_pager.setCurrentItem(2);
+                        break;
                     case R.id.settings:
-                        view_pager.setCurrentItem(1);
+                        item.setChecked(true);
+                        view_pager.setCurrentItem(3);
+                        break;
                 }
                 return false;
+            }
+        });
+
+        view_pager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+            @Override
+            public void onPageSelected(int position) {
+                btNav.getMenu().getItem(0).setChecked(false);
+                btNav.getMenu().getItem(position).setChecked(true);
+                MenuItem prevMenuItem = btNav.getMenu().getItem(position);
+                super.onPageSelected(position);
+
             }
         });
     }
@@ -87,9 +109,8 @@ public class ViewPagerMain extends FragmentActivity {
                 case 1:
                     return new Prueba2();
                 case 2:
-                    return new Prueba4();
+                    return new Profile();
                 case 3:
-
                 default:
                     return new Prueba1();
             }
