@@ -31,7 +31,6 @@ import com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 
 public class ViewPager extends FragmentActivity {
     //Dicta el número de paginas
@@ -42,6 +41,8 @@ public class ViewPager extends FragmentActivity {
     private FragmentStateAdapter pagerAdapter;
     WormDotsIndicator dotsIndicator;
     public static HashMap<String,Boolean> data = new HashMap<String,Boolean>();
+    Fragment111 f111= new Fragment111();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,23 +79,20 @@ public class ViewPager extends FragmentActivity {
 
         @Override
         public Fragment createFragment(int position) {
-            Boolean b=true;
-            position = getPosition(position,b);
             switch(position){
                 case 0:
-                    b=false;
-                    return new Prueba1();
+                    return new Fragment0();
                 case 1:
-                    b=false;
-                    return new Prueba2();
+                    return new Fragment11();
                 case 2:
-                    b=false;
-                    return new Prueba4();
-                case 11:
-                    b=false;
+                    return new Fragment12();
+                case 3:
+                    return new Fragment111();
+                case 4:
+                    return new Fragment112();
+                default:
                     return new Prueba21();
             }
-            return new Prueba1();
         }
         @Override
         public int getItemCount() {
@@ -163,6 +161,34 @@ public class ViewPager extends FragmentActivity {
                 data.put(id, false);
                 System.out.println(id+" "+data.get(id));
             }
+        }
+    }
+    //SI EL METODO NO ES STATIC DABA ERROR (si es static no puedes usar el metodo getSupportFragmentManager():
+    public void conectarFragments(){
+        System.out.println("Llamada a conectarFragments desde el metodo onPause");
+//        System.out.println("Llamada onStop");
+        //Iterando el HashMap sobre las keys
+        for (String key: data.keySet()){
+            boolean valor=data.get(key);
+            if (valor==true){
+                if(key.equals("cv1")){
+                    FragmentManager fragmentManager=getSupportFragmentManager();
+                    FragmentTransaction transaction = fragmentManager.beginTransaction();
+
+                    // Replace whatever is in the fragment_container view with this fragment,
+                    // and add the transaction to the back stack
+                    transaction.replace(R.id.pager, f111);
+                    transaction.addToBackStack(null);
+
+                    // Commit the transaction
+                    transaction.commit();
+                }else if(key.equals("cv2")){
+
+                }else if(key.equals("cv5")){
+
+                }
+            }
+            //System.out.println("Clave: "+key+", Valor: "+valor);
         }
     }
 }

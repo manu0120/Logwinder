@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frgment112"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.Fragment111">
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingMultiplier="1.2"
+        android:textSize="18dp"
+        android:padding="16dp"
+        android:text="¿Que tipo de horno utilizas en tu domicilio?"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="100dp"
+        />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/tv1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        >
+
+
+
+        <RadioButton
+            android:id="@+id/radio_Industrial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Horno industrial"
+
+            />
+
+        <RadioButton
+            android:id="@+id/radio_Domestico"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Horno eléctrico doméstico"
+
+            />
+
+
+    </RadioGroup>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_info2"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="60dp"
+        android:layout_marginEnd="50dp"
+        android:backgroundTint="@color/secondaryColor"
+
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
