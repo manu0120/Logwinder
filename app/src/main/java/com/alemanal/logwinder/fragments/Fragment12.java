@@ -18,6 +18,8 @@ public class Fragment12 extends Fragment {
     private View v;
     private CardView cv6,cv7,cv8,cv9;
     private ArrayList<CardView> arch;
+
+    ViewPager vp=new ViewPager();
     public Fragment12() {
         // Required empty public constructor
     }
@@ -72,7 +74,14 @@ public class Fragment12 extends Fragment {
         arch.add(cv8);
         arch.add(cv9);
 
-        ViewPager.chekealos(arch, getContext());
+        System.out.println("Llamada onPause");
+        /*ViewPager.chekealos(arch, getContext());
+        ViewPager.conectarFragments();*/
+
+        //ESTO DE ABAJO DABA ERROR:
+        vp.chekealos(arch, getContext());
+        vp.conectarFragments();
+
     }
 
     @Override
@@ -84,6 +93,17 @@ public class Fragment12 extends Fragment {
         arch.add(cv8);
         arch.add(cv9);
 
-        ViewPager.chekealos(arch, getContext());
+        //ViewPager.chekealos(arch, getContext());
+
+        vp.chekealos(arch, getContext());
     }
+
+    /*public void onStop() {
+
+        super.onStop();
+        System.out.println("LLamada onStop");
+        ViewPager.chekealos(arch, getContext());
+        ViewPager.conectarFragments();
+
+    }*/
 }
