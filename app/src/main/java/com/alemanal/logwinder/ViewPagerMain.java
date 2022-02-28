@@ -46,9 +46,7 @@ public class ViewPagerMain extends FragmentActivity {
 
         try {
             getData();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
@@ -110,6 +108,7 @@ public class ViewPagerMain extends FragmentActivity {
         FileInputStream fo = new FileInputStream("data.ext");
         ObjectInputStream os = new ObjectInputStream(fo);
         data = (HashMap) os.readObject();
+        os.close();
 //        Gson gson = new Gson();
 //        try{
 //            FileInputStream is = openFileInput("json.json");
@@ -197,6 +196,7 @@ public class ViewPagerMain extends FragmentActivity {
         FileOutputStream fo = openFileOutput("data.ext", Context.MODE_PRIVATE);
         ObjectOutputStream os = new ObjectOutputStream(fo);
         os.writeObject(data);
+        os.close();
     }
     public static HashMap getData(){
         return data;
