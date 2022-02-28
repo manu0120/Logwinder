@@ -36,7 +36,7 @@ public class FragmentTips extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment FragmentTips.
+     * @return A new instance of fragment FragmentTips
      */
     // TODO: Rename and change types and number of parameters
     public static FragmentTips newInstance(String param1, String param2) {
