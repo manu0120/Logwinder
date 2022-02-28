@@ -10,6 +10,7 @@ import androidx.viewpager2.widget.ViewPager2;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.RadioButton;
 
 import com.alemanal.logwinder.fragments.*;
 import com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator;
@@ -124,6 +125,20 @@ public class ViewPager extends FragmentActivity {
             }
         }
     }
+
+    public static void compRadioButton(ArrayList<RadioButton> rad, Context con){
+
+        for(RadioButton rb: rad){
+            String id=con.getResources().getResourceEntryName(((View)rb).getId());
+            if (rb.isChecked()){
+                data.put(id, true);
+                System.out.println(id+" "+data.get(id));
+            }else{
+                data.put(id, false);
+                System.out.println(id+" "+data.get(id));
+            }
+        }
+    }
 }
 /*
 * 0 -> fragmento base
@@ -146,7 +161,7 @@ public class ViewPager extends FragmentActivity {
  * vitro -> 15
  *              vitroRad
  *              VitroEle
- *              vitroIndconge
+ *              vitroInd
  *
 * 2: (lavanderia)
 *   lavadora -> 21

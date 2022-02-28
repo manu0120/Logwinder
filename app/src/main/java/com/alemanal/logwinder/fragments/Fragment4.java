@@ -13,13 +13,19 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.alemanal.logwinder.R;
+import com.alemanal.logwinder.ViewPager;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.ArrayList;
 
 
 public class Fragment4 extends Fragment {
     View v;
     RadioGroup grupoRadio;
     RadioButton botonRadio;
+
+    private RadioButton congeA2, congeA1, congeA, congeB, congeC, congeD;
+    ArrayList<RadioButton> rad;
 
     public Fragment4() {
         // Required empty public constructor
@@ -32,6 +38,14 @@ public class Fragment4 extends Fragment {
         // Inflate the layout for this fragment
         v=inflater.inflate(R.layout.fragment_4, container, false);
 
+
+        congeA2 = v.findViewById(R.id.congeA2);
+        congeA1 = v.findViewById(R.id.congeA1);
+        congeA = v.findViewById(R.id.congeA);
+        congeB = v.findViewById(R.id.congeB);
+        congeC = v.findViewById(R.id.congeC);
+        congeD = v.findViewById(R.id.congeD);
+        rad=new ArrayList<RadioButton>();
         FloatingActionButton fab=v.findViewById(R.id.fab14);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,12 +85,26 @@ public class Fragment4 extends Fragment {
         super.onPause();
 
         //COMPRUEBA QUE RADIOBUTTON ESTA MARCADO
+        rad=new ArrayList<RadioButton>();
 
-        int idSeleccionado = grupoRadio.getCheckedRadioButtonId();
-        if (idSeleccionado != -1) {
-            botonRadio= v.findViewById(idSeleccionado);
+        rad.add(congeA2);
+        rad.add(congeA1);
+        rad.add(congeA);
+        rad.add(congeB);
+        rad.add(congeC);
+        rad.add(congeD);
+        ViewPager.compRadioButton(rad, getContext());
 
-        }
-
+    }
+    public void onStart() {
+        super.onStart();
+        rad=new ArrayList<RadioButton>();
+        rad.add(congeA2);
+        rad.add(congeA1);
+        rad.add(congeA);
+        rad.add(congeB);
+        rad.add(congeC);
+        rad.add(congeD);
+        ViewPager.compRadioButton(rad, getContext());
     }
 }

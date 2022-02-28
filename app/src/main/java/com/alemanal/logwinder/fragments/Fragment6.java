@@ -13,11 +13,17 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.alemanal.logwinder.R;
+import com.alemanal.logwinder.ViewPager;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.ArrayList;
 
 public class Fragment6 extends Fragment {
     private View v;
 
+    private RadioButton lavadoraA3, lavadoraA2, lavadoraA1, lavadoraA, lavadoraB, lavadoraC;
+
+    ArrayList<RadioButton> rad;
     RadioGroup grupoRadio;
     RadioButton botonRadio;
     public Fragment6() {
@@ -30,6 +36,13 @@ public class Fragment6 extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         v=inflater.inflate(R.layout.fragment_6, container, false);
+        lavadoraA3 = v.findViewById(R.id.lavadoraA3);
+        lavadoraA2 = v.findViewById(R.id.lavadoraA2);
+        lavadoraA1 = v.findViewById(R.id.lavadoraA1);
+        lavadoraA = v.findViewById(R.id.lavadoraA);
+        lavadoraB = v.findViewById(R.id.lavadoraB);
+        lavadoraC = v.findViewById(R.id.lavadoraC);
+        rad=new ArrayList<RadioButton>();
         FloatingActionButton fab=v.findViewById(R.id.fab21);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,13 +80,26 @@ public class Fragment6 extends Fragment {
     public void onPause() {
 
         super.onPause();
+        rad=new ArrayList<RadioButton>();
+        rad.add(lavadoraA3);
+        rad.add(lavadoraA2);
+        rad.add(lavadoraA1);
+        rad.add(lavadoraA);
+        rad.add(lavadoraB);
+        rad.add(lavadoraC);
+        ViewPager.compRadioButton(rad, getContext());
+    }
 
-        //COMPRUEBA QUE RADIOBUTTON ESTA MARCADO
-
-        int idSeleccionado = grupoRadio.getCheckedRadioButtonId();
-        if (idSeleccionado != -1) {
-            botonRadio= v.findViewById(idSeleccionado);
-
-        }
+    @Override
+    public void onStart() {
+        super.onStart();
+        rad=new ArrayList<RadioButton>();
+        rad.add(lavadoraA3);
+        rad.add(lavadoraA2);
+        rad.add(lavadoraA1);
+        rad.add(lavadoraA);
+        rad.add(lavadoraB);
+        rad.add(lavadoraC);
+        ViewPager.compRadioButton(rad, getContext());
     }
 }

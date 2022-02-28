@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -13,12 +14,18 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.alemanal.logwinder.R;
+import com.alemanal.logwinder.ViewPager;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.ArrayList;
 
 
 public class Fragment3 extends Fragment {
     private View v;
 
+    private RadioButton frigoA3, frigoA2, frigoA1, frigoA, frigoB, frigoC;
+
+    ArrayList<RadioButton> rad;
     RadioGroup grupoRadio;
     RadioButton botonRadio;
     public Fragment3() {
@@ -44,7 +51,13 @@ public class Fragment3 extends Fragment {
                              Bundle savedInstanceState) {
 
         v=inflater.inflate(R.layout.fragment_3, container, false);
-
+        frigoA3 = v.findViewById(R.id.frigoA3);
+        frigoA2 = v.findViewById(R.id.frigoA2);
+        frigoA1 = v.findViewById(R.id.frigoA1);
+        frigoA = v.findViewById(R.id.frigoA);
+        frigoB = v.findViewById(R.id.frigoB);
+        frigoC = v.findViewById(R.id.frigoC);
+        rad=new ArrayList<RadioButton>();
 
         FloatingActionButton fab=v.findViewById(R.id.fab11);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -84,12 +97,26 @@ public class Fragment3 extends Fragment {
 
         super.onPause();
 
-        //COMPRUEBA QUE RADIOBUTTON ESTA MARCADO
+        rad=new ArrayList<RadioButton>();
+        rad.add(frigoA3);
+        rad.add(frigoA2);
+        rad.add(frigoA1);
+        rad.add(frigoA);
+        rad.add(frigoB);
+        rad.add(frigoC);
+        ViewPager.compRadioButton(rad, getContext());
+    }
 
-        int idSeleccionado = grupoRadio.getCheckedRadioButtonId();
-        if (idSeleccionado != -1) {
-            botonRadio= v.findViewById(idSeleccionado);
-
-        }
+    @Override
+    public void onStart() {
+        super.onStart();
+        rad=new ArrayList<RadioButton>();
+        rad.add(frigoA3);
+        rad.add(frigoA2);
+        rad.add(frigoA1);
+        rad.add(frigoA);
+        rad.add(frigoB);
+        rad.add(frigoC);
+        ViewPager.compRadioButton(rad, getContext());
     }
 }
