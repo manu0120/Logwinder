@@ -24,7 +24,7 @@ public class Fragment11 extends Fragment {
         cv2 = v.findViewById(R.id.cv2);
         cv3 = v.findViewById(R.id.cv3);
         cv4 = v.findViewById(R.id.cv4);
-        //cv5 = v.findViewById(R.id.cv5);
+        cv5 = v.findViewById(R.id.cv5);
         arch = new ArrayList<CardView>();
 
         cv1.setOnClickListener(new View.OnClickListener() {
@@ -51,12 +51,12 @@ public class Fragment11 extends Fragment {
                 ViewPager.compColor(cv4,getContext());
             }
         });
-//        cv5.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                ViewPager.compColor(cv5,getContext());
-//            }
-//        });
+        cv5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ViewPager.compColor(cv5,getContext());
+            }
+        });
         //Infla el layout fragment_prueba1
         return v;
     }
@@ -76,12 +76,12 @@ public class Fragment11 extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-//        arch = new ArrayList<CardView>();
-//        arch.add(cv1);
-//        arch.add(cv2);
-//        arch.add(cv3);
-//        arch.add(cv4);
-//        arch.add(cv5);
-//        ViewPager.chekealos(arch, getContext());
+        arch = new ArrayList<CardView>();
+        arch.add(cv1);
+        arch.add(cv2);
+        arch.add(cv3);
+        arch.add(cv4);
+        arch.add(cv5);
+        ViewPager.chekealos(arch, getContext());
     }
 }
