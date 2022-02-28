@@ -15,12 +15,12 @@ import android.widget.RadioGroup;
 import com.alemanal.logwinder.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-public class Fragment21 extends Fragment {
+public class Fragment6 extends Fragment {
     private View v;
 
     RadioGroup grupoRadio;
     RadioButton botonRadio;
-    public Fragment21() {
+    public Fragment6() {
         // Required empty public constructor
     }
 
@@ -29,7 +29,7 @@ public class Fragment21 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        v=inflater.inflate(R.layout.fragment_21, container, false);
+        v=inflater.inflate(R.layout.fragment_6, container, false);
         FloatingActionButton fab=v.findViewById(R.id.fab21);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override

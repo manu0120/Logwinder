@@ -15,48 +15,41 @@ import android.widget.RadioGroup;
 import com.alemanal.logwinder.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+public class Fragment5 extends Fragment {
+    private View v;
 
-public class Fragment14 extends Fragment {
-    View v;
     RadioGroup grupoRadio;
     RadioButton botonRadio;
-
-    public Fragment14() {
+    public Fragment5() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        v=inflater.inflate(R.layout.fragment_14, container, false);
-
-        FloatingActionButton fab=v.findViewById(R.id.fab14);
+        v=inflater.inflate(R.layout.fragment_5, container, false);
+        FloatingActionButton fab=v.findViewById(R.id.fab15);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 showAlertDialogButtonClicked();
             }
         });
-
-        grupoRadio=v.findViewById(R.id.radioGroup14);
+        grupoRadio=v.findViewById(R.id.radioGroup15);
         return v;
     }
 
     private void showAlertDialogButtonClicked() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
         builder.setTitle("Información");
-        builder.setMessage("Las etiquetas energéticas indican a los consumidores cuáles son los " +
-                "electrodomésticos que gastan más o menos electricidad. Estas etiquetas se hallan, " +
-                "a modo de pegatina, en cada aparato para promover el ahorro energético. A partir " +
-                "del pasado 1 de marzo, contamos ya con una nueva clasificación energética de los " +
-                "electrodomésticos.\n" +
+        builder.setMessage("Las vitrocerámicas de toda la vida son las llamadas “radiantes”. Y no, no es porque " +
+                "reluzcan, es porque irradian calor a todo lo que se encuentra a su alrededor. Funcionan con una " +
+                "resistencia que produce un aumento de temperatura." +
                 "\n" +
-                "Las nuevas etiquetas energéticas están reguladas a partir de la normativa europea. " +
-                "Es por esto por lo que todos los electrodomésticos de la Unión deben llevar de forma " +
-                "obligatoria esta nueva identificación. Es una manera rápida y segura de saber cuáles " +
-                "son los electrodomésticos más eficientes del mercado.");
+                "Las vitrocerámicas de inducción funcionan de una forma totalmente distinta. En su interior hay bobinas " +
+                "que no generan calor, sino campos electromagnéticos. Por eso, solo calientan los recipientes " +
+                "especialmente diseñados para ellas, hechos de material ferromagnético.");
         builder.setCancelable(false);
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialogo1, int id) {
@@ -68,6 +61,7 @@ public class Fragment14 extends Fragment {
     }
 
     public void onPause() {
+
         super.onPause();
 
         //COMPRUEBA QUE RADIOBUTTON ESTA MARCADO
@@ -77,6 +71,5 @@ public class Fragment14 extends Fragment {
             botonRadio= v.findViewById(idSeleccionado);
 
         }
-
     }
 }

@@ -1,5 +1,6 @@
 package com.alemanal.logwinder;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -10,11 +11,18 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
-import com.alemanal.logwinder.fragments.Prueba2;
+import com.alemanal.logwinder.fragments.Fragment9;
+import com.alemanal.logwinder.fragmentsMain.FragmentTips;
 import com.alemanal.logwinder.fragmentsMain.Home;
 import com.alemanal.logwinder.fragmentsMain.Profile;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.util.HashMap;
 
 public class ViewPagerMain extends FragmentActivity {
     //Dicta el número de paginas
@@ -24,6 +32,7 @@ public class ViewPagerMain extends FragmentActivity {
     //El adapter que provee las páginas al ViewPager
     private FragmentStateAdapter pagerAdapter;
     BottomNavigationView btNav;
+    HashMap data = ViewPager.data;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -95,7 +104,7 @@ public class ViewPagerMain extends FragmentActivity {
                 case 0:
                     return new Home();
                 case 1:
-                    return new Prueba2();
+                    return new FragmentTips();
                 case 2:
                     return new Profile();
                 case 3:
@@ -107,6 +116,26 @@ public class ViewPagerMain extends FragmentActivity {
         public int getItemCount() {
             return NUM_PAGES;
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+//        try{
+//            FileOutputStream fos = openFileOutput("datos.txt", Context.MODE_PRIVATE);
+//
+//        } catch(java.io.IOException e){
+//
+//        }
+        Gson gson = new Gson();
+        JsonObject json = gson.toJsonTree(data).getAsJsonObject();
+        FileOutputStream fos = null;
+        try {
+            fos = openFileOutput("datos.json", Context.MODE_PRIVATE);
+            fos.write(json);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        super.onDestroy();
     }
 }
 

@@ -5,7 +5,7 @@
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.Fragment21">
+    tools:context=".fragments.Fragment3">
 
     <TextView
         android:id="@+id/tv1"
@@ -14,23 +14,24 @@
         android:lineSpacingMultiplier="1.2"
         android:textSize="18dp"
         android:padding="16dp"
-        android:text="¿Que clase energética tiene tu lavadora? "
+        android:text="¿Que clase energética tiene tu frigorífico? "
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
-        android:id="@+id/radioGroup21"
+        android:id="@+id/radioGroup11"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/tv1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv1">
+        android:gravity="center"
+         >
 
         <RadioButton
-            android:id="@+id/lavadoraA3"
+            android:id="@+id/frigoA3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="A+++"
@@ -38,7 +39,7 @@
             />
 
         <RadioButton
-            android:id="@+id/lavadoraA2"
+            android:id="@+id/congeA2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
@@ -47,7 +48,7 @@
             />
 
         <RadioButton
-            android:id="@+id/lavadoraA1"
+            android:id="@+id/congeA1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="A+"
@@ -55,7 +56,7 @@
             />
 
         <RadioButton
-            android:id="@+id/lavadoraA"
+            android:id="@+id/congeA"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="A"
@@ -63,7 +64,7 @@
             />
 
         <RadioButton
-            android:id="@+id/lavadoraB"
+            android:id="@+id/congeB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="B"
@@ -71,7 +72,7 @@
             />
 
         <RadioButton
-            android:id="@+id/lavadoraC"
+            android:id="@+id/congeC"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="C"
@@ -81,7 +82,7 @@
     </RadioGroup>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab21"
+        android:id="@+id/fab11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_info2"
@@ -94,15 +95,29 @@
 
         />
 
-    <ImageView
-        android:id="@+id/ivFragment21"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:layout_marginTop="55dp"
-        android:src="@drawable/lavadora"
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingMultiplier="1.2"
+        android:textSize="18dp"
+        android:padding="16dp"
+        android:text="Ejemplo de etiqueta energética: "
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup21" />
+        app:layout_constraintTop_toBottomOf="@id/radioGroup11"
+        android:layout_marginTop="20dp"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:src="@drawable/etiquetas_energeticas"
+        app:layout_constraintTop_toBottomOf="@id/tv2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,20 +6,20 @@
     android:orientation="vertical"
     android:layout_gravity="center"
     android:padding="10dp"
-    tools:context=".fragmentsMain.FragmentTips">
+    tools:context=".fragments.Fragment9">
 
     <TextView
         android:layout_gravity="center"
-        android:id="@+id/tvTips"
+        android:id="@+id/tvEnd"
         android:textSize="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="" />
+        android:text="Ya hemos terminado!!" />
 
     <Button
-        android:id="@+id/btTips"
+        android:id="@+id/btToHome"
         android:layout_marginTop="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tip nuevo" />
+        android:text="Confirmar" />
 </LinearLayout>

@@ -19,14 +19,14 @@ import java.util.HashMap;
 
 public class ViewPager extends FragmentActivity {
     //Dicta el número de paginas
-    private static final int NUM_PAGES = 4;
+    private static final int NUM_PAGES = 10;
     //Pager widget, que otorga animacion y posibilidad de swipear lateralmente
     private ViewPager2 view_pager;
     //El adapter que provee las páginas al ViewPager
     private FragmentStateAdapter pagerAdapter;
     WormDotsIndicator dotsIndicator;
     public static HashMap<String,Boolean> data = new HashMap<String,Boolean>();
-    Fragment11 f111= new Fragment11();
+    Fragment3 f111= new Fragment3();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,61 +65,36 @@ public class ViewPager extends FragmentActivity {
 
         @Override
         public Fragment createFragment(int position) {
+//            getPosition(position);
             switch(position){
                 case 0:
                     return new Fragment0();
                 case 1:
                     return new Fragment1();
                 case 2:
-                    return new Fragment2();
-                case 11:
-                    return new Fragment11();
+                    return new Fragment3();
+                case 3:
+                    return new Fragment4();
                 case 4:
-                    return new Fragment15();
-                default:
-                    return new Prueba21();
+                    return new Fragment5();
+                case 5:
+                    return new Fragment2();
+                case 6:
+                    return new Fragment6();
+                case 7:
+                    return new Fragment7();
+                case 8:
+                    return new Fragment8();
+                case 9:
+                    return new Fragment9();
             }
+            return new Fragment0();
         }
         @Override
         public int getItemCount() {
             return NUM_PAGES;
         }
     }
-
-//    private int getPosition(int position,Boolean b) {
-//        try {
-//            for (Map.Entry<String, Boolean> entry : data.entrySet()) {
-//                Boolean aBoolean = entry.getValue();
-//                if (aBoolean)
-//                    b = true;
-//                else b = false;
-//            }
-//            if(b && data.get("cv1")) {
-//                position += 10;
-//                return position;
-//            }
-//            if(b && data.get("cv2")) {
-//                position += 10;
-//                return position;
-//            }
-//            if(b && data.get("cv3")) {
-//                position += 10;
-//                return position;
-//            }
-//            if(b && data.get("cv4")) {
-//                position += 10;
-//                return position;
-//            }
-//            if(b && data.get("cv5")) {
-//                position += 10;
-//                return position;
-//            }
-//            return position;
-//        } catch(NullPointerException e){
-//            return position;
-//        }
-//
-//    }
 
     public static void compColor(CardView cv, Context con) {
         String currentColor =  Integer.toHexString(cv.getCardBackgroundColor().getDefaultColor());
@@ -149,34 +124,6 @@ public class ViewPager extends FragmentActivity {
             }
         }
     }
-    //SI EL METODO NO ES STATIC DABA ERROR (si es static no puedes usar el metodo getSupportFragmentManager():
-    /*public void conectarFragments(){
-        System.out.println("Llamada a conectarFragments desde el metodo onPause");
-//        System.out.println("Llamada onStop");
-        //Iterando el HashMap sobre las keys
-        for (String key: data.keySet()){
-            boolean valor=data.get(key);
-            if (valor==true){
-                if(key.equals("cv1")){
-                    FragmentManager fragmentManager=getSupportFragmentManager();
-                    FragmentTransaction transaction = fragmentManager.beginTransaction();
-
-                    // Replace whatever is in the fragment_container view with this fragment,
-                    // and add the transaction to the back stack
-                    transaction.replace(R.id.pager, f111);
-                    transaction.addToBackStack(null);
-
-                    // Commit the transaction
-                    transaction.commit();
-                }else if(key.equals("cv2")){
-
-                }else if(key.equals("cv5")){
-
-                }
-            }
-            //System.out.println("Clave: "+key+", Valor: "+valor);
-        }
-    }*/
 }
 /*
 * 0 -> fragmento base
@@ -188,17 +135,7 @@ public class ViewPager extends FragmentActivity {
 *               frigoA
 *               frigoB
 *               frigoC
-*   horno -> 12:
-*              []
 *   micro
-*   cange -> 14:
- *               congeA3
- *               congeA2
- *               congeA1
- *               congeA
- *               congeB
- *               congeC
- * LO DE ARRIBA LO HE CAMBIADO POR ESTO:
  * cange -> 14:
  *               congeA2
  *               congeA1
@@ -206,12 +143,6 @@ public class ViewPager extends FragmentActivity {
  *               congeB
  *               congeC
  *               conged
- *  vitro -> 15
- *              vitroGas
- *              vitroBut
- *              VitroEle
- *              vitroBio
- * LO DE ARRIBA LO HE CAMBIADO POR ESTO:
  * vitro -> 15
  *              vitroRad
  *              VitroEle

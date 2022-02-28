@@ -5,7 +5,7 @@
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.Fragment15">
+    tools:context=".fragments.Fragment5">
 
     <TextView
         android:id="@+id/tv1"

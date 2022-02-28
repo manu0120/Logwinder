@@ -15,29 +15,45 @@ import android.widget.RadioGroup;
 import com.alemanal.logwinder.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-public class Fragment23 extends Fragment {
+
+public class Fragment3 extends Fragment {
     private View v;
 
     RadioGroup grupoRadio;
     RadioButton botonRadio;
-    public Fragment23() {
-        // Required empty public constructor
+    public Fragment3() {
+
     }
 
+    /*public static Fragment111 newInstance(String param1, String param2) {
+        Fragment111 fragment = new Fragment111();
+        Bundle args = new Bundle();
+
+        return fragment;
+    }*/
+
+    /*@Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        }
+    }*/
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        v=inflater.inflate(R.layout.fragment_23, container, false);
-        FloatingActionButton fab=v.findViewById(R.id.fab23);
+
+        v=inflater.inflate(R.layout.fragment_3, container, false);
+
+
+        FloatingActionButton fab=v.findViewById(R.id.fab11);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 showAlertDialogButtonClicked();
             }
         });
-        grupoRadio=v.findViewById(R.id.radioGroup23);
+        grupoRadio=v.findViewById(R.id.radioGroup11);
         return v;
     }
 

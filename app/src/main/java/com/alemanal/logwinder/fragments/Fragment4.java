@@ -15,12 +15,13 @@ import android.widget.RadioGroup;
 import com.alemanal.logwinder.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-public class Fragment22 extends Fragment {
-    private View v;
 
+public class Fragment4 extends Fragment {
+    View v;
     RadioGroup grupoRadio;
     RadioButton botonRadio;
-    public Fragment22() {
+
+    public Fragment4() {
         // Required empty public constructor
     }
 
@@ -29,19 +30,21 @@ public class Fragment22 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        v=inflater.inflate(R.layout.fragment_22, container, false);
-        FloatingActionButton fab=v.findViewById(R.id.fab22);
+        v=inflater.inflate(R.layout.fragment_4, container, false);
+
+        FloatingActionButton fab=v.findViewById(R.id.fab14);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 showAlertDialogButtonClicked();
             }
         });
-        grupoRadio=v.findViewById(R.id.radioGroup22);
+
+        grupoRadio=v.findViewById(R.id.radioGroup14);
         return v;
     }
 
-    public void showAlertDialogButtonClicked(){
+    private void showAlertDialogButtonClicked() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
         builder.setTitle("Información");
         builder.setMessage("Las etiquetas energéticas indican a los consumidores cuáles son los " +
@@ -65,7 +68,6 @@ public class Fragment22 extends Fragment {
     }
 
     public void onPause() {
-
         super.onPause();
 
         //COMPRUEBA QUE RADIOBUTTON ESTA MARCADO
@@ -75,5 +77,6 @@ public class Fragment22 extends Fragment {
             botonRadio= v.findViewById(idSeleccionado);
 
         }
+
     }
 }
