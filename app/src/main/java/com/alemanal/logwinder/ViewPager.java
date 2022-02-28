@@ -135,7 +135,7 @@ public class ViewPager extends FragmentActivity {
 *               frigoA
 *               frigoB
 *               frigoC
-*   micro
+*  micro
  * cange -> 14:
  *               congeA2
  *               congeA1

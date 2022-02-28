@@ -37,7 +37,7 @@ public class ViewPagerMain extends FragmentActivity {
     //El adapter que provee las páginas al ViewPager
     private FragmentStateAdapter pagerAdapter;
     BottomNavigationView btNav;
-    HashMap data = ViewPager.data;
+    public static HashMap<String, Boolean> data = ViewPager.data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -106,7 +106,7 @@ public class ViewPagerMain extends FragmentActivity {
 //        }
     }
 
-    private void getData() throws IOException, ClassNotFoundException {
+    private void getDataFromFile() throws IOException, ClassNotFoundException {
         FileInputStream fo = new FileInputStream("data.ext");
         ObjectInputStream os = new ObjectInputStream(fo);
         data = (HashMap) os.readObject();
@@ -197,6 +197,9 @@ public class ViewPagerMain extends FragmentActivity {
         FileOutputStream fo = openFileOutput("data.ext", Context.MODE_PRIVATE);
         ObjectOutputStream os = new ObjectOutputStream(fo);
         os.writeObject(data);
+    }
+    public static HashMap getData(){
+        return data;
     }
 }
 
