@@ -1,186 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- fragment_screen_slide_page.xml -->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/content"
+    android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-<!--    UN EJEMPLO DEL LAYOUT DE UN FRAGMENTO    -->
+    android:layout_height="match_parent"
+    tools:context=".fragments.Fragment11">
 
     <TextView
         android:id="@+id/tv1"
-        style="?android:textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:lineSpacingMultiplier="1.2"
+        android:textSize="18dp"
         android:padding="16dp"
-        android:text="¿Cuáles de estos electrodomesticos usas en la cocina? "
+        android:text="¿Que clase energética tiene tu frigorífico? "
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/tv1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center"
+         >
 
-    <LinearLayout
+        <RadioButton
+            android:id="@+id/frigoA3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A+++"
+
+            />
+
+        <RadioButton
+            android:id="@+id/congeA2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="A++"
+
+            />
+
+        <RadioButton
+            android:id="@+id/congeA1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A+"
+
+            />
+
+        <RadioButton
+            android:id="@+id/congeA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A"
+
+            />
+
+        <RadioButton
+            android:id="@+id/congeB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="B"
+
+            />
+
+        <RadioButton
+            android:id="@+id/congeC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="C"
+
+            />
+
+    </RadioGroup>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_info2"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="60dp"
+        android:layout_marginEnd="50dp"
+        android:backgroundTint="@color/secondaryColor"
+
+        />
+
+    <TextView
+        android:id="@+id/tv2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@+id/tv1">
+        android:lineSpacingMultiplier="1.2"
+        android:textSize="18dp"
+        android:padding="16dp"
+        android:text="Ejemplo de etiqueta energética: "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radioGroup"
+        android:layout_marginTop="20dp"
+        />
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:src="@drawable/etiquetas_energeticas"
+        app:layout_constraintTop_toBottomOf="@id/tv2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cv1"
-                android:layout_width="match_parent"
-                android:layout_height="90dp"
-
-                android:clickable="true"
-                android:focusable="true"
-
-                app:cardCornerRadius="10dp">
-
-                <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="85dp"
-                    android:layout_gravity="start"
-                    android:layout_marginStart="20dp"
-
-                    android:layout_marginTop="10dp"
-                    android:src="@drawable/ic_fridge">
-
-                </ImageView>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="Frigorífico" />
-
-            </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cv2"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            app:cardCornerRadius="10dp"
-
-            >
-
-            <ImageView
-                android:layout_width="64dp"
-                android:layout_height="85dp"
-                android:layout_gravity="start"
-                android:layout_marginStart="20dp"
-
-                android:layout_marginTop="10dp"
-                android:src="@drawable/ic_oven">
-
-            </ImageView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Horno" />
-
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cv3"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            app:cardCornerRadius="10dp"
-
-            >
-
-            <ImageView
-                android:layout_width="64dp"
-                android:layout_height="85dp"
-                android:layout_gravity="start"
-                android:layout_marginStart="20dp"
-
-                android:layout_marginTop="10dp"
-                android:src="@drawable/ic_microwave">
-
-            </ImageView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Microondas" />
-
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cv4"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            app:cardCornerRadius="10dp"
-
-            >
-
-            <ImageView
-                android:layout_width="64dp"
-                android:layout_height="85dp"
-                android:layout_gravity="start"
-                android:layout_marginStart="20dp"
-
-                android:layout_marginTop="10dp"
-                android:src="@drawable/ic_freezer">
-
-            </ImageView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Congelador" />
-
-        </androidx.cardview.widget.CardView>
-
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cv5"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            app:cardCornerRadius="10dp"
-
-            >
-
-            <ImageView
-                android:layout_width="64dp"
-                android:layout_height="85dp"
-                android:layout_gravity="start"
-                android:layout_marginStart="20dp"
-
-                android:layout_marginTop="10dp"
-                android:src="@drawable/ic_vitroceramicaicon">
-
-            </ImageView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Vitroceramica" />
-
-        </androidx.cardview.widget.CardView>
-
-
-    </LinearLayout>
 
 
 

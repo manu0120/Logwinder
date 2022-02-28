@@ -14,25 +14,25 @@ import com.alemanal.logwinder.ViewPager;
 
 import java.util.ArrayList;
 
-public class Fragment12 extends Fragment {
+public class Fragment2 extends Fragment {
     private View v;
-    private CardView cv6,cv7,cv8,cv9;
+    private CardView cv6,cv7,cv8;
     private ArrayList<CardView> arch;
 
 
-    public Fragment12() {
+    public Fragment2() {
         // Required empty public constructor
     }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        v=inflater.inflate(R.layout.fragment_12, container, false);
+        v=inflater.inflate(R.layout.fragment_2, container, false);
 
-        cv6 = v.findViewById(R.id.cv6);
-        cv7 = v.findViewById(R.id.cv7);
-        cv8 = v.findViewById(R.id.cv8);
-        cv9 = v.findViewById(R.id.cv9);
+        cv6 = v.findViewById(R.id.lavadora);
+        cv7 = v.findViewById(R.id.lavavajillas);
+        cv8 = v.findViewById(R.id.secadora);
+
 
         arch = new ArrayList<CardView>();
 
@@ -56,12 +56,7 @@ public class Fragment12 extends Fragment {
                 ViewPager.compColor(cv8,getContext());
             }
         });
-        cv9.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ViewPager.compColor(cv9,getContext());
-            }
-        });
+
         return v;
     }
 
@@ -72,7 +67,7 @@ public class Fragment12 extends Fragment {
         arch.add(cv6);
         arch.add(cv7);
         arch.add(cv8);
-        arch.add(cv9);
+
         ViewPager.chekealos(arch, getContext());
 
 
@@ -86,11 +81,10 @@ public class Fragment12 extends Fragment {
         arch.add(cv6);
         arch.add(cv7);
         arch.add(cv8);
-        arch.add(cv9);
+
 
         ViewPager.chekealos(arch, getContext());
-//
-//        vp.chekealos(arch, getContext());
+
     }
 
     /*public void onStop() {

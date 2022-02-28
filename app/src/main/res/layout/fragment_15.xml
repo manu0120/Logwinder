@@ -5,7 +5,7 @@
     android:id="@+id/fragment113"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.Fragment111">
+    tools:context=".fragments.Fragment11">
 
     <TextView
         android:id="@+id/tv1"
@@ -31,7 +31,7 @@
         >
 <!--        android:gravity="center"-->
         <RadioButton
-            android:id="@+id/radio_Radiante"
+            android:id="@+id/vitroRad"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Vitroceramica radiante (convencional)"
@@ -39,7 +39,7 @@
             />
 
         <RadioButton
-            android:id="@+id/radio_Resistencia"
+            android:id="@+id/vitroEle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
@@ -48,7 +48,7 @@
             />
 
         <RadioButton
-            android:id="@+id/radio_Induccion"
+            android:id="@+id/vitroInd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Induccion"

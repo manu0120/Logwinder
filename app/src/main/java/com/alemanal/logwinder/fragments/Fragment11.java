@@ -1,87 +1,81 @@
 package com.alemanal.logwinder.fragments;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.alemanal.logwinder.ViewPager;
-import androidx.cardview.widget.CardView;
-import androidx.fragment.app.Fragment;
-
 import com.alemanal.logwinder.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-import java.util.ArrayList;
 
-//Esto es un ejemplo de como seria un fragment
 public class Fragment11 extends Fragment {
     private View v;
-    private CardView cv1,cv2,cv3,cv4,cv5;
-    private ArrayList<CardView> arch;
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        v = inflater.inflate(R.layout.fragment_11, container, false);
-        cv1 = v.findViewById(R.id.cv1);
-        cv2 = v.findViewById(R.id.cv2);
-        cv3 = v.findViewById(R.id.cv3);
-        cv4 = v.findViewById(R.id.cv4);
-        cv5 = v.findViewById(R.id.cv5);
-        arch = new ArrayList<CardView>();
+    public Fragment11() {
 
-        cv1.setOnClickListener(new View.OnClickListener() {
+    }
+
+    /*public static Fragment111 newInstance(String param1, String param2) {
+        Fragment111 fragment = new Fragment111();
+        Bundle args = new Bundle();
+
+        return fragment;
+    }*/
+
+    /*@Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        }
+    }*/
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+
+        v=inflater.inflate(R.layout.fragment_11, container, false);
+
+
+        FloatingActionButton fab=v.findViewById(R.id.fab1);
+        fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ViewPager.compColor(cv1,getContext());
+                showAlertDialogButtonClicked();
             }
         });
-        cv2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ViewPager.compColor(cv2,getContext());
-            }
-        });
-        cv3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ViewPager.compColor(cv3,getContext());
-            }
-        });
-        cv4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ViewPager.compColor(cv4,getContext());
-            }
-        });
-        cv5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ViewPager.compColor(cv5,getContext());
-            }
-        });
-        //Infla el layout fragment_prueba1
         return v;
     }
 
-    @Override
-    public void onPause() {
-        super.onPause();
-        arch = new ArrayList<CardView>();
-        arch.add(cv1);
-        arch.add(cv2);
-        arch.add(cv3);
-        arch.add(cv4);
-        arch.add(cv5);
-        ViewPager.chekealos(arch, getContext());
+    public void showAlertDialogButtonClicked(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setTitle("Información");
+        builder.setMessage("Las etiquetas energéticas indican a los consumidores cuáles son los " +
+                "electrodomésticos que gastan más o menos electricidad. Estas etiquetas se hallan, " +
+                "a modo de pegatina, en cada aparato para promover el ahorro energético. A partir " +
+                "del pasado 1 de marzo, contamos ya con una nueva clasificación energética de los " +
+                "electrodomésticos.\n" +
+                "\n" +
+                "Las nuevas etiquetas energéticas están reguladas a partir de la normativa europea. " +
+                "Es por esto por lo que todos los electrodomésticos de la Unión deben llevar de forma " +
+                "obligatoria esta nueva identificación. Es una manera rápida y segura de saber cuáles " +
+                "son los electrodomésticos más eficientes del mercado.");
+        builder.setCancelable(false);
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialogo1, int id) {
+                dialogo1.dismiss();
+            }
+        });
+
+        builder.show();
     }
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        arch = new ArrayList<CardView>();
-        arch.add(cv1);
-        arch.add(cv2);
-        arch.add(cv3);
-        arch.add(cv4);
-        arch.add(cv5);
-        ViewPager.chekealos(arch, getContext());
+    public void onPause() {
+
+        super.onPause();
     }
 }

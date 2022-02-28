@@ -9,37 +9,28 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 import com.alemanal.logwinder.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 
-public class Fragment111 extends Fragment {
-    private View v;
-    public Fragment111() {
+public class Fragment14 extends Fragment {
+    View v;
+    RadioGroup grupoRadio;
+    RadioButton botonRadio;
 
+    public Fragment14() {
+        // Required empty public constructor
     }
 
-    /*public static Fragment111 newInstance(String param1, String param2) {
-        Fragment111 fragment = new Fragment111();
-        Bundle args = new Bundle();
-
-        return fragment;
-    }*/
-
-    /*@Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        }
-    }*/
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-        v=inflater.inflate(R.layout.fragment_111, container, false);
-
+        // Inflate the layout for this fragment
+        v=inflater.inflate(R.layout.fragment_14, container, false);
 
         FloatingActionButton fab=v.findViewById(R.id.fab1);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -48,10 +39,12 @@ public class Fragment111 extends Fragment {
                 showAlertDialogButtonClicked();
             }
         });
+
+        grupoRadio=v.findViewById(R.id.radioGroup);
         return v;
     }
 
-    public void showAlertDialogButtonClicked(){
+    private void showAlertDialogButtonClicked() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
         builder.setTitle("Información");
         builder.setMessage("Las etiquetas energéticas indican a los consumidores cuáles son los " +
@@ -72,5 +65,18 @@ public class Fragment111 extends Fragment {
         });
 
         builder.show();
+    }
+
+    public void onPause() {
+        super.onPause();
+
+        //COMPRUEBA QUE RADIOBUTTON ESTA MARCADO
+
+        int idSeleccionado = grupoRadio.getCheckedRadioButtonId();
+        if (idSeleccionado != -1) {
+            botonRadio= v.findViewById(idSeleccionado);
+
+        }
+
     }
 }
