@@ -9,6 +9,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 import com.alemanal.logwinder.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -16,6 +18,9 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class Fragment11 extends Fragment {
     private View v;
+
+    RadioGroup grupoRadio;
+    RadioButton botonRadio;
     public Fragment11() {
 
     }
@@ -41,13 +46,14 @@ public class Fragment11 extends Fragment {
         v=inflater.inflate(R.layout.fragment_11, container, false);
 
 
-        FloatingActionButton fab=v.findViewById(R.id.fab1);
+        FloatingActionButton fab=v.findViewById(R.id.fab11);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 showAlertDialogButtonClicked();
             }
         });
+        grupoRadio=v.findViewById(R.id.radioGroup11);
         return v;
     }
 
@@ -77,5 +83,13 @@ public class Fragment11 extends Fragment {
     public void onPause() {
 
         super.onPause();
+
+        //COMPRUEBA QUE RADIOBUTTON ESTA MARCADO
+
+        int idSeleccionado = grupoRadio.getCheckedRadioButtonId();
+        if (idSeleccionado != -1) {
+            botonRadio= v.findViewById(idSeleccionado);
+
+        }
     }
 }

@@ -32,7 +32,7 @@ public class Fragment14 extends Fragment {
         // Inflate the layout for this fragment
         v=inflater.inflate(R.layout.fragment_14, container, false);
 
-        FloatingActionButton fab=v.findViewById(R.id.fab1);
+        FloatingActionButton fab=v.findViewById(R.id.fab14);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -40,7 +40,7 @@ public class Fragment14 extends Fragment {
             }
         });
 
-        grupoRadio=v.findViewById(R.id.radioGroup);
+        grupoRadio=v.findViewById(R.id.radioGroup14);
         return v;
     }
 

@@ -5,7 +5,7 @@
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.Fragment11">
+    tools:context=".fragments.Fragment23">
 
     <TextView
         android:id="@+id/tv1"
@@ -14,13 +14,13 @@
         android:lineSpacingMultiplier="1.2"
         android:textSize="18dp"
         android:padding="16dp"
-        android:text="¿Que clase energética tiene tu frigorífico? "
+        android:text="¿Que clase energética tiene tu secadora? "
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
-        android:id="@+id/radioGroup11"
+        android:id="@+id/radioGroup23"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -28,10 +28,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:gravity="center"
-         >
+        >
 
         <RadioButton
-            android:id="@+id/frigoA3"
+            android:id="@+id/secadoraA3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="A+++"
@@ -39,7 +39,7 @@
             />
 
         <RadioButton
-            android:id="@+id/congeA2"
+            android:id="@+id/secadoraA2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
@@ -48,7 +48,7 @@
             />
 
         <RadioButton
-            android:id="@+id/congeA1"
+            android:id="@+id/secadoraA1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="A+"
@@ -56,7 +56,7 @@
             />
 
         <RadioButton
-            android:id="@+id/congeA"
+            android:id="@+id/secadoraA"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="A"
@@ -64,7 +64,7 @@
             />
 
         <RadioButton
-            android:id="@+id/congeB"
+            android:id="@+id/secadoraB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="B"
@@ -72,7 +72,7 @@
             />
 
         <RadioButton
-            android:id="@+id/congeC"
+            android:id="@+id/secadoraC"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="C"
@@ -82,7 +82,7 @@
     </RadioGroup>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab11"
+        android:id="@+id/fab23"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_info2"
@@ -105,7 +105,7 @@
         android:text="Ejemplo de etiqueta energética: "
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/radioGroup11"
+        app:layout_constraintTop_toBottomOf="@id/radioGroup23"
         android:layout_marginTop="20dp"
         />
 

@@ -75,7 +75,7 @@ public class ViewPager extends FragmentActivity {
                 case 11:
                     return new Fragment11();
                 case 4:
-                    return new Fragment112();
+                    return new Fragment15();
                 default:
                     return new Prueba21();
             }

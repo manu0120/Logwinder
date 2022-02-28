@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/fragment114"
+    xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.Fragment114">
+    tools:context=".fragments.Fragment21">
 
     <TextView
         android:id="@+id/tv1"
@@ -14,104 +14,74 @@
         android:lineSpacingMultiplier="1.2"
         android:textSize="18dp"
         android:padding="16dp"
-        android:text="¿Que tipo de caldera usas? "
+        android:text="¿Que clase energética tiene tu lavadora? "
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="300dp"
+        android:id="@+id/radioGroup21"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/tv1"
+        android:gravity="center"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv1">
 
-        >
-        <!--        android:gravity="center"-->
         <RadioButton
-            android:id="@+id/radio_Gas"
+            android:id="@+id/lavadoraA3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Gas natural"
+            android:text="A+++"
 
             />
 
         <RadioButton
-            android:id="@+id/radio_Butano"
+            android:id="@+id/lavadoraA2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:text="Butano / Propano"
+            android:text="A++"
 
             />
 
         <RadioButton
-            android:id="@+id/radio_Electrica"
+            android:id="@+id/lavadoraA1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Electrica"
+            android:text="A+"
 
             />
 
         <RadioButton
-            android:id="@+id/radio_Biomasa"
+            android:id="@+id/lavadoraA"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Biomasa"
+            android:text="A"
+
+            />
+
+        <RadioButton
+            android:id="@+id/lavadoraB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="B"
+
+            />
+
+        <RadioButton
+            android:id="@+id/lavadoraC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="C"
 
             />
 
     </RadioGroup>
-
-    <TextView
-        android:id="@+id/tv2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:lineSpacingMultiplier="1.2"
-        android:textSize="18dp"
-        android:padding="16dp"
-        android:text="¿En que vivienda vives? "
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/radioGroup"/>
-
-    <RadioGroup
-        android:id="@+id/radioGroup2"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/tv2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-
-        >
-        <!--        android:gravity="center"-->
-        <RadioButton
-            android:id="@+id/radio_60"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Vivienda de 60 metros cuadrados (1 pers.)"
-
-            />
-
-        <RadioButton
-            android:id="@+id/radio_80"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:text="Vivienda de 80 metros cuadrados (varias pers.)"
-
-            />
-
-
-
-    </RadioGroup>
-
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab1"
+        android:id="@+id/fab21"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_info2"
@@ -123,5 +93,16 @@
         android:backgroundTint="@color/secondaryColor"
 
         />
+
+    <ImageView
+        android:id="@+id/ivFragment21"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="55dp"
+        android:src="@drawable/lavadora"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup21" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

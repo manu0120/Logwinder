@@ -2,10 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/fragment113"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.Fragment11">
+    tools:context=".fragments.Fragment15">
 
     <TextView
         android:id="@+id/tv1"
@@ -20,16 +20,16 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
-        android:id="@+id/radioGroup"
+        android:id="@+id/radioGroup15"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/tv1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv1"
 
         >
-<!--        android:gravity="center"-->
+        <!--        android:gravity="center"-->
         <RadioButton
             android:id="@+id/vitroRad"
             android:layout_width="wrap_content"
@@ -56,11 +56,10 @@
             />
 
 
-
     </RadioGroup>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab1"
+        android:id="@+id/fab15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_info2"
@@ -73,7 +72,16 @@
 
         />
 
+    <ImageView
+        android:id="@+id/ivFragment15"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:src="@drawable/imgvitroceramica"
+        app:layout_constraintEnd_toEndOf="parent"
 
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup15" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
