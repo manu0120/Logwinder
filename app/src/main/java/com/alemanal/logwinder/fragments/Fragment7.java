@@ -13,11 +13,17 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.alemanal.logwinder.R;
+import com.alemanal.logwinder.ViewPager;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.ArrayList;
 
 public class Fragment7 extends Fragment {
     private View v;
 
+    private RadioButton lavavajillasA3, lavavajillasA2, lavavajillasA1, lavavajillasA, lavavajillasB, lavavajillasC;
+
+    ArrayList<RadioButton> rad;
     RadioGroup grupoRadio;
     RadioButton botonRadio;
     public Fragment7() {
@@ -30,6 +36,14 @@ public class Fragment7 extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         v=inflater.inflate(R.layout.fragment_7, container, false);
+        lavavajillasA3 = v.findViewById(R.id.lavavajillasA3);
+        lavavajillasA2 = v.findViewById(R.id.lavavajillasA2);
+        lavavajillasA1 = v.findViewById(R.id.lavavajillasA1);
+        lavavajillasA = v.findViewById(R.id.lavavajillasA);
+        lavavajillasB = v.findViewById(R.id.lavavajillasB);
+        lavavajillasC = v.findViewById(R.id.lavavajillasC);
+        rad=new ArrayList<RadioButton>();
+
         FloatingActionButton fab=v.findViewById(R.id.fab22);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,12 +82,26 @@ public class Fragment7 extends Fragment {
 
         super.onPause();
 
-        //COMPRUEBA QUE RADIOBUTTON ESTA MARCADO
+        rad=new ArrayList<RadioButton>();
+        rad.add(lavavajillasA3);
+        rad.add(lavavajillasA2);
+        rad.add(lavavajillasA1);
+        rad.add(lavavajillasA);
+        rad.add(lavavajillasB);
+        rad.add(lavavajillasC);
+        ViewPager.compRadioButton(rad, getContext());
+    }
 
-        int idSeleccionado = grupoRadio.getCheckedRadioButtonId();
-        if (idSeleccionado != -1) {
-            botonRadio= v.findViewById(idSeleccionado);
-
-        }
+    @Override
+    public void onStart() {
+        super.onStart();
+        rad=new ArrayList<RadioButton>();
+        rad.add(lavavajillasA3);
+        rad.add(lavavajillasA2);
+        rad.add(lavavajillasA1);
+        rad.add(lavavajillasA);
+        rad.add(lavavajillasB);
+        rad.add(lavavajillasC);
+        ViewPager.compRadioButton(rad, getContext());
     }
 }

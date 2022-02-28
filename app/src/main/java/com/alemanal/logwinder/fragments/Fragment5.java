@@ -13,11 +13,16 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.alemanal.logwinder.R;
+import com.alemanal.logwinder.ViewPager;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.ArrayList;
 
 public class Fragment5 extends Fragment {
     private View v;
 
+    private RadioButton vitroRad, vitroEle, vitroInd;
+    ArrayList<RadioButton> rad;
     RadioGroup grupoRadio;
     RadioButton botonRadio;
     public Fragment5() {
@@ -29,6 +34,12 @@ public class Fragment5 extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         v=inflater.inflate(R.layout.fragment_5, container, false);
+
+        vitroRad = v.findViewById(R.id.vitroRad);
+        vitroEle = v.findViewById(R.id.vitroEle);
+        vitroInd = v.findViewById(R.id.vitroInd);
+
+        rad=new ArrayList<RadioButton>();
         FloatingActionButton fab=v.findViewById(R.id.fab15);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,13 +74,21 @@ public class Fragment5 extends Fragment {
     public void onPause() {
 
         super.onPause();
+        rad=new ArrayList<RadioButton>();
+        rad.add(vitroRad);
+        rad.add(vitroEle);
+        rad.add(vitroInd);
+        ViewPager.compRadioButton(rad, getContext());
 
-        //COMPRUEBA QUE RADIOBUTTON ESTA MARCADO
-
-        int idSeleccionado = grupoRadio.getCheckedRadioButtonId();
-        if (idSeleccionado != -1) {
-            botonRadio= v.findViewById(idSeleccionado);
-
-        }
     }
+    @Override
+    public void onStart() {
+        super.onStart();
+        rad=new ArrayList<RadioButton>();
+        rad.add(vitroRad);
+        rad.add(vitroEle);
+        rad.add(vitroInd);
+        ViewPager.compRadioButton(rad, getContext());
+    }
+
 }

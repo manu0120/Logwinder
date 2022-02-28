@@ -39,7 +39,7 @@
             />
 
         <RadioButton
-            android:id="@+id/congeA2"
+            android:id="@+id/frigoA2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
@@ -48,7 +48,7 @@
             />
 
         <RadioButton
-            android:id="@+id/congeA1"
+            android:id="@+id/frigoA1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="A+"
@@ -56,7 +56,7 @@
             />
 
         <RadioButton
-            android:id="@+id/congeA"
+            android:id="@+id/frigoA"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="A"
@@ -64,7 +64,7 @@
             />
 
         <RadioButton
-            android:id="@+id/congeB"
+            android:id="@+id/frigoB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="B"
@@ -72,7 +72,7 @@
             />
 
         <RadioButton
-            android:id="@+id/congeC"
+            android:id="@+id/frigoC"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="C"

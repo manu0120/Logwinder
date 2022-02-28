@@ -13,11 +13,16 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.alemanal.logwinder.R;
+import com.alemanal.logwinder.ViewPager;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.ArrayList;
 
 public class Fragment8 extends Fragment {
     private View v;
+    private RadioButton secadoraA3, secadoraA2, secadoraA1, secadoraA, secadoraB, secadoraC;
 
+    ArrayList<RadioButton> rad;
     RadioGroup grupoRadio;
     RadioButton botonRadio;
     public Fragment8() {
@@ -30,6 +35,13 @@ public class Fragment8 extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         v=inflater.inflate(R.layout.fragment_8, container, false);
+        secadoraA3 = v.findViewById(R.id.secadoraA3);
+        secadoraA2 = v.findViewById(R.id.secadoraA2);
+        secadoraA1 = v.findViewById(R.id.secadoraA1);
+        secadoraA = v.findViewById(R.id.secadoraA);
+        secadoraB = v.findViewById(R.id.secadoraB);
+        secadoraC = v.findViewById(R.id.secadoraC);
+        rad=new ArrayList<RadioButton>();
         FloatingActionButton fab=v.findViewById(R.id.fab23);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,12 +80,26 @@ public class Fragment8 extends Fragment {
 
         super.onPause();
 
-        //COMPRUEBA QUE RADIOBUTTON ESTA MARCADO
+        rad=new ArrayList<RadioButton>();
+        rad.add(secadoraA3);
+        rad.add(secadoraA2);
+        rad.add(secadoraA1);
+        rad.add(secadoraA);
+        rad.add(secadoraB);
+        rad.add(secadoraC);
+        ViewPager.compRadioButton(rad, getContext());
+    }
 
-        int idSeleccionado = grupoRadio.getCheckedRadioButtonId();
-        if (idSeleccionado != -1) {
-            botonRadio= v.findViewById(idSeleccionado);
-
-        }
+    @Override
+    public void onStart() {
+        super.onStart();
+        rad=new ArrayList<RadioButton>();
+        rad.add(secadoraA3);
+        rad.add(secadoraA2);
+        rad.add(secadoraA1);
+        rad.add(secadoraA);
+        rad.add(secadoraB);
+        rad.add(secadoraC);
+        ViewPager.compRadioButton(rad, getContext());
     }
 }
