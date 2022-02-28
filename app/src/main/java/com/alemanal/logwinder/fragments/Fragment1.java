@@ -13,7 +13,6 @@ import com.alemanal.logwinder.R;
 
 import java.util.ArrayList;
 
-//Esto es un ejemplo de como seria un fragment
 public class Fragment1 extends Fragment {
     private View v;
     private CardView cv1,cv2,cv3,cv4,cv5;

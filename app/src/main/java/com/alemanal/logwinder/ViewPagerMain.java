@@ -20,8 +20,13 @@ import com.google.android.material.navigation.NavigationBarView;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 
 public class ViewPagerMain extends FragmentActivity {
@@ -33,10 +38,19 @@ public class ViewPagerMain extends FragmentActivity {
     private FragmentStateAdapter pagerAdapter;
     BottomNavigationView btNav;
     HashMap data = ViewPager.data;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_pager_main);
+
+        try {
+            getData();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
 
         // Instanciacion del ViewPager2 y PagerAdapter.
         view_pager = findViewById(R.id.pager);
@@ -47,7 +61,6 @@ public class ViewPagerMain extends FragmentActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId();
-                Intent in;
                 switch (id){
                     case R.id.home:
                         item.setChecked(true);
@@ -68,6 +81,7 @@ public class ViewPagerMain extends FragmentActivity {
                 }
                 return false;
             }
+
         });
 
         view_pager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
@@ -80,7 +94,38 @@ public class ViewPagerMain extends FragmentActivity {
 
             }
         });
+
+//        Gson gson = new Gson();
+//        JsonObject json = gson.toJsonTree(data).getAsJsonObject();
+//        try {
+//            FileOutputStream fos = getApplicationContext().openFileOutput("json.json",Context.MODE_PRIVATE);
+//            fos.write(data.toString().getBytes(),0,data.toString().length());
+//            fos.close();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
     }
+
+    private void getData() throws IOException, ClassNotFoundException {
+        FileInputStream fo = new FileInputStream("data.ext");
+        ObjectInputStream os = new ObjectInputStream(fo);
+        data = (HashMap) os.readObject();
+//        Gson gson = new Gson();
+//        try{
+//            FileInputStream is = openFileInput("json.json");
+//            String aaa = is.toString();
+//            System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+//            System.out.println(aaa);
+//        } catch (FileNotFoundException e) {
+//            e.printStackTrace();
+//        } catch (IOException e) {
+//
+//        }
+        System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+        System.out.println(data.toString());
+
+    }
+
     @Override
     public void onBackPressed() {
         if (view_pager.getCurrentItem() == 0) {
@@ -119,6 +164,16 @@ public class ViewPagerMain extends FragmentActivity {
     }
 
     @Override
+    protected void onPause() {
+        try {
+            guardarDatos();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        super.onPause();
+    }
+
+    @Override
     protected void onDestroy() {
 //        try{
 //            FileOutputStream fos = openFileOutput("datos.txt", Context.MODE_PRIVATE);
@@ -126,16 +181,22 @@ public class ViewPagerMain extends FragmentActivity {
 //        } catch(java.io.IOException e){
 //
 //        }
-        Gson gson = new Gson();
-        JsonObject json = gson.toJsonTree(data).getAsJsonObject();
-        FileOutputStream fos = null;
-        try {
-            fos = openFileOutput("datos.json", Context.MODE_PRIVATE);
-            fos.write(json);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
+
+//        Gson gson = new Gson();
+//        JsonObject json = gson.toJsonTree(data).getAsJsonObject();
+//        try {
+//            FileOutputStream fos = getApplicationContext().openFileOutput("json.txt",Context.MODE_PRIVATE);
+//            fos.write(json.toString().getBytes(),0,json.toString().length());
+//            fos.close();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
         super.onDestroy();
+    }
+    public void guardarDatos() throws IOException {
+        FileOutputStream fo = openFileOutput("data.ext", Context.MODE_PRIVATE);
+        ObjectOutputStream os = new ObjectOutputStream(fo);
+        os.writeObject(data);
     }
 }
 
