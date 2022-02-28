@@ -140,7 +140,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="@font/signika_negative_semibold"
-            android:text="@string/Lavavajillas" />
+            android:text="Lavavajillas:" />
 
         <TextView
             android:id="@+id/dato6"
@@ -162,7 +162,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="@font/signika_negative_semibold"
-            android:text="@string/Lavavajillas" />
+            android:text="Secadora:" />
 
         <TextView
             android:id="@+id/dato7"

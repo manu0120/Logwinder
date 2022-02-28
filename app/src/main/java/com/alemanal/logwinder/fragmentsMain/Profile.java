@@ -62,65 +62,65 @@ public class Profile extends Fragment {
                 dato3.setText("195kw/h");
             }else if (data.get("congeD")) {
                  dato3.setText("234kw/h");
-             }
-        } else dato1.setText("0kw/h");
+             } else dato3.setText("300 ~ 500 kw/h");
+        } else dato3.setText("0kw/h");
         if(data.get("vitro")) {
             if (data.get("vitroRad")) {
-                dato1.setText("1200 ~ 2500kw/h");
+                dato4.setText("1200 ~ 2500kw/h");
             } else if (data.get("vitroEle")) {
-                dato1.setText("500kw/h");
+                dato4.setText("500kw/h");
             }else if (data.get("vitroInd")) {
-                dato1.setText("438 ~ 900 kw/h");
-            }
-        } else dato1.setText("0kw/h");
+                dato4.setText("438 ~ 900 kw/h");
+            }else dato4.setText("300 ~ 500 kw/h");
+        } else dato4.setText("0kw/h");
 
         if(data.get("lavadora")) {
             if (data.get("lavadoraA2")) {
-                dato1.setText("125kw/h");
+                dato4.setText("125kw/h");
             } else if (data.get("lavadoraA1")) {
-                dato1.setText("151kw/h");
+                dato5.setText("151kw/h");
             }else if (data.get("lavadoraA")) {
-                dato1.setText("193kw/h");
+                dato5.setText("193kw/h");
             }else if (data.get("lavadoraB")) {
-                dato1.setText("352kw/h");
+                dato5.setText("352kw/h");
             }else if (data.get("lavadoraC")) {
-                dato1.setText("425kw/h");
+                dato5.setText("425kw/h");
             }else if (data.get("lavadoraD")) {
-                dato1.setText("450kw/h");
-            }
-        } else dato1.setText("0kw/h");
+                dato5.setText("450kw/h");
+            } else dato5.setText("300 ~ 500 kw/h");
+        } else dato5.setText("0kw/h");
 
         if(data.get("lavavajillas")) {
             if (data.get("lavavajillasA2")) {
-                dato1.setText("131kw/h");
+                dato6.setText("131kw/h");
             } else if (data.get("lavavajillasA1")) {
-                dato1.setText("147kw/h");
+                dato6.setText("147kw/h");
             }else if (data.get("lavavajillasA")) {
-                dato1.setText("158kw/h");
+                dato6.setText("158kw/h");
             }else if (data.get("lavavajillasB")) {
-                dato1.setText("173kw/h");
+                dato6.setText("173kw/h");
             }else if (data.get("lavavajillasC")) {
-                dato1.setText("183kw/h");
+                dato6.setText("183kw/h");
             }else if (data.get("lavavajillasD")) {
-                dato1.setText("246kw/h");
-            }
-        } else dato1.setText("0kw/h");
+                dato6.setText("246kw/h");
+            }else dato6.setText("300 ~ 500 kw/h");
+        } else dato6.setText("0kw/h");
 
         if(data.get("secadora")) {
             if (data.get("secadoraA2")) {
-                dato1.setText("145kw/h");
+                dato7.setText("145kw/h");
             } else if (data.get("secadoraA1")) {
-                dato1.setText("152kw/h");
+                dato7.setText("152kw/h");
             }else if (data.get(".secadoraA")) {
-                dato1.setText("163kw/h");
+                dato7.setText("163kw/h");
             }else if (data.get("secadoraB")) {
-                dato1.setText("184kw/h");
+                dato7.setText("184kw/h");
             }else if (data.get("secadoraC")) {
-                dato1.setText("197kw/h");
+                dato7.setText("197kw/h");
             }else if (data.get("secadoraD")) {
-                dato1.setText("234kw/h");
-            }
-        } else dato1.setText("0kw/h");
+                dato7.setText("234kw/h");
+            }else dato7.setText("300 ~ 500 kw/h");
+        } else dato7.setText("0kw/h");
 
         return v;
     }
