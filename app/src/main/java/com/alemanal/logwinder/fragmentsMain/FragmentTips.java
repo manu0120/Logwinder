@@ -38,32 +38,32 @@ public class FragmentTips extends Fragment {
     }
     public String getTip(){
         String s="";
-        if(data.get("R.id.frigo") && cont == 0) {
-            if (data.get("R.id.frigoA")) {
+        if(data.get("frigo") && cont == 0) {
+            if (data.get("frigoA")) {
                 s = "Deberías remplazar tu frigorífico por uno con una clase energética mejor, asi podrías ahorrar un poco de electricidad";
-            } else if (data.get("R.id.frigoB")) {
+            } else if (data.get("frigoB")) {
                 s = "Deberías remplazar tu frigorífico por uno con una clase energética mejor, asi podrías ahorrar un poco de electricidad";
-            } else if (data.get("R.id.frigoC")) {
+            } else if (data.get("frigoC")) {
                 s = "Deberías remplazar tu frigorífico por uno con una clase energética mejor, asi podrías ahorrar un poco de electricidad";
             }
             cont++;
             return s;
         }
-        if(data.get("R.id.conge") && cont == 1) {
-            if (data.get("R.id.congeB")) {
+        if(data.get("conge") && cont == 1) {
+            if (data.get("congeB")) {
                 s = "Deberías remplazar tu congelador por uno con una clase energética mejor, asi podrías ahorrar un poco de electricidad";
-            } else if (data.get("R.id.congeC")) {
+            } else if (data.get("congeC")) {
                 s = "Deberías remplazar tu congelador por uno con una clase energética mejor, asi podrías ahorrar un poco de electricidad";
-            } else if (data.get("R.id.congeD")) {
+            } else if (data.get("congeD")) {
                 s = "Deberías remplazar tu congelador por uno con una clase energética mejor, asi podrías ahorrar un poco de electricidad";
             }
             cont++;
             return s;
         }
-        if(data.get("R.id.lavadora") && cont == 2) {
-            if (data.get("R.id.lavadoraB")) {
+        if(data.get("lavadora") && cont == 2) {
+            if (data.get("lavadoraB")) {
                 s = "Deberías remplazar tu lavadora por una con una clase energética mejor, asi podrías ahorrar un poco de electricidad";
-            } else if (data.get("R.id.lavadoraC")) {
+            } else if (data.get("lavadoraC")) {
                 s = "Deberías remplazar tu lavadora por una con una clase energética mejor, asi podrías ahorrar un poco de electricidad";
             }
             cont++;
