@@ -166,7 +166,7 @@ public class ViewPager extends FragmentActivity {
         }
     }
     //SI EL METODO NO ES STATIC DABA ERROR (si es static no puedes usar el metodo getSupportFragmentManager():
-    public void conectarFragments(){
+    /*public void conectarFragments(){
         System.out.println("Llamada a conectarFragments desde el metodo onPause");
 //        System.out.println("Llamada onStop");
         //Iterando el HashMap sobre las keys
@@ -192,7 +192,7 @@ public class ViewPager extends FragmentActivity {
             }
             //System.out.println("Clave: "+key+", Valor: "+valor);
         }
-    }
+    }*/
 }
 /*
 * 0 -> fragmento base
