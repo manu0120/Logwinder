@@ -115,7 +115,6 @@ public class Home extends Fragment {
     private void precioK() {
         listaPre = new ArrayList<Object>();
         listaPre.add(pvpc.get0001().getPrice());
-        listaPre.add(pvpc.get0001().getPrice());
         listaPre.add(pvpc.get0102().getPrice());
         listaPre.add(pvpc.get0203().getPrice());
         listaPre.add(pvpc.get0304().getPrice());
@@ -133,6 +132,7 @@ public class Home extends Fragment {
         listaPre.add(pvpc.get1516().getPrice());
         listaPre.add(pvpc.get1617().getPrice());
         listaPre.add(pvpc.get1718().getPrice());
+        listaPre.add(pvpc.get1819().getPrice());
         listaPre.add(pvpc.get1920().getPrice());
         listaPre.add(pvpc.get2021().getPrice());
         listaPre.add(pvpc.get2122().getPrice());
@@ -165,6 +165,7 @@ public class Home extends Fragment {
         listaHoraI.add(pvpc.get1516().getHour());
         listaHoraI.add(pvpc.get1617().getHour());
         listaHoraI.add(pvpc.get1718().getHour());
+        listaHoraI.add(pvpc.get1819().getHour());
         listaHoraI.add(pvpc.get1920().getHour());
         listaHoraI.add(pvpc.get2021().getHour());
         listaHoraI.add(pvpc.get2122().getHour());
@@ -193,6 +194,7 @@ public class Home extends Fragment {
         listaPorc.add(pvpc.get1516().getPrice());
         listaPorc.add(pvpc.get1617().getPrice());
         listaPorc.add(pvpc.get1718().getPrice());
+        listaPorc.add(pvpc.get1819().getPrice());
         listaPorc.add(pvpc.get1920().getPrice());
         listaPorc.add(pvpc.get2021().getPrice());
         listaPorc.add(pvpc.get2122().getPrice());
