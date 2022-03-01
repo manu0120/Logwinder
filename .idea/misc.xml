@@ -3,42 +3,63 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/IES Juan de la Cierva 2021-22/DI/Segunda evaluacion/Logwinder/app/src/main/res/layout/activity_view_pager.xml" value="0.36666666666666664" />
-        <entry key="..\:/IES Juan de la Cierva 2021-22/DI/Segunda evaluacion/Logwinder/app/src/main/res/layout/fragment_1.xml" value="0.17831813576494426" />
-        <entry key="..\:/IES Juan de la Cierva 2021-22/DI/Segunda evaluacion/Logwinder/app/src/main/res/layout/fragment_11.xml" value="0.22105263157894736" />
-        <entry key="..\:/IES Juan de la Cierva 2021-22/DI/Segunda evaluacion/Logwinder/app/src/main/res/layout/fragment_111.xml" value="0.35260416666666666" />
-        <entry key="..\:/IES Juan de la Cierva 2021-22/DI/Segunda evaluacion/Logwinder/app/src/main/res/layout/fragment_112.xml" value="0.18" />
-        <entry key="..\:/IES Juan de la Cierva 2021-22/DI/Segunda evaluacion/Logwinder/app/src/main/res/layout/fragment_113.xml" value="0.36666666666666664" />
-        <entry key="..\:/IES Juan de la Cierva 2021-22/DI/Segunda evaluacion/Logwinder/app/src/main/res/layout/fragment_114.xml" value="0.25" />
-        <entry key="..\:/IES Juan de la Cierva 2021-22/DI/Segunda evaluacion/Logwinder/app/src/main/res/layout/fragment_12.xml" value="0.2828282828282828" />
-        <entry key="..\:/IES Juan de la Cierva 2021-22/DI/Segunda evaluacion/Logwinder/app/src/main/res/layout/fragment_14.xml" value="0.25" />
-        <entry key="..\:/IES Juan de la Cierva 2021-22/DI/Segunda evaluacion/Logwinder/app/src/main/res/layout/fragment_15.xml" value="0.17831813576494426" />
-        <entry key="..\:/IES Juan de la Cierva 2021-22/DI/Segunda evaluacion/Logwinder/app/src/main/res/layout/fragment_2.xml" value="0.17831813576494426" />
-        <entry key="..\:/IES Juan de la Cierva 2021-22/DI/Segunda evaluacion/Logwinder/app/src/main/res/layout/fragment_21.xml" value="0.18" />
-        <entry key="..\:/IES Juan de la Cierva 2021-22/DI/Segunda evaluacion/Logwinder/app/src/main/res/layout/fragment_22.xml" value="0.1648148148148148" />
-        <entry key="..\:/IES Juan de la Cierva 2021-22/DI/Segunda evaluacion/Logwinder/app/src/main/res/layout/fragment_23.xml" value="0.1648148148148148" />
-        <entry key="..\:/IES Juan de la Cierva 2021-22/DI/Segunda evaluacion/Logwinder/app/src/main/res/layout/fragment_3.xml" value="0.20520833333333333" />
-        <entry key="..\:/IES Juan de la Cierva 2021-22/DI/Segunda evaluacion/Logwinder/app/src/main/res/layout/fragment_4.xml" value="0.15462962962962962" />
-        <entry key="..\:/IES Juan de la Cierva 2021-22/DI/Segunda evaluacion/Logwinder/app/src/main/res/layout/fragment_5.xml" value="0.11955420466058764" />
-        <entry key="..\:/IES Juan de la Cierva 2021-22/DI/Segunda evaluacion/Logwinder/app/src/main/res/layout/fragment_6.xml" value="0.22" />
-        <entry key="..\:/IES Juan de la Cierva 2021-22/DI/Segunda evaluacion/Logwinder/app/src/main/res/layout/fragment_7.xml" value="0.11955420466058764" />
-        <entry key="..\:/IES Juan de la Cierva 2021-22/DI/Segunda evaluacion/Logwinder/app/src/main/res/layout/fragment_8.xml" value="0.22" />
-        <entry key="..\:/IES Juan de la Cierva 2021-22/DI/Segunda evaluacion/Logwinder/app/src/main/res/layout/fragment_9.xml" value="0.11955420466058764" />
-        <entry key="..\:/IES Juan de la Cierva 2021-22/DI/Segunda evaluacion/Logwinder/app/src/main/res/layout/fragment_prueba3.xml" value="0.36666666666666664" />
-        <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.37864583333333335" />
-        <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/drawable/ic_launcher_background.xml" value="0.37864583333333335" />
-        <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/drawable/ic_launcher_logo_foreground.xml" value="0.37864583333333335" />
+        <entry key="..\:/Logwinder/app/src/main/res/layout/activity_navigation.xml" value="0.33" />
+        <entry key="..\:/Logwinder/app/src/main/res/layout/fragment_navigation.xml" value="0.18704710144927536" />
+        <entry key="..\:/Logwinder/app/src/main/res/layout/fragment_page1.xml" value="0.3307291666666667" />
+        <entry key="..\:/Logwinder/app/src/main/res/layout/fragment_page2.xml" value="0.20520833333333333" />
+        <entry key="..\:/Logwinder/app/src/main/res/layout/fragment_page3.xml" value="0.20520833333333333" />
+        <entry key="..\:/Logwinder/app/src/main/res/layout/fragment_page4.xml" value="0.24048913043478262" />
+        <entry key="..\:/Logwinder/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.3302083333333333" />
+        <entry key="..\:/Logwinder/app/src/main/res/menu/menu_chulo.xml" value="0.3302083333333333" />
+        <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/drawable/ic_logoappfondo.xml" value="0.37864583333333335" />
+        <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/drawable/ic_logorayo.xml" value="0.37864583333333335" />
         <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/drawable/ic_splash.xml" value="0.37864583333333335" />
-        <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/layout/activity_main.xml" value="0.3625" />
-        <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/layout/activity_navigation.xml" value="0.3625" />
-        <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/layout/activity_splash.xml" value="0.3625" />
-        <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/layout/fragment_navigation.xml" value="0.3625" />
-        <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/layout/fragment_page1.xml" value="0.3625" />
-        <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/layout/fragment_page2.xml" value="0.3625" />
-        <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/layout/fragment_page3.xml" value="0.3625" />
-        <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/layout/fragment_page4.xml" value="0.3625" />
+        <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/layout/activity_navigation.xml" value="0.2767210144927536" />
+        <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/layout/activity_navigation2.xml" value="0.2767210144927536" />
+        <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/layout/activity_splash.xml" value="0.338768115942029" />
+        <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/layout/activity_view_pager.xml" value="0.338768115942029" />
+        <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/layout/fragment_navigation2.xml" value="0.3625" />
+        <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/layout/fragment_prueba4.xml" value="0.25226449275362317" />
+        <entry key="..\:/Perfiles/am11dam2/Desktop/WOLFCRAY/android/Logwinder/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.3625" />
+        <entry key="..\:/Perfiles/am6DAM2/Manuel Arias/DI/Segunda evaluacion/Logwinder/app/src/main/res/drawable/ic_dishwasher.xml" value="0.266" />
+        <entry key="..\:/Perfiles/am6DAM2/Manuel Arias/DI/Segunda evaluacion/Logwinder/app/src/main/res/drawable/ic_dryer.xml" value="0.266" />
+        <entry key="..\:/Perfiles/am6DAM2/Manuel Arias/DI/Segunda evaluacion/Logwinder/app/src/main/res/drawable/ic_drying_machine.xml" value="0.266" />
+        <entry key="..\:/Perfiles/am6DAM2/Manuel Arias/DI/Segunda evaluacion/Logwinder/app/src/main/res/drawable/ic_fridge.xml" value="0.1605" />
+        <entry key="..\:/Perfiles/am6DAM2/Manuel Arias/DI/Segunda evaluacion/Logwinder/app/src/main/res/drawable/ic_logoappfondo.xml" value="0.336" />
+        <entry key="..\:/Perfiles/am6DAM2/Manuel Arias/DI/Segunda evaluacion/Logwinder/app/src/main/res/drawable/ic_logorayo.xml" value="0.336" />
+        <entry key="..\:/Perfiles/am6DAM2/Manuel Arias/DI/Segunda evaluacion/Logwinder/app/src/main/res/drawable/ic_splash.xml" value="0.18518518518518517" />
+        <entry key="..\:/Perfiles/am6DAM2/Manuel Arias/DI/Segunda evaluacion/Logwinder/app/src/main/res/drawable/ic_statistics.xml" value="0.336" />
+        <entry key="..\:/Perfiles/am6DAM2/Manuel Arias/DI/Segunda evaluacion/Logwinder/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Perfiles/am6DAM2/Manuel Arias/DI/Segunda evaluacion/Logwinder/app/src/main/res/layout/activity_navigation.xml" value="0.1" />
+        <entry key="..\:/Perfiles/am6DAM2/Manuel Arias/DI/Segunda evaluacion/Logwinder/app/src/main/res/layout/activity_navigation2.xml" value="0.5" />
+        <entry key="..\:/Perfiles/am6DAM2/Manuel Arias/DI/Segunda evaluacion/Logwinder/app/src/main/res/layout/activity_view_pager.xml" value="0.5" />
+        <entry key="..\:/Perfiles/am6DAM2/Manuel Arias/DI/Segunda evaluacion/Logwinder/app/src/main/res/layout/fragment_0.xml" value="0.25" />
+        <entry key="..\:/Perfiles/am6DAM2/Manuel Arias/DI/Segunda evaluacion/Logwinder/app/src/main/res/layout/fragment_11.xml" value="0.21603260869565216" />
+        <entry key="..\:/Perfiles/am6DAM2/Manuel Arias/DI/Segunda evaluacion/Logwinder/app/src/main/res/layout/fragment_111.xml" value="0.25" />
+        <entry key="..\:/Perfiles/am6DAM2/Manuel Arias/DI/Segunda evaluacion/Logwinder/app/src/main/res/layout/fragment_112.xml" value="0.20652173913043478" />
+        <entry key="..\:/Perfiles/am6DAM2/Manuel Arias/DI/Segunda evaluacion/Logwinder/app/src/main/res/layout/fragment_113.xml" value="0.36666666666666664" />
+        <entry key="..\:/Perfiles/am6DAM2/Manuel Arias/DI/Segunda evaluacion/Logwinder/app/src/main/res/layout/fragment_12.xml" value="0.21603260869565216" />
+        <entry key="..\:/Perfiles/am6DAM2/Manuel Arias/DI/Segunda evaluacion/Logwinder/app/src/main/res/layout/fragment_8.xml" value="0.19270833333333334" />
+        <entry key="..\:/Perfiles/am6DAM2/Manuel Arias/DI/Segunda evaluacion/Logwinder/app/src/main/res/layout/fragment_9.xml" value="0.19270833333333334" />
+        <entry key="..\:/Perfiles/am6DAM2/Manuel Arias/DI/Segunda evaluacion/Logwinder/app/src/main/res/layout/fragment_home.xml" value="0.19270833333333334" />
+        <entry key="..\:/Perfiles/am6DAM2/Manuel Arias/DI/Segunda evaluacion/Logwinder/app/src/main/res/layout/fragment_navigation2.xml" value="0.1" />
+        <entry key="..\:/Perfiles/am6DAM2/Manuel Arias/DI/Segunda evaluacion/Logwinder/app/src/main/res/layout/fragment_page1.xml" value="0.1" />
+        <entry key="..\:/Perfiles/am6DAM2/Manuel Arias/DI/Segunda evaluacion/Logwinder/app/src/main/res/layout/fragment_page2.xml" value="0.1" />
+        <entry key="..\:/Perfiles/am6DAM2/Manuel Arias/DI/Segunda evaluacion/Logwinder/app/src/main/res/layout/fragment_page3.xml" value="0.20380434782608695" />
+        <entry key="..\:/Perfiles/am6DAM2/Manuel Arias/DI/Segunda evaluacion/Logwinder/app/src/main/res/layout/fragment_profile.xml" value="0.19270833333333334" />
+        <entry key="..\:/Perfiles/am6DAM2/Manuel Arias/DI/Segunda evaluacion/Logwinder/app/src/main/res/layout/fragment_prueba2.xml" value="0.1" />
+        <entry key="..\:/Perfiles/am6DAM2/Manuel Arias/DI/Segunda evaluacion/Logwinder/app/src/main/res/layout/fragment_prueba4.xml" value="0.33" />
+        <entry key="..\:/Perfiles/am6DAM2/Manuel Arias/DI/Segunda evaluacion/Logwinder/app/src/main/res/layout/fragment_tips.xml" value="0.19270833333333334" />
+        <entry key="..\:/Perfiles/am6DAM2/Manuel Arias/DI/Segunda evaluacion/Logwinder/app/src/main/res/layout/layout_badge.xml" value="0.1778115501519757" />
+        <entry key="..\:/Perfiles/am6DAM2/Manuel Arias/DI/Segunda evaluacion/Logwinder/app/src/main/res/layout/lista_datos.xml" value="0.20652173913043478" />
+        <entry key="..\:/Perfiles/am6DAM2/Manuel Arias/DI/Segunda evaluacion/Logwinder/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.1" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
 </project>
