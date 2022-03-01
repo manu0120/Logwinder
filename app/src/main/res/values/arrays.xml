@@ -1,0 +1,45 @@
+<resources>
+    <!-- Reply Preference -->
+    <string-array name="reply_entries">
+        <item>Reply</item>
+        <item>Reply to all</item>
+    </string-array>
+
+    <string-array name="reply_values">
+        <item>reply</item>
+        <item>reply_all</item>
+    </string-array>
+
+    <!--    Arrays para casa-->
+    <string-array name="entradas_casa">
+        <item>Chalet</item>
+        <item>Piso</item>
+        <item>Oficina</item>
+    </string-array>
+    <string-array name="valores_casa">
+        <item>Chalet</item>
+        <item>Piso</item>
+        <item>Oficina</item>
+    </string-array>
+
+    <!--    Arrays para aficiones-->
+    <string-array name="entradas_electro">
+        <item>Nevera</item>
+        <item>Lavadora</item>
+        <item>Lavavajillas</item>
+        <item>Secadora</item>
+        <item>Vitroceramica</item>
+        <item>Microondas</item>
+        <item>Congelador</item>
+
+    </string-array>
+    <string-array name="valores_electro">
+        <item>Nevera</item>
+        <item>Lavadora</item>
+        <item>Lavavajillas</item>
+        <item>Secadora</item>
+        <item>Vitroceramica</item>
+        <item>Congelador</item>
+        <item>Congelador</item>
+    </string-array>
+</resources>

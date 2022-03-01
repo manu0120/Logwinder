@@ -16,6 +16,49 @@
     <string name="radiador">Radiador</string>
     <string name="plancha">Plancha</string>
     <string name="aspiradora">Aspiradora</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+
+    <!-- Preference Titles -->
+    <string name="mis_datos_header">Mis datos</string>
+    <string name="opciones_header">Opciones</string>
+
+    <!-- Strings para control sonido -->
+    <string name="activar_sonido">Activar sonido</string>
+    <string name="descripcion_activar_sonido_on">Activar sonido</string>
+    <string name="descripcion_activar_sonido_off">Activar inactivo</string>
+
+    <!-- Strings para control email -->
+    <string name="correo_electronico">Email</string>
+    <string name="descripcion_correo_electronico">Aqui se guardara el correo electronico</string>
+    <string name="texto_cuadro_correo_electronico">Introduce aquí tu email</string>
+
+    <!-- Strings para sexo -->
+    <string name="casa">Casa</string>
+    <string name="descripcion_casa">Aqui se guardara su tipo de casa</string>
+
+    <!-- Strings para electrodomesticos -->
+    <string name="electro">Electrodomesticos</string>
+    <string name="descripcion_electrodomesticos">Aqui se guardara el electrodomestico que mas se usa</string>
+
+    <!-- Strings para notificaciones -->
+    <string name="activar_notificaciones">Activar notificaciones</string>
+    <string name="descripcion_acticvar_notificaciones">Aqui se indicara si se activan las notificaciones</string>
 
 <!--    Disclaimer-->
     <string name="disclaim" translatable="false">* Si no has marcado este elesctrodoméstico anteriormente, no marques ninguna opción.</string>

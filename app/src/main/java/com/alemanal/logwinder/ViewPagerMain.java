@@ -15,6 +15,7 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import com.alemanal.logwinder.Utilidades.Utilidades;
 import com.alemanal.logwinder.fragments.Fragment9;
+import com.alemanal.logwinder.fragmentsMain.FragmentSettings;
 import com.alemanal.logwinder.fragmentsMain.FragmentTips;
 import com.alemanal.logwinder.fragmentsMain.Home;
 import com.alemanal.logwinder.fragmentsMain.Profile;
@@ -131,6 +132,7 @@ public class ViewPagerMain extends FragmentActivity {
                 case 2:
                     return new Profile();
                 case 3:
+                    return  new FragmentSettings();
                 default:
                     return new Home();
             }
@@ -144,7 +146,7 @@ public class ViewPagerMain extends FragmentActivity {
     @Override
     protected void onPause() {
         try {
-            guardarDatos(data, getApplicationContext());
+            guardarDatos();
         } catch (IOException e) {
             e.printStackTrace();
         }
