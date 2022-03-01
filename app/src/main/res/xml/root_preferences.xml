@@ -1,0 +1,41 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/mis_datos_header">
+        <EditTextPreference
+
+            android:title="@string/correo_electronico"
+            android:key="email"
+            android:summary="@string/descripcion_correo_electronico"
+            android:dialogTitle="@string/texto_cuadro_correo_electronico"/>
+
+        <ListPreference
+            android:title="@string/casa"
+            android:key="casa"
+            android:summary="@string/descripcion_casa"
+            android:entries="@array/entradas_casa"
+            android:entryValues="@array/valores_casa"/>
+
+        <MultiSelectListPreference
+            android:title="@string/electrodomesticos"
+            android:key="@string/electrodomesticos"
+            android:summary="@string/descripcion_electrodomesticos"
+            android:entries="@array/entradas_electro"
+            android:entryValues="@array/valores_electro"/>
+
+
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/opciones_header">
+        <CheckBoxPreference
+            android:title="@string/activar_sonido"
+            android:key="sonido"
+            android:summaryOn="@string/descripcion_activar_sonido_on"
+            android:summaryOff="@string/descripcion_activar_sonido_off"
+            android:defaultValue="false"/>
+        <SwitchPreference
+            android:title="@string/activar_notificaciones"
+            android:summary="@string/descripcion_acticvar_notificaciones"
+            android:key="notificaciones"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>
