@@ -337,12 +337,29 @@ public class ViewPagerMain extends FragmentActivity {
             data.put("frigoC", true);
         } else data.put("frigoC", false);
 
-//        ArrayList<String> arrConge = (ArrayList<String>) SQLite.get_frig_db(this);
-//        if (arrConge.equals("t")){
-//            data.put("frigo", true);
-//        } else data.put("frigo", false);
-        System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-        System.out.println(data.get("frigo"));
+        ArrayList<String> arrConge = (ArrayList<String>) SQLite.get_frig_db(this);
+        if (arrConge.get(0).equalsIgnoreCase("t")){
+            data.put("frigo", true);
+        } else data.put("frigo", false);
+        if (arrConge.get(1).equalsIgnoreCase("t")){
+            data.put("frigoA3", true);
+        } else data.put("frigoA3", false);
+        if (arrConge.get(2).equalsIgnoreCase("t")){
+            data.put("frigoA2", true);
+        } else data.put("frigoA2", false);
+        if (arrConge.get(3).equalsIgnoreCase("t")){
+            data.put("frigoA1", true);
+        } else data.put("frigoA1", false);
+        if (arrConge.get(4).equalsIgnoreCase("t")){
+            data.put("frigoA", true);
+        } else data.put("frigoA", false);
+        if (arrConge.get(5).equalsIgnoreCase("t")){
+            data.put("frigoB", true);
+        } else data.put("frigoB", false);
+        if (arrConge.get(6).equalsIgnoreCase("t")){
+            data.put("frigoC", true);
+        } else data.put("frigoC", false);
+
         return data;
 
     }

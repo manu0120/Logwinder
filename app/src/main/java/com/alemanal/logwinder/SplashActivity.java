@@ -17,6 +17,7 @@ import com.alemanal.logwinder.Utilidades.Utilidades;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class SplashActivity extends AppCompatActivity {
     ImageView logo_splash,logo_thunder;
@@ -40,12 +41,13 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-                    SQLite sq = new SQLite(getApplicationContext(), "Datos", null, 1);
+                    SQLite sq = new SQLite(getApplicationContext(), Utilidades.TABLA_FRIGORIFICO, null, 1);
                     SQLiteDatabase db = sq.getReadableDatabase();
                     Cursor cursor = db.rawQuery("SELECT * FROM " + Utilidades.TABLA_FRIGORIFICO, null);
-                    if(cursor.isNull(0)) {
-                        System.out.println("Manuel, Alex, Alejandro");
-                    }
+                    if(cursor.moveToFirst())
+                        if(cursor.isNull(0)) {
+                            System.out.println("Manuel, Alex, Alejandro");
+                        }
                     Intent intent = new Intent(SplashActivity.this, ViewPagerMain.class);
                     startActivity(intent);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
