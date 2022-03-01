@@ -339,26 +339,122 @@ public class ViewPagerMain extends FragmentActivity {
 
         ArrayList<String> arrConge = (ArrayList<String>) SQLite.get_frig_db(this);
         if (arrConge.get(0).equalsIgnoreCase("t")){
-            data.put("frigo", true);
-        } else data.put("frigo", false);
+            data.put("conge", true);
+        } else data.put("conge", false);
         if (arrConge.get(1).equalsIgnoreCase("t")){
-            data.put("frigoA3", true);
-        } else data.put("frigoA3", false);
+            data.put("congeA2", true);
+        } else data.put("congeA2", false);
         if (arrConge.get(2).equalsIgnoreCase("t")){
-            data.put("frigoA2", true);
-        } else data.put("frigoA2", false);
+            data.put("congeA1", true);
+        } else data.put("congeA1", false);
         if (arrConge.get(3).equalsIgnoreCase("t")){
-            data.put("frigoA1", true);
-        } else data.put("frigoA1", false);
+            data.put("congeA", true);
+        } else data.put("congeA", false);
         if (arrConge.get(4).equalsIgnoreCase("t")){
-            data.put("frigoA", true);
-        } else data.put("frigoA", false);
+            data.put("congeB", true);
+        } else data.put("congeB", false);
         if (arrConge.get(5).equalsIgnoreCase("t")){
-            data.put("frigoB", true);
-        } else data.put("frigoB", false);
+            data.put("congeC", true);
+        } else data.put("congeC", false);
         if (arrConge.get(6).equalsIgnoreCase("t")){
-            data.put("frigoC", true);
-        } else data.put("frigoC", false);
+            data.put("congeD", true);
+        } else data.put("congeD", false);
+
+        ArrayList<String> arrHorno = (ArrayList<String>) SQLite.get_horno_db(this);
+        if (arrHorno.get(0).equalsIgnoreCase("t")){
+            data.put("horno", true);
+        } else data.put("horno", false);
+
+
+        ArrayList<String> arrLavadora = (ArrayList<String>) SQLite.get_frig_db(this);
+        if (arrLavadora.get(0).equalsIgnoreCase("t")){
+            data.put("lava", true);
+        } else data.put("lava", false);
+        if (arrLavadora.get(1).equalsIgnoreCase("t")){
+            data.put("lavaA3", true);
+        } else data.put("lavaA3", false);
+        if (arrLavadora.get(2).equalsIgnoreCase("t")){
+            data.put("lavaA2", true);
+        } else data.put("lavaA2", false);
+        if (arrLavadora.get(3).equalsIgnoreCase("t")){
+            data.put("lavaA1", true);
+        } else data.put("lavaA1", false);
+        if (arrLavadora.get(4).equalsIgnoreCase("t")){
+            data.put("lavaA", true);
+        } else data.put("lavaA", false);
+        if (arrLavadora.get(5).equalsIgnoreCase("t")){
+            data.put("lavaB", true);
+        } else data.put("lavaB", false);
+        if (arrLavadora.get(6).equalsIgnoreCase("t")){
+            data.put("lavaC", true);
+        } else data.put("lavaC", false);
+
+
+        ArrayList<String> arrVaji = (ArrayList<String>) SQLite.get_vaji_db(this);
+        if (arrVaji.get(0).equalsIgnoreCase("t")){
+            data.put("vaji", true);
+        } else data.put("vaji", false);
+        if (arrVaji.get(1).equalsIgnoreCase("t")){
+            data.put("vajiA3", true);
+        } else data.put("vajiA3", false);
+        if (arrVaji.get(2).equalsIgnoreCase("t")){
+            data.put("vajiA2", true);
+        } else data.put("vajiA2", false);
+        if (arrVaji.get(3).equalsIgnoreCase("t")){
+            data.put("vajiA1", true);
+        } else data.put("vajiA1", false);
+        if (arrVaji.get(4).equalsIgnoreCase("t")){
+            data.put("vajiA", true);
+        } else data.put("vajiA", false);
+        if (arrVaji.get(5).equalsIgnoreCase("t")){
+            data.put("vajiB", true);
+        } else data.put("vajiB", false);
+        if (arrVaji.get(6).equalsIgnoreCase("t")){
+            data.put("vajiC", true);
+        } else data.put("vajiC", false);
+
+        ArrayList<String> arrSeca = (ArrayList<String>) SQLite.get_vaji_db(this);
+        if (arrSeca.get(0).equalsIgnoreCase("t")){
+            data.put("seca", true);
+        } else data.put("seca", false);
+        if (arrSeca.get(1).equalsIgnoreCase("t")){
+            data.put("secaA3", true);
+        } else data.put("secaA3", false);
+        if (arrSeca.get(2).equalsIgnoreCase("t")){
+            data.put("secaA2", true);
+        } else data.put("secaA2", false);
+        if (arrSeca.get(3).equalsIgnoreCase("t")){
+            data.put("secaA1", true);
+        } else data.put("secaA1", false);
+        if (arrSeca.get(4).equalsIgnoreCase("t")){
+            data.put("secaA", true);
+        } else data.put("secaA", false);
+        if (arrSeca.get(5).equalsIgnoreCase("t")){
+            data.put("secaB", true);
+        } else data.put("secaB", false);
+        if (arrSeca.get(6).equalsIgnoreCase("t")){
+            data.put("secaC", true);
+        } else data.put("secaC", false);
+
+        ArrayList<String> arrMicro = (ArrayList<String>) SQLite.get_horno_db(this);
+        if (arrMicro.get(0).equalsIgnoreCase("t")){
+            data.put("micro", true);
+        } else data.put("micro", false);
+
+        ArrayList<String> arrVitro = (ArrayList<String>) SQLite.get_frig_db(this);
+        if (arrVitro.get(0).equalsIgnoreCase("t")){
+            data.put("vitro", true);
+        } else data.put("vitro", false);
+        if (arrVitro.get(1).equalsIgnoreCase("t")){
+            data.put("vitroEle", true);
+        } else data.put("vitroEle", false);
+        if (arrVitro.get(2).equalsIgnoreCase("t")){
+            data.put("vitroRad", true);
+        } else data.put("vitroRad", false);
+        if (arrVitro.get(3).equalsIgnoreCase("t")){
+            data.put("vitroInd", true);
+        } else data.put("vitroInd", false);
+
 
         return data;
 
