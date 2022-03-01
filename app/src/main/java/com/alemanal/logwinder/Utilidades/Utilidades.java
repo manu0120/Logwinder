@@ -127,4 +127,21 @@ public class Utilidades {
             +CAMPO_SECAA+" TEXT,"
             +CAMPO_SECAB+" TEXT,"
             +CAMPO_SECAC+" TEXT)";
+
+    public static final String TABLA_HORNO = "HORNO";
+    public static final String CAMPO_ID_HORNO = "id_horno";
+    public static final String CAMPO_HORNO = "horno";
+
+    public static final String CREAR_TABLA_HORNO = "CREATE TABLE "+TABLA_HORNO+"("
+            +CAMPO_ID_HORNO+" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "
+            +CAMPO_HORNO+" TEXT)";
+
+    public static final String TABLA_MICRO = "MICRO";
+    public static final String CAMPO_ID_MICRO = "id_micro";
+    public static final String CAMPO_MICRO = "micro";
+
+    public static final String CREAR_TABLA_MICRO = "CREATE TABLE "+TABLA_MICRO+"("
+            +CAMPO_ID_MICRO+" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "
+            +CAMPO_MICRO+" TEXT)";
+
 }

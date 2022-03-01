@@ -11,6 +11,7 @@ import com.alemanal.logwinder.Utilidades.Utilidades;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Handler;
 
 public class SQLite extends SQLiteOpenHelper {
 
@@ -21,9 +22,6 @@ public class SQLite extends SQLiteOpenHelper {
         this.context=context;
     }
 
-
-
-
     @Override
     public void onCreate(SQLiteDatabase db) {
 
@@ -33,6 +31,8 @@ public class SQLite extends SQLiteOpenHelper {
         db.execSQL(Utilidades.CREAR_TABLA_LAVADORA);
         db.execSQL(Utilidades.CREAR_TABLA_VAJILLA);
         db.execSQL(Utilidades.CREAR_TABLA_SECADORA);
+        db.execSQL(Utilidades.CREAR_TABLA_HORNO);
+        db.execSQL(Utilidades.CREAR_TABLA_MICRO);
 
     }
 
@@ -44,6 +44,8 @@ public class SQLite extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS "+Utilidades.TABLA_VITRO);
         db.execSQL("DROP TABLE IF EXISTS "+Utilidades.TABLA_LAVADORA);
         db.execSQL("DROP TABLE IF EXISTS "+Utilidades.TABLA_SECADORA);
+        db.execSQL("DROP TABLE IF EXISTS "+Utilidades.TABLA_HORNO);
+        db.execSQL("DROP TABLE IF EXISTS "+Utilidades.TABLA_MICRO);
         onCreate(db);
     }
 
@@ -66,22 +68,25 @@ public class SQLite extends SQLiteOpenHelper {
     }
 
     //extraer datos de la bases de datos
-    public List<String> get_frig_db(String frig, String frigA3,String frigA2,String frigA1,String frigA,String frigB,String frigC){
-        SQLite conn = new SQLite(this.context,Utilidades.TABLA_FRIGORIFICO, null, 1);
-        SQLiteDatabase db = getReadableDatabase();
+
+
+    public static List<String> get_frig_db(Context context){
+        SQLite conn = new SQLite(context,Utilidades.TABLA_FRIGORIFICO, null, 1);
+        SQLiteDatabase db = conn.getReadableDatabase();
         List<String> data = new ArrayList<String>();
 
         //Cursor cursor = db.rawQuery("SELECT * FROM USUARIOS WHERE user='"+usuario+"'",null);
-        Cursor cursor = db.rawQuery("SELECT * FROM USUARIOS",null);
+        Cursor cursor = db.rawQuery("SELECT * FROM "+Utilidades.TABLA_FRIGORIFICO,null);
 
         if(cursor.moveToFirst()){
             do{
-                data.add(cursor.getString(0));
                 data.add(cursor.getString(1));
                 data.add(cursor.getString(2));
                 data.add(cursor.getString(3));
                 data.add(cursor.getString(4));
                 data.add(cursor.getString(5));
+                data.add(cursor.getString(6));
+                data.add(cursor.getString(7));
             }while(cursor.moveToNext());
         }
 
@@ -89,6 +94,195 @@ public class SQLite extends SQLiteOpenHelper {
 
         return data;
     }
+
+    public static List<String> get_lavadora_db(Context context){
+        SQLite conn = new SQLite(context,Utilidades.TABLA_LAVADORA, null, 1);
+        SQLiteDatabase db = conn.getReadableDatabase();
+        List<String> data = new ArrayList<String>();
+
+        //Cursor cursor = db.rawQuery("SELECT * FROM USUARIOS WHERE user='"+usuario+"'",null);
+        Cursor cursor = db.rawQuery("SELECT * FROM "+Utilidades.TABLA_LAVADORA,null);
+
+        if(cursor.moveToFirst()){
+            do{
+                data.add(cursor.getString(1));
+                data.add(cursor.getString(2));
+                data.add(cursor.getString(3));
+                data.add(cursor.getString(4));
+                data.add(cursor.getString(5));
+                data.add(cursor.getString(6));
+                data.add(cursor.getString(7));
+            }while(cursor.moveToNext());
+        }
+
+        db.close();
+
+        return data;
+    }
+
+    public static List<String> get_vaji_db(Context context){
+        SQLite conn = new SQLite(context,Utilidades.TABLA_VAJILLA, null, 1);
+        SQLiteDatabase db = conn.getReadableDatabase();
+        List<String> data = new ArrayList<String>();
+
+        //Cursor cursor = db.rawQuery("SELECT * FROM USUARIOS WHERE user='"+usuario+"'",null);
+        Cursor cursor = db.rawQuery("SELECT * FROM "+Utilidades.TABLA_VAJILLA,null);
+
+        if(cursor.moveToFirst()){
+            do{
+                data.add(cursor.getString(1));
+                data.add(cursor.getString(2));
+                data.add(cursor.getString(3));
+                data.add(cursor.getString(4));
+                data.add(cursor.getString(5));
+                data.add(cursor.getString(6));
+                data.add(cursor.getString(7));
+            }while(cursor.moveToNext());
+        }
+
+        db.close();
+
+        return data;
+    }
+
+    public static List<String> get_seca_db(Context context){
+        SQLite conn = new SQLite(context,Utilidades.TABLA_SECADORA, null, 1);
+        SQLiteDatabase db = conn.getReadableDatabase();
+        List<String> data = new ArrayList<String>();
+
+        //Cursor cursor = db.rawQuery("SELECT * FROM USUARIOS WHERE user='"+usuario+"'",null);
+        Cursor cursor = db.rawQuery("SELECT * FROM "+Utilidades.TABLA_SECADORA,null);
+
+        if(cursor.moveToFirst()){
+            do{
+                data.add(cursor.getString(1));
+                data.add(cursor.getString(2));
+                data.add(cursor.getString(3));
+                data.add(cursor.getString(4));
+                data.add(cursor.getString(5));
+                data.add(cursor.getString(6));
+                data.add(cursor.getString(7));
+            }while(cursor.moveToNext());
+        }
+
+        db.close();
+
+        return data;
+    }
+
+    public static List<String> get_conge_db(Context context){
+        SQLite conn = new SQLite(context,Utilidades.TABLA_CONGELADOR, null, 1);
+        SQLiteDatabase db = conn.getReadableDatabase();
+        List<String> data = new ArrayList<String>();
+
+        //Cursor cursor = db.rawQuery("SELECT * FROM USUARIOS WHERE user='"+usuario+"'",null);
+        Cursor cursor = db.rawQuery("SELECT * FROM "+Utilidades.TABLA_CONGELADOR,null);
+
+        if(cursor.moveToFirst()){
+            do{
+                data.add(cursor.getString(1));
+                data.add(cursor.getString(2));
+                data.add(cursor.getString(3));
+                data.add(cursor.getString(4));
+                data.add(cursor.getString(5));
+                data.add(cursor.getString(6));
+                data.add(cursor.getString(7));
+            }while(cursor.moveToNext());
+        }
+
+        db.close();
+
+        return data;
+    }
+
+    public static List<String> get_vitro_db(Context context){
+        SQLite conn = new SQLite(context,Utilidades.TABLA_VITRO, null, 1);
+        SQLiteDatabase db = conn.getReadableDatabase();
+        List<String> data = new ArrayList<String>();
+
+        //Cursor cursor = db.rawQuery("SELECT * FROM USUARIOS WHERE user='"+usuario+"'",null);
+        Cursor cursor = db.rawQuery("SELECT * FROM "+Utilidades.TABLA_VITRO,null);
+
+        if(cursor.moveToFirst()){
+            do{
+                data.add(cursor.getString(1));
+                data.add(cursor.getString(2));
+                data.add(cursor.getString(3));
+
+            }while(cursor.moveToNext());
+        }
+
+        db.close();
+
+        return data;
+    }
+
+    public static List<String> get_horno_db(Context context){
+        SQLite conn = new SQLite(context,Utilidades.TABLA_HORNO, null, 1);
+        SQLiteDatabase db = conn.getReadableDatabase();
+        List<String> data = new ArrayList<String>();
+
+        //Cursor cursor = db.rawQuery("SELECT * FROM USUARIOS WHERE user='"+usuario+"'",null);
+        Cursor cursor = db.rawQuery("SELECT * FROM "+Utilidades.TABLA_HORNO,null);
+
+        if(cursor.moveToFirst()){
+            do{
+                data.add(cursor.getString(1));
+
+            }while(cursor.moveToNext());
+        }
+
+        db.close();
+
+        return data;
+    }
+
+    public static List<String> get_micro_db(Context context){
+        SQLite conn = new SQLite(context,Utilidades.TABLA_MICRO, null, 1);
+        SQLiteDatabase db = conn.getReadableDatabase();
+        List<String> data = new ArrayList<String>();
+
+        //Cursor cursor = db.rawQuery("SELECT * FROM USUARIOS WHERE user='"+usuario+"'",null);
+        Cursor cursor = db.rawQuery("SELECT * FROM "+Utilidades.TABLA_MICRO,null);
+
+        if(cursor.moveToFirst()){
+            do{
+                data.add(cursor.getString(1));
+
+            }while(cursor.moveToNext());
+        }
+
+        db.close();
+
+        return data;
+    }
+
+
+    public Boolean insert_horno_db(String horno){
+        SQLite conn = new SQLite(this.context,Utilidades.TABLA_HORNO,null,1);
+        SQLiteDatabase db = conn.getWritableDatabase();
+        if (db!=null){
+            db.execSQL("INSERT INTO "+Utilidades.TABLA_HORNO+" ("+Utilidades.CAMPO_HORNO+") VALUES "
+                    +"('"+horno+"')");
+            db.close();
+            return true;
+        }else
+            return false;
+    }
+
+    public Boolean insert_micro_db(String micro){
+        SQLite conn = new SQLite(this.context,Utilidades.TABLA_MICRO,null,1);
+        SQLiteDatabase db = conn.getWritableDatabase();
+        if (db!=null){
+            db.execSQL("INSERT INTO "+Utilidades.TABLA_MICRO+" ("+Utilidades.CAMPO_MICRO+") VALUES "
+                    +"('"+micro+"')");
+            db.close();
+            return true;
+        }else
+            return false;
+    }
+
+
     public Boolean insert_conge_db(String conge, String congeA2, String congeA1,String congeA,String congeB,String congeC,String congeD){
         SQLite conn = new SQLite(this.context,Utilidades.TABLA_CONGELADOR, null, 1);
         SQLiteDatabase db = conn.getWritableDatabase();

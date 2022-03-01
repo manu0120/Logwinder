@@ -2,6 +2,8 @@ package com.alemanal.logwinder;
 
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -11,6 +13,7 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.alemanal.logwinder.Utilidades.Utilidades;
 import com.alemanal.logwinder.fragments.Fragment9;
 import com.alemanal.logwinder.fragmentsMain.FragmentTips;
 import com.alemanal.logwinder.fragmentsMain.Home;
@@ -29,6 +32,7 @@ import java.io.ObjectOutputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class ViewPagerMain extends FragmentActivity {
     //Dicta el número de paginas
@@ -38,19 +42,14 @@ public class ViewPagerMain extends FragmentActivity {
     //El adapter que provee las páginas al ViewPager
     private FragmentStateAdapter pagerAdapter;
     BottomNavigationView btNav;
-    public static HashMap<String, Boolean> data = ViewPager.data;
+    public static HashMap<String, Boolean> data = new HashMap<String, Boolean>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_pager_main);
 
-        try {
-            getData();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
+        data= setDataFromDataBase();
         // Instanciacion del ViewPager2 y PagerAdapter.
         view_pager = findViewById(R.id.pager);
         pagerAdapter = new ScreenSlidePagerAdapter(this);
@@ -289,9 +288,63 @@ public class ViewPagerMain extends FragmentActivity {
             } else arrSeca.add("f");
             sqlite.insert_seca_db(arrSeca.get(0),arrSeca.get(1),arrSeca.get(2),arrSeca.get(3),arrSeca.get(4),arrSeca.get(5),arrSeca.get(6));
         }else sqlite.insert_seca_db("f","f","f","f","f","f","f");
+
+        if (data.get("micro")){
+            ArrayList<String> arrMicro = new ArrayList<String>();
+            arrMicro.add("t");
+            if (data.get("micro")){
+                arrMicro.add("t");
+            } else  arrMicro.add("f");
+            sqlite.insert_horno_db(arrMicro.get(0));
+        } else sqlite.insert_horno_db("f");
+        sqlite.close();
+
+        if (data.get("horno")){
+            ArrayList<String> arrHorno = new ArrayList<String>();
+            arrHorno.add("t");
+            if (data.get("horno")){
+                arrHorno.add("t");
+            } else  arrHorno.add("f");
+            sqlite.insert_horno_db(arrHorno.get(0));
+        } else sqlite.insert_horno_db("f");
+        sqlite.close();
     }
     public static HashMap<String,Boolean> getData(){
         return data;
+    }
+
+    public HashMap<String,Boolean> setDataFromDataBase(){
+        ArrayList<String> arrFrigo = (ArrayList<String>) SQLite.get_frig_db(this);
+        if (arrFrigo.get(0).equalsIgnoreCase("t")){
+            data.put("frigo", true);
+        } else data.put("frigo", false);
+        if (arrFrigo.get(1).equalsIgnoreCase("t")){
+            data.put("frigoA3", true);
+        } else data.put("frigoA3", false);
+        if (arrFrigo.get(2).equalsIgnoreCase("t")){
+            data.put("frigoA2", true);
+        } else data.put("frigoA2", false);
+        if (arrFrigo.get(3).equalsIgnoreCase("t")){
+            data.put("frigoA1", true);
+        } else data.put("frigoA1", false);
+        if (arrFrigo.get(4).equalsIgnoreCase("t")){
+            data.put("frigoA", true);
+        } else data.put("frigoA", false);
+        if (arrFrigo.get(5).equalsIgnoreCase("t")){
+            data.put("frigoB", true);
+        } else data.put("frigoB", false);
+        if (arrFrigo.get(6).equalsIgnoreCase("t")){
+            data.put("frigoC", true);
+        } else data.put("frigoC", false);
+
+//        ArrayList<String> arrConge = (ArrayList<String>) SQLite.get_frig_db(this);
+//        if (arrConge.equals("t")){
+//            data.put("frigo", true);
+//        } else data.put("frigo", false);
+        System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+        System.out.println(data.get("frigo"));
+        return data;
+
     }
 
 }
