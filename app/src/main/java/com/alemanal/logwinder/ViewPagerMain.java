@@ -11,23 +11,19 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
-import com.alemanal.logwinder.fragments.Fragment9;
 import com.alemanal.logwinder.fragmentsMain.FragmentTips;
 import com.alemanal.logwinder.fragmentsMain.Home;
 import com.alemanal.logwinder.fragmentsMain.Profile;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
-import com.google.gson.Gson;
-import com.google.gson.JsonObject;
 
+import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.nio.charset.StandardCharsets;
-import java.util.HashMap;
 
 public class ViewPagerMain extends FragmentActivity {
     //Dicta el número de paginas
@@ -37,7 +33,7 @@ public class ViewPagerMain extends FragmentActivity {
     //El adapter que provee las páginas al ViewPager
     private FragmentStateAdapter pagerAdapter;
     BottomNavigationView btNav;
-    HashMap data = ViewPager.data;
+    Object data = ViewPager.data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +57,7 @@ public class ViewPagerMain extends FragmentActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId();
+                Intent in;
                 switch (id){
                     case R.id.home:
                         item.setChecked(true);
@@ -81,7 +78,6 @@ public class ViewPagerMain extends FragmentActivity {
                 }
                 return false;
             }
-
         });
 
         view_pager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
@@ -109,7 +105,11 @@ public class ViewPagerMain extends FragmentActivity {
     private void getData() throws IOException, ClassNotFoundException {
         FileInputStream fo = new FileInputStream("data.ext");
         ObjectInputStream os = new ObjectInputStream(fo);
-        data = (HashMap) os.readObject();
+
+        data = os.readObject();
+
+        os.close();
+
 //        Gson gson = new Gson();
 //        try{
 //            FileInputStream is = openFileInput("json.json");
@@ -175,6 +175,7 @@ public class ViewPagerMain extends FragmentActivity {
 
     @Override
     protected void onDestroy() {
+
 //        try{
 //            FileOutputStream fos = openFileOutput("datos.txt", Context.MODE_PRIVATE);
 //
@@ -194,10 +195,41 @@ public class ViewPagerMain extends FragmentActivity {
         super.onDestroy();
     }
     public void guardarDatos() throws IOException {
-        FileOutputStream fo = openFileOutput("data.ext", Context.MODE_PRIVATE);
-        ObjectOutputStream os = new ObjectOutputStream(fo);
-        os.writeObject(data);
+
+        String filename = "res/raw/data.txt";
+        try
+        {
+            File file = new File("data.ext");
+            if (!file.exists()) {
+                FileOutputStream fo = openFileOutput("data.ext", Context.MODE_PRIVATE);
+                ObjectOutputStream os = new ObjectOutputStream(fo);
+                os.writeObject(data);
+                os.close();
+            }
+                if (!file.createNewFile()) {
+                    FileOutputStream fo = openFileOutput("data.ext", Context.MODE_PRIVATE);
+                    ObjectOutputStream os = new ObjectOutputStream(fo);
+                    os.writeObject(data);
+                    os.close();
+                    throw new IOException("Unable to create file");
+                }
+                // else { //prompt user to confirm overwrite }
+
+                FileOutputStream fileout = new FileOutputStream(file);
+                ObjectOutputStream out = new ObjectOutputStream(fileout);
+                out.writeObject(data);
+            }
+catch (Exception ex)
+            {
+                //show the error message
+            }
+
+//        FileOutputStream fo = openFileOutput("data.ext", Context.MODE_PRIVATE);
+//        ObjectOutputStream os = new ObjectOutputStream(fo);
+//        os.writeObject(data);
+//        os.close();
     }
+
 }
 
 
