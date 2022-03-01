@@ -27,6 +27,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class ViewPagerMain extends FragmentActivity {
@@ -37,7 +38,7 @@ public class ViewPagerMain extends FragmentActivity {
     //El adapter que provee las páginas al ViewPager
     private FragmentStateAdapter pagerAdapter;
     BottomNavigationView btNav;
-    HashMap<String, Boolean> data = ViewPager.data;
+    public static HashMap<String, Boolean> data = ViewPager.data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,11 +105,6 @@ public class ViewPagerMain extends FragmentActivity {
 //        }
     }
 
-    private void getData() throws IOException, ClassNotFoundException {
-
-
-    }
-
     @Override
     public void onBackPressed() {
         if (view_pager.getCurrentItem() == 0) {
@@ -149,7 +145,7 @@ public class ViewPagerMain extends FragmentActivity {
     @Override
     protected void onPause() {
         try {
-            guardarDatos();
+            guardarDatos(data, getApplicationContext());
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -245,6 +241,9 @@ public class ViewPagerMain extends FragmentActivity {
             } else arrLava.add("f");
             sqlite.insert_lavadora_db(arrLava.get(0),arrLava.get(1),arrLava.get(2),arrLava.get(3),arrLava.get(4),arrLava.get(5),arrLava.get(6));
         }else sqlite.insert_lavadora_db("f","f","f","f","f","f","f");
+    }
+    public static HashMap getData(){
+        return data;
     }
 
 }
