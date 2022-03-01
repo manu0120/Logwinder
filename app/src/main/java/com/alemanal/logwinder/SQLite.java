@@ -208,6 +208,7 @@ public class SQLite extends SQLiteOpenHelper {
                 data.add(cursor.getString(1));
                 data.add(cursor.getString(2));
                 data.add(cursor.getString(3));
+                data.add(cursor.getString(4));
 
             }while(cursor.moveToNext());
         }

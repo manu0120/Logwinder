@@ -1,6 +1,7 @@
 package com.alemanal.logwinder;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
@@ -55,10 +56,21 @@ public class SplashActivity extends AppCompatActivity {
 //                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 //                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
 //                } catch (IndexOutOfBoundsException e){
-                    Intent intent = new Intent(SplashActivity.this, ViewPager.class);
-                    startActivity(intent);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                switch(getFirstTimeRun()) {
+                    case 0 : case 2:
+                        Intent intent = new Intent(SplashActivity.this, ViewPager.class);
+                        startActivity(intent);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                        break;
+                    case 1:
+                        Intent intent2 = new Intent(SplashActivity.this, ViewPagerMain.class);
+                        startActivity(intent2);
+                        intent2.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        intent2.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                        break;
+                }
+
 //                }catch (NullPointerException e){
 //                    System.out.println("ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc");
 //                    Intent intent = new Intent(SplashActivity.this, ViewPager.class);
@@ -68,5 +80,14 @@ public class SplashActivity extends AppCompatActivity {
 //                }
             }
         }, 4000);
+    }
+    private int getFirstTimeRun() {
+        SharedPreferences sp = getSharedPreferences("MYAPP", 0);
+        int result, currentVersionCode = BuildConfig.VERSION_CODE;
+        int lastVersionCode = sp.getInt("FIRSTTIMERUN", -1);
+        if (lastVersionCode == -1) result = 0; else
+            result = (lastVersionCode == currentVersionCode) ? 1 : 2;
+        sp.edit().putInt("FIRSTTIMERUN", currentVersionCode).apply();
+        return result;
     }
 }
