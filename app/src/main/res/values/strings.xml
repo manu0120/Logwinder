@@ -17,4 +17,7 @@
     <string name="plancha">Plancha</string>
     <string name="aspiradora">Aspiradora</string>
 
+<!--    Disclaimer-->
+    <string name="disclaim" translatable="false">* Si no has marcado este elesctrodoméstico anteriormente, no marques ninguna opción.</string>
+
 </resources>

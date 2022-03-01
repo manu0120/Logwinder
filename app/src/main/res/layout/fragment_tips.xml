@@ -30,8 +30,8 @@
 
         android:text="Tip nuevo"
         style="@style/ButtonSecondaryColor"
-        android:layout_marginTop="100dp"
+        android:layout_marginBottom="250dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTips" />
+        app:layout_constraintBottom_toBottomOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
