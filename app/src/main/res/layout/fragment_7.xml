@@ -31,7 +31,7 @@
         >
 
         <RadioButton
-            android:id="@+id/lavavajillasA3"
+            android:id="@+id/vajiA3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="A+++"
@@ -39,7 +39,7 @@
             />
 
         <RadioButton
-            android:id="@+id/lavavajillasA2"
+            android:id="@+id/vajiA2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
@@ -48,7 +48,7 @@
             />
 
         <RadioButton
-            android:id="@+id/lavavajillasA1"
+            android:id="@+id/vajiA1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="A+"
@@ -56,7 +56,7 @@
             />
 
         <RadioButton
-            android:id="@+id/lavavajillasA"
+            android:id="@+id/vajiA"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="A"
@@ -64,7 +64,7 @@
             />
 
         <RadioButton
-            android:id="@+id/lavavajillasB"
+            android:id="@+id/vajiB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="B"
@@ -72,7 +72,7 @@
             />
 
         <RadioButton
-            android:id="@+id/lavavajillasC"
+            android:id="@+id/vajiC"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="C"

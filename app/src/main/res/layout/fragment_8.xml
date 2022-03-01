@@ -31,7 +31,7 @@
         >
 
         <RadioButton
-            android:id="@+id/secadoraA3"
+            android:id="@+id/secaA3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="A+++"
@@ -39,7 +39,7 @@
             />
 
         <RadioButton
-            android:id="@+id/secadoraA2"
+            android:id="@+id/secaA2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
@@ -48,7 +48,7 @@
             />
 
         <RadioButton
-            android:id="@+id/secadoraA1"
+            android:id="@+id/secaA1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="A+"
@@ -56,7 +56,7 @@
             />
 
         <RadioButton
-            android:id="@+id/secadoraA"
+            android:id="@+id/secaA"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="A"
@@ -64,7 +64,7 @@
             />
 
         <RadioButton
-            android:id="@+id/secadoraB"
+            android:id="@+id/secaB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="B"
@@ -72,7 +72,7 @@
             />
 
         <RadioButton
-            android:id="@+id/secadoraC"
+            android:id="@+id/secaC"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="C"

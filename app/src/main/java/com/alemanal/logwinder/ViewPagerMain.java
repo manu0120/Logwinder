@@ -182,26 +182,26 @@ public class ViewPagerMain extends FragmentActivity {
             ArrayList<String> arrCong = new ArrayList<String>();
             arrCong.add("t");
 
-            if (data.get("congA2")) {
+            if (data.get("congeA2")) {
                 arrCong.add("t");
             } else arrCong.add("f");
-            if (data.get("congA1")) {
+            if (data.get("congeA1")) {
                 arrCong.add("t");
             } else arrCong.add("f");
-            if (data.get("congA")) {
+            if (data.get("congeA")) {
                 arrCong.add("t");
             } else arrCong.add("f");
-            if (data.get("congB")) {
+            if (data.get("congeB")) {
                 arrCong.add("t");
             } else arrCong.add("f");
-            if (data.get("congC")) {
+            if (data.get("congeC")) {
                 arrCong.add("t");
             } else arrCong.add("f");
-            if (data.get("congD")) {
+            if (data.get("congeD")) {
                 arrCong.add("t");
             } else arrCong.add("f");
-            sqlite.insert_cong_db(arrCong.get(0),arrCong.get(1),arrCong.get(2),arrCong.get(3),arrCong.get(4),arrCong.get(5),arrCong.get(6));
-        }else sqlite.insert_cong_db("f","f","f","f","f","f","f");
+            sqlite.insert_conge_db(arrCong.get(0),arrCong.get(1),arrCong.get(2),arrCong.get(3),arrCong.get(4),arrCong.get(5),arrCong.get(6));
+        }else sqlite.insert_conge_db("f","f","f","f","f","f","f");
 
         if(data.get("vitro")) {
             ArrayList<String> arrVitro = new ArrayList<String>();
@@ -241,8 +241,56 @@ public class ViewPagerMain extends FragmentActivity {
             } else arrLava.add("f");
             sqlite.insert_lavadora_db(arrLava.get(0),arrLava.get(1),arrLava.get(2),arrLava.get(3),arrLava.get(4),arrLava.get(5),arrLava.get(6));
         }else sqlite.insert_lavadora_db("f","f","f","f","f","f","f");
+
+        if(data.get("vaji")) {
+            ArrayList<String> arrVaji = new ArrayList<String>();
+            arrVaji.add("t");
+            if (data.get("vajiA3")) {
+                arrVaji.add("t");
+            } else arrVaji.add("f");
+            if (data.get("vajiA2")) {
+                arrVaji.add("t");
+            } else arrVaji.add("f");
+            if (data.get("vajiA1")) {
+                arrVaji.add("t");
+            } else arrVaji.add("f");
+            if (data.get("vajiA")) {
+                arrVaji.add("t");
+            } else arrVaji.add("f");
+            if (data.get("vajiB")) {
+                arrVaji.add("t");
+            } else arrVaji.add("f");
+            if (data.get("vajiC")) {
+                arrVaji.add("t");
+            } else arrVaji.add("f");
+            sqlite.insert_vaji_db(arrVaji.get(0),arrVaji.get(1),arrVaji.get(2),arrVaji.get(3),arrVaji.get(4),arrVaji.get(5),arrVaji.get(6));
+        }else sqlite.insert_vaji_db("f","f","f","f","f","f","f");
+
+        if(data.get("seca")) {
+            ArrayList<String> arrSeca = new ArrayList<String>();
+            arrSeca.add("t");
+            if (data.get("secaA3")) {
+                arrSeca.add("t");
+            } else arrSeca.add("f");
+            if (data.get("secaA2")) {
+                arrSeca.add("t");
+            } else arrSeca.add("f");
+            if (data.get("secaA1")) {
+                arrSeca.add("t");
+            } else arrSeca.add("f");
+            if (data.get("secaA")) {
+                arrSeca.add("t");
+            } else arrSeca.add("f");
+            if (data.get("secaB")) {
+                arrSeca.add("t");
+            } else arrSeca.add("f");
+            if (data.get("secaC")) {
+                arrSeca.add("t");
+            } else arrSeca.add("f");
+            sqlite.insert_seca_db(arrSeca.get(0),arrSeca.get(1),arrSeca.get(2),arrSeca.get(3),arrSeca.get(4),arrSeca.get(5),arrSeca.get(6));
+        }else sqlite.insert_seca_db("f","f","f","f","f","f","f");
     }
-    public static HashMap getData(){
+    public static HashMap<String,Boolean> getData(){
         return data;
     }
 

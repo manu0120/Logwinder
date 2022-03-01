@@ -29,9 +29,9 @@ public class Fragment2 extends Fragment {
         // Inflate the layout for this fragment
         v=inflater.inflate(R.layout.fragment_2, container, false);
 
-        cv6 = v.findViewById(R.id.lavadora);
-        cv7 = v.findViewById(R.id.lavavajillas);
-        cv8 = v.findViewById(R.id.secadora);
+        cv6 = v.findViewById(R.id.lava);
+        cv7 = v.findViewById(R.id.vaji);
+        cv8 = v.findViewById(R.id.seca);
 
 
         arch = new ArrayList<CardView>();

@@ -127,7 +127,6 @@ public class ViewPager extends FragmentActivity {
     }
 
     public static void compRadioButton(ArrayList<RadioButton> rad, Context con){
-
         for(RadioButton rb: rad){
             String id=con.getResources().getResourceEntryName(((View)rb).getId());
             if (rb.isChecked()){

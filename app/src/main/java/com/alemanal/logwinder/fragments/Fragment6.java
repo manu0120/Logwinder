@@ -36,12 +36,12 @@ public class Fragment6 extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         v=inflater.inflate(R.layout.fragment_6, container, false);
-        lavadoraA3 = v.findViewById(R.id.lavadoraA3);
-        lavadoraA2 = v.findViewById(R.id.lavadoraA2);
-        lavadoraA1 = v.findViewById(R.id.lavadoraA1);
-        lavadoraA = v.findViewById(R.id.lavadoraA);
-        lavadoraB = v.findViewById(R.id.lavadoraB);
-        lavadoraC = v.findViewById(R.id.lavadoraC);
+        lavadoraA3 = v.findViewById(R.id.lavaA3);
+        lavadoraA2 = v.findViewById(R.id.lavaA2);
+        lavadoraA1 = v.findViewById(R.id.lavaA1);
+        lavadoraA = v.findViewById(R.id.lavaA);
+        lavadoraB = v.findViewById(R.id.lavaB);
+        lavadoraC = v.findViewById(R.id.lavaC);
         rad=new ArrayList<RadioButton>();
         FloatingActionButton fab=v.findViewById(R.id.fab21);
         fab.setOnClickListener(new View.OnClickListener() {

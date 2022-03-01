@@ -76,12 +76,12 @@ public class SQLite extends SQLiteOpenHelper {
 
         if(cursor.moveToFirst()){
             do{
+                data.add(cursor.getString(0));
                 data.add(cursor.getString(1));
                 data.add(cursor.getString(2));
                 data.add(cursor.getString(3));
                 data.add(cursor.getString(4));
                 data.add(cursor.getString(5));
-                data.add(cursor.getString(6));
             }while(cursor.moveToNext());
         }
 
@@ -89,7 +89,7 @@ public class SQLite extends SQLiteOpenHelper {
 
         return data;
     }
-    public Boolean insert_cong_db(String cong, String congA2, String congA1,String congA,String congB,String congC,String congD){
+    public Boolean insert_conge_db(String conge, String congeA2, String congeA1,String congeA,String congeB,String congeC,String congeD){
         SQLite conn = new SQLite(this.context,Utilidades.TABLA_CONGELADOR, null, 1);
         SQLiteDatabase db = conn.getWritableDatabase();
         //SQLiteDatabase db = getWritableDatabase();
@@ -98,7 +98,7 @@ public class SQLite extends SQLiteOpenHelper {
                     +Utilidades.CAMPO_CONGA2+","+Utilidades.CAMPO_CONGA1+","
                     +Utilidades.CAMPO_CONGA+","+Utilidades.CAMPO_CONGB+","
                     +Utilidades.CAMPO_CONGC+","+Utilidades.CAMPO_CONGD+") VALUES " +
-                    "('"+cong+"','"+congA2+"','"+congA1+"','"+congA+"','"+congB+"','"+congC+"','"+congD+"')");
+                    "('"+conge+"','"+congeA2+"','"+congeA1+"','"+congeA+"','"+congeB+"','"+congeC+"','"+congeD+"')");
             db.close();
             return true;
         }else

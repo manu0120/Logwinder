@@ -30,7 +30,7 @@
         app:layout_constraintTop_toBottomOf="@id/tv1">
 
         <RadioButton
-            android:id="@+id/lavadoraA3"
+            android:id="@+id/lavaA3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="A+++"
@@ -38,7 +38,7 @@
             />
 
         <RadioButton
-            android:id="@+id/lavadoraA2"
+            android:id="@+id/lavaA2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
@@ -47,7 +47,7 @@
             />
 
         <RadioButton
-            android:id="@+id/lavadoraA1"
+            android:id="@+id/lavaA1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="A+"
@@ -55,7 +55,7 @@
             />
 
         <RadioButton
-            android:id="@+id/lavadoraA"
+            android:id="@+id/lavaA"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="A"
@@ -63,7 +63,7 @@
             />
 
         <RadioButton
-            android:id="@+id/lavadoraB"
+            android:id="@+id/lavaB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="B"
@@ -71,7 +71,7 @@
             />
 
         <RadioButton
-            android:id="@+id/lavadoraC"
+            android:id="@+id/lavaC"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="C"

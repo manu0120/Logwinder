@@ -50,19 +50,19 @@ public class Profile extends Fragment {
             dato2.setText("90 ~ 1000 kw/h");
         else dato2.setText("0kw/h");
         if(data.get("conge")) {
-             if (data.get("congA2")) {
+             if (data.get("congeA2")) {
                 dato3.setText("131kw/h");
-            } else if (data.get("congA1")) {
+            } else if (data.get("congeA1")) {
                 dato3.setText("151kw/h");
-            }else if (data.get("congA")) {
+            }else if (data.get("congeA")) {
                 dato3.setText("163kw/h");
-            }else if (data.get("congB")) {
+            }else if (data.get("congeB")) {
                 dato3.setText("171kw/h");
-            }else if (data.get("congC")) {
+            }else if (data.get("congeC")) {
                 dato3.setText("195kw/h");
-            }else if (data.get("congD")) {
+            }else if (data.get("congeD")) {
                  dato3.setText("234kw/h");
-             } else dato3.setText("300 ~ 500 kw/h");
+             } else dato3.setText("131 ~ 234 kw/h");
         } else dato3.setText("0kw/h");
         if(data.get("vitro")) {
             if (data.get("vitroRad")) {
@@ -71,23 +71,23 @@ public class Profile extends Fragment {
                 dato4.setText("500kw/h");
             }else if (data.get("vitroInd")) {
                 dato4.setText("438 ~ 900 kw/h");
-            }else dato4.setText("300 ~ 500 kw/h");
+            }else dato4.setText("500 ~ 800 kw/h");
         } else dato4.setText("0kw/h");
 
         if(data.get("lava")) {
-            if (data.get("lavaA2")) {
+            if (data.get("lavaA3")) {
                 dato4.setText("125kw/h");
-            } else if (data.get("lavaA1")) {
+            } else if (data.get("lavaA2")) {
                 dato5.setText("151kw/h");
-            }else if (data.get("lavaA")) {
+            }else if (data.get("lavaA1")) {
                 dato5.setText("193kw/h");
-            }else if (data.get("lavaB")) {
+            }else if (data.get("lavaA")) {
                 dato5.setText("352kw/h");
-            }else if (data.get("lavaC")) {
+            }else if (data.get("lavaB")) {
                 dato5.setText("425kw/h");
-            }else if (data.get("lavaD")) {
+            }else if (data.get("lavaC")) {
                 dato5.setText("450kw/h");
-            } else dato5.setText("300 ~ 500 kw/h");
+            } else dato5.setText("200 ~ 300 kw/h");
         } else dato5.setText("0kw/h");
 
         if(data.get("vaji")) {
@@ -103,7 +103,7 @@ public class Profile extends Fragment {
                 dato6.setText("183kw/h");
             }else if (data.get("vajiD")) {
                 dato6.setText("246kw/h");
-            }else dato6.setText("300 ~ 500 kw/h");
+            }else dato6.setText("120 ~ 200 kw/h");
         } else dato6.setText("0kw/h");
 
         if(data.get("seca")) {
@@ -119,7 +119,7 @@ public class Profile extends Fragment {
                 dato7.setText("197kw/h");
             }else if (data.get("secaD")) {
                 dato7.setText("234kw/h");
-            }else dato7.setText("300 ~ 500 kw/h");
+            }else dato7.setText("150 ~ 200 kw/h");
         } else dato7.setText("0kw/h");
 
         return v;

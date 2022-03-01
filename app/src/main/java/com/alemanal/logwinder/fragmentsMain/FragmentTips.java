@@ -45,9 +45,7 @@ public class FragmentTips extends Fragment {
                 s = "Deberías remplazar tu frigorífico por uno con una clase energética mejor, asi podrías ahorrar un poco de electricidad";
             } else if (data.get("frigoC")) {
                 s = "Deberías remplazar tu frigorífico por uno con una clase energética mejor, asi podrías ahorrar un poco de electricidad";
-            }
-            cont++;
-            return s;
+            } else cont++;
         }
         if(data.get("conge") && cont == 1) {
             if (data.get("congeB")) {
@@ -56,18 +54,14 @@ public class FragmentTips extends Fragment {
                 s = "Deberías remplazar tu congelador por uno con una clase energética mejor, asi podrías ahorrar un poco de electricidad";
             } else if (data.get("congeD")) {
                 s = "Deberías remplazar tu congelador por uno con una clase energética mejor, asi podrías ahorrar un poco de electricidad";
-            }
-            cont++;
-            return s;
+            } else cont++;
         }
-        if(data.get("lavadora") && cont == 2) {
-            if (data.get("lavadoraB")) {
+        if(data.get("lava") && cont == 2) {
+            if (data.get("lavaB")) {
                 s = "Deberías remplazar tu lavadora por una con una clase energética mejor, asi podrías ahorrar un poco de electricidad";
-            } else if (data.get("lavadoraC")) {
+            } else if (data.get("lavaC")) {
                 s = "Deberías remplazar tu lavadora por una con una clase energética mejor, asi podrías ahorrar un poco de electricidad";
-            }
-            cont++;
-            return s;
+            } else cont++;
         }
         if(cont==3){
             s="Intenta usar los aparatos cuando la electricidad este mas baja, puesdes consultar los precios de hoy en la pestaña principal";
@@ -81,7 +75,7 @@ public class FragmentTips extends Fragment {
         if(cont==6){
             s="Intenta no dejar luces encendidas si no vas a estar en esa sala, pero tampoco enciendas y apagues las luces todo el tiempo";
         }
-        if (cont < 6)
+        if (cont > 6)
             cont=0;
         cont++;
         return s;
