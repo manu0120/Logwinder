@@ -37,7 +37,7 @@ public class ViewPagerMain extends FragmentActivity {
     //El adapter que provee las páginas al ViewPager
     private FragmentStateAdapter pagerAdapter;
     BottomNavigationView btNav;
-    public static HashMap<String, Boolean> data = ViewPager.data;
+    HashMap<String, Boolean> data = ViewPager.data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,24 +104,8 @@ public class ViewPagerMain extends FragmentActivity {
 //        }
     }
 
-    private void getDataFromFile() throws IOException, ClassNotFoundException {
-        FileInputStream fo = new FileInputStream("data.ext");
-        ObjectInputStream os = new ObjectInputStream(fo);
-        data = (HashMap) os.readObject();
-        os.close();
-//        Gson gson = new Gson();
-//        try{
-//            FileInputStream is = openFileInput("json.json");
-//            String aaa = is.toString();
-//            System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-//            System.out.println(aaa);
-//        } catch (FileNotFoundException e) {
-//            e.printStackTrace();
-//        } catch (IOException e) {
-//
-//        }
-        System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-        System.out.println(data.toString());
+    private void getData() throws IOException, ClassNotFoundException {
+
 
     }
 
@@ -172,35 +156,97 @@ public class ViewPagerMain extends FragmentActivity {
         super.onPause();
     }
 
-    @Override
-    protected void onDestroy() {
-//        try{
-//            FileOutputStream fos = openFileOutput("datos.txt", Context.MODE_PRIVATE);
-//
-//        } catch(java.io.IOException e){
-//
-//        }
+    public static void guardarDatos(HashMap<String, Boolean> data, Context context) throws IOException {
+        SQLite sqlite = new SQLite(context,"Datos",null,1);
+        if(data.get("frigo")) {
+            ArrayList<String> arrFrigo = new ArrayList<String>();
+            arrFrigo.add("t");
+            if (data.get("frigoA3")) {
+                arrFrigo.add("t");
+            } else arrFrigo.add("f");
+            if (data.get("frigoA2")) {
+                arrFrigo.add("t");
+            } else arrFrigo.add("f");
+            if (data.get("frigoA1")) {
+                arrFrigo.add("t");
+            } else arrFrigo.add("f");
+            if (data.get("frigoA")) {
+                arrFrigo.add("t");
+            } else arrFrigo.add("f");
+            if (data.get("frigoB")) {
+                arrFrigo.add("t");
+            } else arrFrigo.add("f");
+            if (data.get("frigoC")) {
+                arrFrigo.add("t");
+            } else arrFrigo.add("f");
+            sqlite.insert_frig_db(arrFrigo.get(0),arrFrigo.get(1),arrFrigo.get(2),arrFrigo.get(3),arrFrigo.get(4),arrFrigo.get(5),arrFrigo.get(6));
+        }else sqlite.insert_frig_db("f","f","f","f","f","f","f");
 
-//        Gson gson = new Gson();
-//        JsonObject json = gson.toJsonTree(data).getAsJsonObject();
-//        try {
-//            FileOutputStream fos = getApplicationContext().openFileOutput("json.txt",Context.MODE_PRIVATE);
-//            fos.write(json.toString().getBytes(),0,json.toString().length());
-//            fos.close();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-        super.onDestroy();
+        if(data.get("conge")) {
+            ArrayList<String> arrCong = new ArrayList<String>();
+            arrCong.add("t");
+
+            if (data.get("congA2")) {
+                arrCong.add("t");
+            } else arrCong.add("f");
+            if (data.get("congA1")) {
+                arrCong.add("t");
+            } else arrCong.add("f");
+            if (data.get("congA")) {
+                arrCong.add("t");
+            } else arrCong.add("f");
+            if (data.get("congB")) {
+                arrCong.add("t");
+            } else arrCong.add("f");
+            if (data.get("congC")) {
+                arrCong.add("t");
+            } else arrCong.add("f");
+            if (data.get("congD")) {
+                arrCong.add("t");
+            } else arrCong.add("f");
+            sqlite.insert_cong_db(arrCong.get(0),arrCong.get(1),arrCong.get(2),arrCong.get(3),arrCong.get(4),arrCong.get(5),arrCong.get(6));
+        }else sqlite.insert_cong_db("f","f","f","f","f","f","f");
+
+        if(data.get("vitro")) {
+            ArrayList<String> arrVitro = new ArrayList<String>();
+            arrVitro.add("t");
+            if (data.get("vitroRad")) {
+                arrVitro.add("t");
+            } else arrVitro.add("f");
+            if (data.get("vitroEle")) {
+                arrVitro.add("t");
+            } else arrVitro.add("f");
+            if (data.get("vitroInd")) {
+                arrVitro.add("t");
+            } else arrVitro.add("f");
+            sqlite.insert_vitro_db(arrVitro.get(0),arrVitro.get(1),arrVitro.get(2),arrVitro.get(3));
+        }else sqlite.insert_vitro_db("f","f","f","f");
+
+        if(data.get("lava")) {
+            ArrayList<String> arrLava = new ArrayList<String>();
+            arrLava.add("t");
+            if (data.get("lavaA3")) {
+                arrLava.add("t");
+            } else arrLava.add("f");
+            if (data.get("lavaA2")) {
+                arrLava.add("t");
+            } else arrLava.add("f");
+            if (data.get("lavaA1")) {
+                arrLava.add("t");
+            } else arrLava.add("f");
+            if (data.get("lavaA")) {
+                arrLava.add("t");
+            } else arrLava.add("f");
+            if (data.get("lavaB")) {
+                arrLava.add("t");
+            } else arrLava.add("f");
+            if (data.get("lavaC")) {
+                arrLava.add("t");
+            } else arrLava.add("f");
+            sqlite.insert_lavadora_db(arrLava.get(0),arrLava.get(1),arrLava.get(2),arrLava.get(3),arrLava.get(4),arrLava.get(5),arrLava.get(6));
+        }else sqlite.insert_lavadora_db("f","f","f","f","f","f","f");
     }
-    public void guardarDatos() throws IOException {
-        FileOutputStream fo = openFileOutput("data.ext", Context.MODE_PRIVATE);
-        ObjectOutputStream os = new ObjectOutputStream(fo);
-        os.writeObject(data);
-        os.close();
-    }
-    public static HashMap getData(){
-        return data;
-    }
+
 }
 
 

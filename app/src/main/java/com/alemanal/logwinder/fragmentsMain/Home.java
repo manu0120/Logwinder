@@ -8,6 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import androidx.annotation.ColorInt;
 import androidx.fragment.app.Fragment;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
@@ -89,7 +90,6 @@ public class Home extends Fragment {
 
                 pvpc = response.body();
 
-                dato = pvpc.get0001().getHour();
                 System.out.println(dato);
                 hora();
                 porc();
