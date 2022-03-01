@@ -64,6 +64,7 @@ public class SQLite extends SQLiteOpenHelper {
         }else
             return false;
     }
+
     //extraer datos de la bases de datos
     public List<String> get_frig_db(String frig, String frigA3,String frigA2,String frigA1,String frigA,String frigB,String frigC){
         SQLite conn = new SQLite(this.context,Utilidades.TABLA_FRIGORIFICO, null, 1);
