@@ -5,8 +5,8 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.preference.PreferenceManager;
 
+import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,14 +31,14 @@ public class FragmentSettings extends Fragment {
         tvCasa = view.findViewById(R.id.tvCasa);
         tvEle = view.findViewById(R.id.tvEle);
         btPref = view.findViewById(R.id.btPrefe);
-        PreferenceManager.setDefaultValues(getContext(),R.xml.root_preferences, false);
 
+        PreferenceManager.setDefaultValues(getContext(),R.xml.root_preferences, false);
         SharedPreferences preferences=PreferenceManager.getDefaultSharedPreferences(getContext());
         Preferencias.obtenerPreferencias(preferences,this);
+
         tvEmail.setText(Preferencias.email);
         tvCasa.setText(Preferencias.casa);
-
-
+        tvEle.setText(Preferencias.elec);
 
         btPref.setOnClickListener(new View.OnClickListener() {
             @Override

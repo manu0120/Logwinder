@@ -57,8 +57,8 @@
     <string name="descripcion_casa">Aqui se guardara su tipo de casa</string>
 
     <!-- Strings para electrodomesticos -->
-    <string name="electrodomesticos">Electrodomesticos</string>
-    <string name="descripcion_electrodomesticos">Aqui se guardara sus electrodomesticos</string>
+    <string name="electro">Electrodomesticos</string>
+    <string name="descripcion_electrodomesticos">Aqui se guardara el electrodomestico que mas se usa</string>
 
     <!-- Strings para notificaciones -->
     <string name="activar_notificaciones">Activar notificaciones</string>

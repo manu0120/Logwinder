@@ -16,7 +16,6 @@ public class FragmentTips extends Fragment {
                              Bundle savedInstanceState) {
         v = inflater.inflate(R.layout.fragment_tips, container, false);
 
-
         return v;
     }
 }

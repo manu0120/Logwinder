@@ -13,17 +13,17 @@ public class Preferencias {
 
     public static String email;
     public static String casa;
-    public static String electrodomestico;
+    public static String elec;
 
     public static void obtenerPreferencias(SharedPreferences preferences, FragmentSettings context){
-        String Error ="ok";
 
-        email= preferences.getString(EMAIL,"example@gmial.com");
+        email= preferences.getString(EMAIL,"Configure las preferencias");
 
-        casa = preferences.getString(CASA,"Piso");
+        casa = preferences.getString(CASA,"Configure las preferencias");
 
-        electrodomestico = preferences.getString(ELECTRODOMESTICOS,"Configure las preferencias");
+        elec = preferences.getString(ELECTRODOMESTICOS,"Configure las preferencias");
 
+        //Radio button tipo de casa
         if (casa.equals("Chalet")){
             casa = "Chalet";
         } else if (casa.equals("Piso")){
@@ -32,8 +32,23 @@ public class Preferencias {
             casa="Oficina";
         }
 
-
-
+        //Radio button electrodomestico
+        switch (elec){
+            case "Nevera": elec="Nevera";
+                break;
+            case "Lavadora": elec="Lavadora";
+                break;
+            case "Lavavajillas": elec="Lavavajillas";
+                break;
+            case "Secadora": elec="Secadora";
+                break;
+            case "Vitroceramica": elec="Vitroceramica";
+                break;
+            case "Microondas": elec="Microondas";
+                break;
+            default: elec="Congelador";
+                break;
+        }
 
     }
 

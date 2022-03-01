@@ -15,12 +15,12 @@
         android:theme="@style/Theme.Logwinder" >
         <activity
             android:name=".SettingsActivity"
-            android:parentActivityName=".ViewPagerMain"
+            android:parentActivityName=".SettingsActivity"
             android:exported="false">
             android:label="@string/title_activity_settings"
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ViewPagerMain"/>
+                android:value=".SettingsActivity"/>
         </activity>
         <activity
             android:name=".ViewPagerMain"

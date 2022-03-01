@@ -16,15 +16,16 @@
             android:entries="@array/entradas_casa"
             android:entryValues="@array/valores_casa"/>
 
-        <MultiSelectListPreference
-            android:title="@string/electrodomesticos"
-            android:key="@string/electrodomesticos"
+        <ListPreference
+            android:title="Electrodomesticos"
+            android:key="@string/electro"
             android:summary="@string/descripcion_electrodomesticos"
             android:entries="@array/entradas_electro"
             android:entryValues="@array/valores_electro"/>
 
 
     </PreferenceCategory>
+
     <PreferenceCategory android:title="@string/opciones_header">
         <CheckBoxPreference
             android:title="@string/activar_sonido"
