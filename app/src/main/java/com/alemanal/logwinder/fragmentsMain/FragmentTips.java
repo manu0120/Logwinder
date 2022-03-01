@@ -13,6 +13,7 @@ import android.widget.TextView;
 import com.alemanal.logwinder.R;
 import com.alemanal.logwinder.ViewPagerMain;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class FragmentTips extends Fragment {
@@ -37,47 +38,48 @@ public class FragmentTips extends Fragment {
         return v;
     }
     public String getTip(){
-        String s="";
-        if(data.get("frigo") && cont == 0) {
-            if (data.get("frigoA")) {
-                s = "Deberías remplazar tu frigorífico por uno con una clase energética mejor, asi podrías ahorrar un poco de electricidad";
-            } else if (data.get("frigoB")) {
-                s = "Deberías remplazar tu frigorífico por uno con una clase energética mejor, asi podrías ahorrar un poco de electricidad";
-            } else if (data.get("frigoC")) {
-                s = "Deberías remplazar tu frigorífico por uno con una clase energética mejor, asi podrías ahorrar un poco de electricidad";
-            } else cont++;
+        ArrayList<String> arrTips= new ArrayList<String>();
+        String s;
+        try {
+            if (data.get("frigo")) {
+                if (data.get("frigoA")) {
+                    arrTips.add("Deberías remplazar tu frigorífico por uno con una clase energética mejor, asi podrías ahorrar un poco de electricidad");
+                } else if (data.get("frigoB")) {
+                    arrTips.add("Deberías remplazar tu frigorífico por uno con una clase energética mejor, asi podrías ahorrar un poco de electricidad");
+                } else if (data.get("frigoC")) {
+                    arrTips.add("Deberías remplazar tu frigorífico por uno con una clase energética mejor, asi podrías ahorrar un poco de electricidad");
+                }
+            }
+            if (data.get("conge")) {
+                if (data.get("congeB")) {
+                    arrTips.add("Deberías remplazar tu congelador por uno con una clase energética mejor, asi podrías ahorrar un poco de electricidad");
+                } else if (data.get("congeC")) {
+                    arrTips.add("Deberías remplazar tu congelador por uno con una clase energética mejor, asi podrías ahorrar un poco de electricidad");
+                } else if (data.get("congeD")) {
+                    arrTips.add("Deberías remplazar tu congelador por uno con una clase energética mejor, asi podrías ahorrar un poco de electricidad");
+                }
+            }
+            if (data.get("lava")) {
+                if (data.get("lavaB")) {
+                    arrTips.add("Deberías remplazar tu lavadora por una con una clase energética mejor, asi podrías ahorrar un poco de electricidad");
+                } else if (data.get("lavaC")) {
+                    arrTips.add("Deberías remplazar tu lavadora por una con una clase energética mejor, asi podrías ahorrar un poco de electricidad");
+                }
+            }
+            arrTips.add("Intenta usar los aparatos cuando la electricidad este mas baja, puesdes consultar los precios de hoy en la pestaña principal");
+            arrTips.add("Intenta usar la lavadora y el lavavajillas cuando esten llenos");
+            arrTips.add("Intenta usar bombillas de bajo consumo o bombillas LED, ¡consumen menos!");
+            arrTips.add("Intenta no dejar luces encendidas si no vas a estar en esa sala, pero tampoco enciendas y apagues las luces todo el tiempo");
+            arrTips.add("Apaga la vitrocerámica 5 minutos antes de que se termine de hacer la comida, con el calor residual se terminará igual");
+            arrTips.add("Intenta no dejar mucho tiempo la nevera o el congelador abierto, sino tendrán que trabajar mas en recuperar la temperatura que han perdido");
+            arrTips.add("Intenta desenchufar los aparatos electricos que no se usen para evitar que gasten electricidad de forma stand-by");
+            arrTips.add("Intenta no descuidar los electrodomésticos, ¡uno limpio siempre va a trabajar mejor que uno que este sucio!");
+            arrTips.add("Intenta elegir una tarifa con discriminación horaria ¡puedes ver en nuestra ventana home que horas son mas baratas!");
+            int ran = (int) Math.floor(Math.random() * (12 + 1));
+             s = arrTips.get(ran);
+        } catch (IndexOutOfBoundsException e){
+            s = arrTips.get(0);
         }
-        if(data.get("conge") && cont == 1) {
-            if (data.get("congeB")) {
-                s = "Deberías remplazar tu congelador por uno con una clase energética mejor, asi podrías ahorrar un poco de electricidad";
-            } else if (data.get("congeC")) {
-                s = "Deberías remplazar tu congelador por uno con una clase energética mejor, asi podrías ahorrar un poco de electricidad";
-            } else if (data.get("congeD")) {
-                s = "Deberías remplazar tu congelador por uno con una clase energética mejor, asi podrías ahorrar un poco de electricidad";
-            } else cont++;
-        }
-        if(data.get("lava") && cont == 2) {
-            if (data.get("lavaB")) {
-                s = "Deberías remplazar tu lavadora por una con una clase energética mejor, asi podrías ahorrar un poco de electricidad";
-            } else if (data.get("lavaC")) {
-                s = "Deberías remplazar tu lavadora por una con una clase energética mejor, asi podrías ahorrar un poco de electricidad";
-            } else cont++;
-        }
-        if(cont==3){
-            s="Intenta usar los aparatos cuando la electricidad este mas baja, puesdes consultar los precios de hoy en la pestaña principal";
-        }
-        if(cont==4){
-            s="Intenta usar la lavadora y el lavavajillas cuando esten llenos";
-        }
-        if(cont==5){
-            s="Intenta usar bombillas de bajo consumo o bombillas LED, ¡consumen menos!";
-        }
-        if(cont==6){
-            s="Intenta no dejar luces encendidas si no vas a estar en esa sala, pero tampoco enciendas y apagues las luces todo el tiempo";
-        }
-        if (cont > 6)
-            cont=0;
-        cont++;
         return s;
     }
 }
