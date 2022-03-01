@@ -17,11 +17,11 @@ public class Preferencias {
 
     public static void obtenerPreferencias(SharedPreferences preferences, FragmentSettings context){
 
-        email= preferences.getString(EMAIL,"Configure las preferencias");
+        email= preferences.getString(EMAIL,"No esta definido");
 
-        casa = preferences.getString(CASA,"Configure las preferencias");
+        casa = preferences.getString(CASA,"No esta definido");
 
-        elec = preferences.getString(ELECTRODOMESTICOS,"Configure las preferencias");
+        elec = preferences.getString(ELECTRODOMESTICOS,"No esta definido");
 
         //Radio button tipo de casa
         if (casa.equals("Chalet")){
@@ -69,7 +69,7 @@ public class Preferencias {
 //                break;
 //            default: elec="Congelador";
 //          }              break;
-        
+
 
     }
 

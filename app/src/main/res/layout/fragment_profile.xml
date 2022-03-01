@@ -17,6 +17,7 @@
         android:textSize="30dp"/>
 
     <LinearLayout
+        android:layout_marginLeft="15dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1.1"
@@ -43,6 +44,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:layout_marginLeft="15dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1.1"
@@ -67,6 +69,7 @@
             android:fontFamily="@font/signika_negative"/>
     </LinearLayout>
     <LinearLayout
+        android:layout_marginLeft="15dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1.1"
@@ -91,6 +94,7 @@
             android:fontFamily="@font/signika_negative"/>
     </LinearLayout>
     <LinearLayout
+        android:layout_marginLeft="15dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1.1"
@@ -115,6 +119,7 @@
             android:fontFamily="@font/signika_negative"/>
     </LinearLayout>
     <LinearLayout
+        android:layout_marginLeft="15dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1.1"
@@ -139,6 +144,7 @@
             android:fontFamily="@font/signika_negative"/>
     </LinearLayout>
     <LinearLayout
+        android:layout_marginLeft="15dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1.1"
@@ -163,6 +169,7 @@
             android:fontFamily="@font/signika_negative"/>
     </LinearLayout>
     <LinearLayout
+        android:layout_marginLeft="15dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1.1"
