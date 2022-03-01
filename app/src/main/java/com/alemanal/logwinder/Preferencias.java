@@ -32,23 +32,44 @@ public class Preferencias {
             casa="Oficina";
         }
 
-        //Radio button electrodomestico
-        switch (elec){
-            case "Nevera": elec="Nevera";
-                break;
-            case "Lavadora": elec="Lavadora";
-                break;
-            case "Lavavajillas": elec="Lavavajillas";
-                break;
-            case "Secadora": elec="Secadora";
-                break;
-            case "Vitroceramica": elec="Vitroceramica";
-                break;
-            case "Microondas": elec="Microondas";
-                break;
-            default: elec="Congelador";
-                break;
+        if (elec.equals("Nevera")){
+            elec = "Nevera";
+        } else if (elec.equals("Lavadora")){
+            elec="Lavadora";
+        } else if (elec.equals("Lavavajillas")){
+            elec="Lavavajillas";
+        } else if (elec.equals("Secadora")){
+            elec="Secadora";
+        } else if (elec.equals("Vitroceramica")){
+            elec="Vitroceramica";
+        } else if (elec.equals("Microondas")){
+            elec="Microondas";
+        } else if (elec.equals("Secadora")){
+            elec="Secadora";
+        } else if (elec.equals("Congelador")) {
+            elec = "Congelador";
         }
+
+
+
+
+//        //Radio button electrodomestico
+//        switch (elec){
+//            case "Nevera": elec="Nevera";
+//                break;
+//            case "Lavadora": elec="Lavadora";
+//                break;
+//            case "Lavavajillas": elec="Lavavajillas";
+//                break;
+//            case "Secadora": elec="Secadora";
+//                break;
+//            case "Vitroceramica": elec="Vitroceramica";
+//                break;
+//            case "Microondas": elec="Microondas";
+//                break;
+//            default: elec="Congelador";
+//          }              break;
+        
 
     }
 

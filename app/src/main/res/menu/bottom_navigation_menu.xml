@@ -10,7 +10,7 @@
     <item
         android:id="@+id/tips"
         android:title="Tips"
-        android:icon="@drawable/ic_action_name"
+        android:icon="@drawable/ic_tip"
         app:showAsAction="always"
         />
     <item
