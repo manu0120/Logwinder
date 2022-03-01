@@ -50,17 +50,17 @@ public class Profile extends Fragment {
             dato2.setText("90 ~ 1000 kw/h");
         else dato2.setText("0kw/h");
         if(data.get("conge")) {
-             if (data.get("congeA2")) {
+             if (data.get("congA2")) {
                 dato3.setText("131kw/h");
-            } else if (data.get("congeA1")) {
+            } else if (data.get("congA1")) {
                 dato3.setText("151kw/h");
-            }else if (data.get("congeA")) {
+            }else if (data.get("congA")) {
                 dato3.setText("163kw/h");
-            }else if (data.get("congeB")) {
+            }else if (data.get("congB")) {
                 dato3.setText("171kw/h");
-            }else if (data.get("congeC")) {
+            }else if (data.get("congC")) {
                 dato3.setText("195kw/h");
-            }else if (data.get("congeD")) {
+            }else if (data.get("congD")) {
                  dato3.setText("234kw/h");
              } else dato3.setText("300 ~ 500 kw/h");
         } else dato3.setText("0kw/h");
@@ -74,50 +74,50 @@ public class Profile extends Fragment {
             }else dato4.setText("300 ~ 500 kw/h");
         } else dato4.setText("0kw/h");
 
-        if(data.get("lavadora")) {
-            if (data.get("lavadoraA2")) {
+        if(data.get("lava")) {
+            if (data.get("lavaA2")) {
                 dato4.setText("125kw/h");
-            } else if (data.get("lavadoraA1")) {
+            } else if (data.get("lavaA1")) {
                 dato5.setText("151kw/h");
-            }else if (data.get("lavadoraA")) {
+            }else if (data.get("lavaA")) {
                 dato5.setText("193kw/h");
-            }else if (data.get("lavadoraB")) {
+            }else if (data.get("lavaB")) {
                 dato5.setText("352kw/h");
-            }else if (data.get("lavadoraC")) {
+            }else if (data.get("lavaC")) {
                 dato5.setText("425kw/h");
-            }else if (data.get("lavadoraD")) {
+            }else if (data.get("lavaD")) {
                 dato5.setText("450kw/h");
             } else dato5.setText("300 ~ 500 kw/h");
         } else dato5.setText("0kw/h");
 
-        if(data.get("lavavajillas")) {
-            if (data.get("lavavajillasA2")) {
+        if(data.get("vaji")) {
+            if (data.get("vajiA2")) {
                 dato6.setText("131kw/h");
-            } else if (data.get("lavavajillasA1")) {
+            } else if (data.get("vajiA1")) {
                 dato6.setText("147kw/h");
-            }else if (data.get("lavavajillasA")) {
+            }else if (data.get("vajiA")) {
                 dato6.setText("158kw/h");
-            }else if (data.get("lavavajillasB")) {
+            }else if (data.get("vajiB")) {
                 dato6.setText("173kw/h");
-            }else if (data.get("lavavajillasC")) {
+            }else if (data.get("vajiC")) {
                 dato6.setText("183kw/h");
-            }else if (data.get("lavavajillasD")) {
+            }else if (data.get("vajiD")) {
                 dato6.setText("246kw/h");
             }else dato6.setText("300 ~ 500 kw/h");
         } else dato6.setText("0kw/h");
 
-        if(data.get("secadora")) {
-            if (data.get("secadoraA2")) {
+        if(data.get("seca")) {
+            if (data.get("secaA2")) {
                 dato7.setText("145kw/h");
-            } else if (data.get("secadoraA1")) {
+            } else if (data.get("secaA1")) {
                 dato7.setText("152kw/h");
-            }else if (data.get(".secadoraA")) {
+            }else if (data.get(".secaA")) {
                 dato7.setText("163kw/h");
-            }else if (data.get("secadoraB")) {
+            }else if (data.get("secaB")) {
                 dato7.setText("184kw/h");
-            }else if (data.get("secadoraC")) {
+            }else if (data.get("secaC")) {
                 dato7.setText("197kw/h");
-            }else if (data.get("secadoraD")) {
+            }else if (data.get("secaD")) {
                 dato7.setText("234kw/h");
             }else dato7.setText("300 ~ 500 kw/h");
         } else dato7.setText("0kw/h");
