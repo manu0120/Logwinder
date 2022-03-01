@@ -9,9 +9,9 @@ public class Microondas implements Serializable {
     public Microondas() {
     }
 
-    public Microondas(Integer id, String horno) {
+    public Microondas(Integer id, String micro) {
         this.id = id;
-        this.micro = horno;
+        this.micro = micro;
     }
 
     public Integer getId() {
@@ -26,7 +26,7 @@ public class Microondas implements Serializable {
         return micro;
     }
 
-    public void setMicro(String horno) {
-        this.micro = horno;
+    public void setMicro(String micro) {
+        this.micro = micro;
     }
 }

@@ -40,24 +40,32 @@ public class SplashActivity extends AppCompatActivity {
         new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
             @Override
             public void run() {
-                try {
-                    SQLite sq = new SQLite(getApplicationContext(), Utilidades.TABLA_FRIGORIFICO, null, 1);
-                    SQLiteDatabase db = sq.getReadableDatabase();
-                    Cursor cursor = db.rawQuery("SELECT * FROM " + Utilidades.TABLA_FRIGORIFICO, null);
-                    if(cursor.moveToFirst())
-                        if(cursor.isNull(0)) {
-                            System.out.println("Manuel, Alex, Alejandro");
-                        }
-                    Intent intent = new Intent(SplashActivity.this, ViewPagerMain.class);
-                    startActivity(intent);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                } catch (IndexOutOfBoundsException e){
+//                try {
+//                    SQLite sq = new SQLite(getApplicationContext(), Utilidades.TABLA_FRIGORIFICO, null, 1);
+//                    SQLiteDatabase db = sq.getReadableDatabase();
+//                    Cursor cursor = db.rawQuery("SELECT * FROM " + Utilidades.TABLA_FRIGORIFICO, null);
+//                    if(cursor.moveToFirst())
+//                        if(!cursor.isNull(0)) {
+//                            String s = cursor.getString(1);
+//                            String s1 = cursor.getString(2);
+//                        }
+//                    System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+//                    Intent intent = new Intent(SplashActivity.this, ViewPagerMain.class);
+//                    startActivity(intent);
+//                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//                } catch (IndexOutOfBoundsException e){
                     Intent intent = new Intent(SplashActivity.this, ViewPager.class);
                     startActivity(intent);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                }
+//                }catch (NullPointerException e){
+//                    System.out.println("ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc");
+//                    Intent intent = new Intent(SplashActivity.this, ViewPager.class);
+//                    startActivity(intent);
+//                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//                }
             }
         }, 4000);
     }
