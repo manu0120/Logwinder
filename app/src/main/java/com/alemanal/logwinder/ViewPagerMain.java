@@ -42,14 +42,14 @@ public class ViewPagerMain extends FragmentActivity {
     //El adapter que provee las páginas al ViewPager
     private FragmentStateAdapter pagerAdapter;
     BottomNavigationView btNav;
-    public static HashMap<String, Boolean> data = new HashMap<String, Boolean>();
+    public static HashMap<String, Boolean> data = ViewPager.data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_pager_main);
 
-        data= setDataFromDataBase();
+//        data= setDataFromDataBase();
         // Instanciacion del ViewPager2 y PagerAdapter.
         view_pager = findViewById(R.id.pager);
         pagerAdapter = new ScreenSlidePagerAdapter(this);
