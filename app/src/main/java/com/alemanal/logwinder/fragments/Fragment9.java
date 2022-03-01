@@ -11,7 +11,10 @@ import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 
 import com.alemanal.logwinder.R;
+import com.alemanal.logwinder.ViewPager;
 import com.alemanal.logwinder.ViewPagerMain;
+
+import java.io.IOException;
 
 //Esto es un ejemplo de como seria un fragment
 public class Fragment9 extends Fragment {
@@ -27,6 +30,11 @@ public class Fragment9 extends Fragment {
         btToHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                try {
+                    ViewPagerMain.guardarDatos(ViewPager.data, getContext());
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
                 Intent in = new Intent(getContext(), ViewPagerMain.class);
                 startActivity(in);
             }

@@ -50,7 +50,7 @@ public class Utilidades {
 
 
     //Constantes campos tabla vitro
-    public static final String TABLA_VITRO = "CONGELADOR";
+    public static final String TABLA_VITRO = "VITRO";
     public static final String CAMPO_ID_VITRO = "id_vitro";
     public static final String CAMPO_VITRO = "vitro";
     public static final String CAMPO_VITRORAD = "vitroRad";
